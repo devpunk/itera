@@ -4,7 +4,7 @@ class VSaveProgressThumb:View<VSave, MSave, CSave>
 {
     private weak var layoutImageLeft:NSLayoutConstraint!
     private weak var layoutImageTop:NSLayoutConstraint!
-    private let kImageSize:CGFloat = 130
+    private let kImageSize:CGFloat = 150
     private let kBorderWidth:CGFloat = 10
     
     required init(controller:CSave)

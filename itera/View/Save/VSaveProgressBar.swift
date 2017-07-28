@@ -10,12 +10,12 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
     private let pi2:CGFloat
     private let endAngle:CGFloat
     private let kRadius:CGFloat = 82
-    private let kSmallLineWidth:CGFloat = 2
-    private let kBigLineWidth:CGFloat = 4
+    private let kSmallLineWidth:CGFloat = 15
+    private let kBigLineWidth:CGFloat = 15
     
     required init(controller:CSave)
     {
-        colourSmall = UIColor(white:0, alpha:0.15)
+        colourSmall = UIColor(white:1, alpha:0.2)
         colourBig = UIColor.white
         percent = 0
         pi2 = CGFloat.pi + CGFloat.pi
