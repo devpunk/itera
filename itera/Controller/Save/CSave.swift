@@ -27,7 +27,7 @@ class CSave:Controller<VSave, MSave>
     
     //MARK: private
     
-    private func asyncDone()
+    private func asyncClose()
     {
         guard
             
@@ -39,6 +39,22 @@ class CSave:Controller<VSave, MSave>
         }
         
         parent.pop(vertical:ControllerParent.Vertical.bottom)
+    }
+    
+    private func asyncExport(url:URL)
+    {
+        let activity:UIActivityViewController = UIActivityViewController(
+            activityItems:[url],
+            applicationActivities:nil)
+        
+        if let popover:UIPopoverPresentationController = activity.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
+        }
+        
+        present(activity, animated:true, completion:nil)
     }
     
     private func asyncUpdateProgress(percent:CGFloat)
@@ -57,12 +73,21 @@ class CSave:Controller<VSave, MSave>
     
     //MARK: public
     
-    func done()
+    func close()
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncDone()
+            self?.asyncClose()
+        }
+    }
+    
+    func export(url:URL)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncExport(url:url)
         }
     }
     

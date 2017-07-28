@@ -9,10 +9,7 @@ extension MSave
         path:URL)
     {
         let items:[MEditSequenceItem] = sequence.items
-        let duration:TimeInterval = sequence.duration
         let totalImages:Int = items.count
-        let totalImagesInterval:TimeInterval = TimeInterval(totalImages)
-        let imageDuration:TimeInterval = duration / totalImagesInterval
         
         guard
             
@@ -24,13 +21,13 @@ extension MSave
             
         else
         {
+            savingError()
+            
             return
         }
         
-        let destinationPropertiesRaw:[String:Any] = [
-            kCGImagePropertyGIFDictionary as String:[
-                kCGImagePropertyGIFLoopCount as String:0]]
-        let destinationProperties:CFDictionary = destinationPropertiesRaw as CFDictionary
+        let destinationProperties:CFDictionary = factoryDestinationProperties()
+        let imageProperties:CFDictionary = factoryImageProperties(sequence:sequence)
         
         CGImageDestinationSetProperties(
             destination,
@@ -38,20 +35,49 @@ extension MSave
         
         scheduleGeneration(
             destination:destination,
+            properties:imageProperties,
             index:0,
-            items:items,
-            duration:imageDuration)
-        
-        CGImageDestinationFinalize(destination)
+            items:items)
     }
     
     //MARK: private
     
+    private func durationPerImage(sequence:MEditSequence) -> TimeInterval
+    {
+        let duration:TimeInterval = sequence.duration
+        let totalImages:Int = sequence.items.count
+        let totalImagesInterval:TimeInterval = TimeInterval(totalImages)
+        let imageDuration:TimeInterval = duration / totalImagesInterval
+        
+        return imageDuration
+    }
+    
+    private func factoryDestinationProperties() -> CFDictionary
+    {
+        let destinationPropertiesRaw:[String:Any] = [
+            kCGImagePropertyGIFDictionary as String:[
+                kCGImagePropertyGIFLoopCount as String:0]]
+        let destinationProperties:CFDictionary = destinationPropertiesRaw as CFDictionary
+        
+        return destinationProperties
+    }
+    
+    private func factoryImageProperties(sequence:MEditSequence) -> CFDictionary
+    {
+        let duration:TimeInterval = durationPerImage(sequence:sequence)
+        let imagePropertiesRaw:[String:Any] = [
+            kCGImagePropertyGIFDictionary as String:[
+                kCGImagePropertyGIFDelayTime as String:duration]]
+        let imageProperties:CFDictionary = imagePropertiesRaw as CFDictionary
+        
+        return imageProperties
+    }
+    
     private func scheduleGeneration(
         destination:CGImageDestination,
+        properties:CFDictionary,
         index:Int,
-        items:[MEditSequenceItem],
-        duration:TimeInterval)
+        items:[MEditSequenceItem])
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
             deadline:DispatchTime.now() + kDelayGeneration)
@@ -59,17 +85,17 @@ extension MSave
             
             self?.generate(
                 destination:destination,
+                properties:properties,
                 index:index,
-                items:items,
-                duration:duration)
+                items:items)
         }
     }
     
     private func generate(
         destination:CGImageDestination,
+        properties:CFDictionary,
         index:Int,
-        items:[MEditSequenceItem],
-        duration:TimeInterval)
+        items:[MEditSequenceItem])
     {
         let count:Int = items.count
         
@@ -80,21 +106,17 @@ extension MSave
             let newIndex:Int = index + 1
             let item:MEditSequenceItem = items[index]
             let cgImage:CGImage = item.image
-            let gifPropertiesRaw:[String:Any] = [
-                kCGImagePropertyGIFDictionary as String:[
-                    kCGImagePropertyGIFDelayTime as String:duration]]
-            let gifProperties:CFDictionary = gifPropertiesRaw as CFDictionary
             
             CGImageDestinationAddImage(
                 destination,
                 cgImage,
-                gifProperties)
+                properties)
             
             scheduleGeneration(
                 destination:destination,
+                properties:properties,
                 index:newIndex,
-                items:items,
-                duration:duration)
+                items:items)
         }
         else
         {
@@ -113,6 +135,7 @@ extension MSave
     private func finishGeneration(destination:CGImageDestination)
     {
         CGImageDestinationFinalize(destination)
-        controller?.done()
+        
+        savingSuccess()
     }
 }

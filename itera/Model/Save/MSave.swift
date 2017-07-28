@@ -9,6 +9,7 @@ class MSave:Model
     let kDelayGeneration:TimeInterval = 0.25
     private(set) var sequence:MEditSequence?
     private(set) weak var controller:CSave?
+    private var path:URL?
     
     //MARK: private
     
@@ -26,16 +27,8 @@ class MSave:Model
             return
         }
         
+        self.path = path
         factoryGif(sequence:sequence, path:path)
-    }
-    
-    private func savingError()
-    {
-        let message:String = String.localizedModel(
-            key:"MSave_errorMessage")
-        VAlert.messageFail(message:message)
-        
-        controller?.done()
     }
     
     //MARK: public
@@ -54,5 +47,30 @@ class MSave:Model
         
             self?.asyncSave()
         }
+    }
+    
+    func savingError()
+    {
+        let message:String = String.localizedModel(
+            key:"MSave_errorMessage")
+        VAlert.messageFail(message:message)
+        
+        controller?.close()
+    }
+    
+    func savingSuccess()
+    {
+        guard
+            
+            let path:URL = self.path
+        
+        else
+        {
+            controller?.close()
+            
+            return
+        }
+        
+        controller?.export(url:path)
     }
 }
