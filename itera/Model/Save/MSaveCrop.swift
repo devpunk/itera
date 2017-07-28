@@ -35,11 +35,13 @@ extension MSave
             
             let newHeight:CGFloat = imageHeight + topBottom
             let newWidth:CGFloat = imageWidth + leftRight
-            let newSize:CGSize = CGSize(width:newWidth, height:newHeight)
+            let newSize:CGSize = CGSize(
+                width:newWidth,
+                height:newHeight)
             
             let drawRect:CGRect = CGRect(
                 x:-left,
-                y:-top,
+                y:top,
                 width:imageWidth,
                 height:imageHeight)
             
@@ -95,7 +97,7 @@ extension MSave
             return nil
         }
         
-        context.translateBy(x:0, y:size.height)
+        context.translateBy(x:0, y:drawRect.height)
         context.scaleBy(x:1, y:-1)
         context.draw(image, in:drawRect)
         
