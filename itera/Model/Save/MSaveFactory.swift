@@ -40,7 +40,7 @@ extension MSave
         {
             try FileManager.default.createDirectory(
                 at:projectsPath,
-                withIntermediateDirectories:false,
+                withIntermediateDirectories:true,
                 attributes:nil)
         }
         catch
