@@ -95,8 +95,8 @@ extension MSave
             return nil
         }
         
-//        context.translateBy(x:0, y:imageSize.height)
-//        context.scaleBy(x:1, y:-1)
+        context.translateBy(x:0, y:size.height)
+        context.scaleBy(x:1, y:-1)
         context.draw(image, in:drawRect)
         
         guard
