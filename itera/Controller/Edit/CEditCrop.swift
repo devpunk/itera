@@ -45,14 +45,15 @@ class CEditCrop:Controller<VEditCrop, MEditCrop>
     {
         guard
             
-            let parent:ControllerParent = self.parent as? ControllerParent
+            let parent:ControllerParent = self.parent as? ControllerParent,
+            let view:VEditCrop = self.view as? VEditCrop
             
         else
         {
             return
         }
         
-//        model.exportDuration()
+        model.exportCrop(viewImage:view.viewImage)
         parent.dismissAnimateOver(completion:nil)
     }
 }

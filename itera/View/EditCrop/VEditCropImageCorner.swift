@@ -74,4 +74,18 @@ class VEditCropImageCorner:UIView
         layoutLeft.constant = initialX
         layoutTop.constant = initialY
     }
+    
+    func deltaLeft() -> CGFloat
+    {
+        let delta:CGFloat = layoutLeft.constant - initialX
+        
+        return delta
+    }
+    
+    func deltaTop() -> CGFloat
+    {
+        let delta:CGFloat = layoutTop.constant - initialY
+        
+        return delta
+    }
 }

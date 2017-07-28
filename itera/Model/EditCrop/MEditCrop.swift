@@ -45,4 +45,9 @@ class MEditCrop:Model
         
         return model
     }
+    
+    func exportCrop(viewImage:VEditCropImage)
+    {
+        
+    }
 }

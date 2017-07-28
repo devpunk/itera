@@ -2,7 +2,7 @@ import UIKit
 
 class VEditCrop:ViewMain
 {
-    private weak var viewImage:VEditCropImage!
+    private(set) weak var viewImage:VEditCropImage!
     private weak var layoutOkayLeft:NSLayoutConstraint!
     private weak var layoutResetLeft:NSLayoutConstraint!
     private let kOkayWidth:CGFloat = 195
