@@ -15,7 +15,8 @@ class CHome:Controller<VHome, MHome>
             return
         }
         
-        let controller:CNew = CNew()
+//        let controller:CNew = CNew()
+        let controller:CSave = CSave(sequence:MEditSequence(items:[], duration:1))
         parent.centreOver(controller:controller)
     }
 }

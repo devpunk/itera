@@ -29,15 +29,15 @@ class VSave:ViewMain
     private func factoryViews(controller:CSave)
     {
         let colourTop:UIColor = UIColor(
-            red:0.011764705882352896,
-            green:0.7137254901960783,
-            blue:0.7450980392156863,
+            red:1,
+            green:0.5215686274509804,
+            blue:0.43529411764705883,
             alpha:1)
         
         let colourBottom:UIColor = UIColor(
-            red:0.12941176470588237,
-            green:0.49019607843137286,
-            blue:0.7137254901960784,
+            red:0.8627450980392157,
+            green:0.3529411764705883,
+            blue:0.2588235294117647,
             alpha:1)
         
         let viewGradient:VGradient = VGradient.vertical(
