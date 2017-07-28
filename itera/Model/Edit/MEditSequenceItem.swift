@@ -8,4 +8,11 @@ class MEditSequenceItem
     {
         self.image = image
     }
+    
+    //MARK: public
+    
+    func update(image:CGImage)
+    {
+        self.image = image
+    }
 }

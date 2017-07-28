@@ -28,6 +28,7 @@ class MSave:Model
         }
         
         self.path = path
+        cropSequence(sequence:sequence)
         factoryGif(sequence:sequence, path:path)
     }
     
