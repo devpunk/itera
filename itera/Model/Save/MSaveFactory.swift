@@ -38,7 +38,7 @@ extension MSave
     func fileName() -> String
     {
         let randomName:String = UUID().uuidString
-        let nameExtension:String = "\(randomName)\(kGifExtension)"
+        let nameExtension:String = randomName.appending(kGifExtension)
         
         return nameExtension
     }
