@@ -6,8 +6,8 @@ extension VEditCropImage
     {
         constraintImage()
         constraintCorners()
-        factoryBorders()
         importLayout()
+        factoryBorders()
     }
     
     //MARK: private
@@ -173,6 +173,13 @@ extension VEditCropImage
             return
         }
         
-        
+        cornerTopLeft.layoutTop.constant += model.top
+        cornerTopRight.layoutTop.constant += model.top
+        cornerBottomLeft.layoutTop.constant -= model.bottom
+        cornerBottomRight.layoutTop.constant -= model.bottom
+        cornerTopLeft.layoutLeft.constant += model.left
+        cornerBottomLeft.layoutLeft.constant += model.left
+        cornerTopRight.layoutLeft.constant += model.right
+        cornerBottomRight.layoutLeft.constant += model.right
     }
 }
