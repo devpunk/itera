@@ -48,14 +48,14 @@ class MSourceVideoTimeItemDuration:MSourceVideoTimeItemProtocol
             string = "0\(minutes)"
         }
         
-        string = "\(string):"
+        string = string.appending(":")
         
         if seconds < 10
         {
-            string = "\(string)0"
+            string = string.appending("0")
         }
         
-        string = "\(string)\(seconds)"
+        string = string.appending("\(seconds)")
         
         return string
     }
