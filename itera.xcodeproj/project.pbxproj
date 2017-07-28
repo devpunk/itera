@@ -155,6 +155,8 @@
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 		DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */; };
 		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
+		DACE6BE81F2B26F20016DEEB /* VSaveProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */; };
+		DACE6BEA1F2B26FC0016DEEB /* VSaveProgressThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +310,8 @@
 		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 		DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveBottom.swift; sourceTree = "<group>"; };
 		DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgress.swift; sourceTree = "<group>"; };
+		DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressBar.swift; sourceTree = "<group>"; };
+		DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressThumb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +331,8 @@
 				DA0294971F2B16540079382B /* VSave.swift */,
 				DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */,
 				DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */,
+				DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */,
+				DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -923,6 +929,7 @@
 				DA2796851F2AFC4200550ECA /* VEditCropImageShade.swift in Sources */,
 				DA27965E1F2AFC4200550ECA /* ExtensionUIColor.swift in Sources */,
 				DA2796741F2AFC4200550ECA /* VToast.swift in Sources */,
+				DACE6BEA1F2B26FC0016DEEB /* VSaveProgressThumb.swift in Sources */,
 				DA27962D1F2AFC4100550ECA /* MEditSequenceCrop.swift in Sources */,
 				DA2796371F2AFC4200550ECA /* MPerkThumbnailProtocol.swift in Sources */,
 				DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */,
@@ -930,6 +937,7 @@
 				DA2796361F2AFC4200550ECA /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA2796281F2AFC4100550ECA /* MEditActionProtocol.swift in Sources */,
 				DA2796261F2AFC4100550ECA /* MEditActionCrop.swift in Sources */,
+				DACE6BE81F2B26F20016DEEB /* VSaveProgressBar.swift in Sources */,
 				DA2796931F2AFC4200550ECA /* VNewSourceCell.swift in Sources */,
 				DA27968A1F2AFC4200550ECA /* VEditDurationDisplay.swift in Sources */,
 				DA2796441F2AFC4200550ECA /* MSourceVideoAuth.swift in Sources */,
