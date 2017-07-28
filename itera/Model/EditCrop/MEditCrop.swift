@@ -48,6 +48,22 @@ class MEditCrop:Model
     
     func exportCrop(viewImage:VEditCropImage)
     {
+        let deltaTop:CGFloat = viewImage.cornerTopLeft.deltaTop()
+        let deltaBottom:CGFloat = viewImage.cornerBottomLeft.deltaTop()
+        let deltaLeft:CGFloat = viewImage.cornerTopLeft.deltaLeft()
+        let deltaRight:CGFloat = viewImage.cornerTopRight.deltaLeft()
         
+        let top:CGFloat = deltaTop / scaledHeight
+        let bottom:CGFloat = deltaBottom / scaledHeight
+        let left:CGFloat = deltaLeft / scaledHeight
+        let right:CGFloat = deltaRight / scaledHeight
+        
+        let model:MEditSequenceCrop = MEditSequenceCrop(
+            top:top,
+            bottom:bottom,
+            left:left,
+            right:right)
+        
+        edit.sequence?.crop = model
     }
 }
