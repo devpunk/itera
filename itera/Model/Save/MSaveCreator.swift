@@ -2,8 +2,11 @@ import Foundation
 
 extension MSave
 {
-    func animateGif(sequence:MEditSequence) -> URL?
+    func factoryGif(
+        sequence:MEditSequence,
+        path:URL)
     {
+        /*
         let directoryUrl:URL = URL(fileURLWithPath:NSTemporaryDirectory())
         let fileUrl:URL = directoryUrl.appendingPathComponent(kFilenameGif)
         let totalImages:Int = images.count
@@ -57,6 +60,6 @@ extension MSave
         
         CGImageDestinationFinalize(destination)
         
-        return fileUrl
+        return fileUrl*/
     }
 }

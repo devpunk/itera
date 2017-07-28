@@ -15,7 +15,8 @@ class MSave:Model
     {
         guard
         
-            let directory:URL = createDirectory()
+            let sequence:MEditSequence = self.sequence,
+            let path:URL = filePath()
         
         else
         {
@@ -23,6 +24,8 @@ class MSave:Model
             
             return
         }
+        
+        factoryGif(sequence:sequence, path:path)
     }
     
     private func savingError()

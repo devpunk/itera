@@ -2,7 +2,26 @@ import Foundation
 
 extension MSave
 {
-    func createDirectory() -> URL?
+    func filePath() -> URL?
+    {
+        guard
+            
+            let directory:URL = createDirectory()
+        
+        else
+        {
+            return nil
+        }
+        print("directory created")
+        let file:String = fileName()
+        let path:URL = directory.appendingPathComponent(file)
+        
+        return path
+    }
+    
+    //MARK: private
+    
+    private func createDirectory() -> URL?
     {
         guard
             
@@ -35,15 +54,13 @@ extension MSave
         return excludedPath
     }
     
-    func fileName() -> String
+    private func fileName() -> String
     {
         let randomName:String = UUID().uuidString
         let nameExtension:String = randomName.appending(kGifExtension)
         
         return nameExtension
     }
-    
-    //MARK: private
     
     private func directoryName() -> String?
     {
