@@ -10,8 +10,8 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
     private let pi2:CGFloat
     private let endAngle:CGFloat
     private let kRadius:CGFloat = 82
-    private let kSmallLineWidth:CGFloat = 15
-    private let kBigLineWidth:CGFloat = 15
+    private let kSmallLineWidth:CGFloat = 17
+    private let kBigLineWidth:CGFloat = 17
     
     required init(controller:CSave)
     {
