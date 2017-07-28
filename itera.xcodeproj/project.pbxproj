@@ -152,6 +152,7 @@
 		DA2796A21F2AFC4200550ECA /* VSourceVideoTimeBarThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796121F2AFC4100550ECA /* VSourceVideoTimeBarThumb.swift */; };
 		DA2796A31F2AFC4200550ECA /* VSourceVideoTimeNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */; };
 		DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */; };
+		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -302,6 +303,7 @@
 		DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeNext.swift; sourceTree = "<group>"; };
 		DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeSlider.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				DA27955A1F2AFC4100550ECA /* Abstract */,
+				DACE6BE01F2B1B910016DEEB /* Save */,
 				DA27955F1F2AFC4100550ECA /* Edit */,
 				DA2795631F2AFC4100550ECA /* Home */,
 				DA2795651F2AFC4100550ECA /* New */,
@@ -820,6 +823,14 @@
 			path = itera;
 			sourceTree = "<group>";
 		};
+		DACE6BE01F2B1B910016DEEB /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				DACE6BE11F2B1B990016DEEB /* CSave.swift */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -929,6 +940,7 @@
 				DA27966D1F2AFC4200550ECA /* VCollection.swift in Sources */,
 				DA27967C1F2AFC4200550ECA /* VEditCropImageAdjust.swift in Sources */,
 				DA27966A1F2AFC4200550ECA /* VAlert.swift in Sources */,
+				DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */,
 				DA2796691F2AFC4200550ECA /* ViewProtocol.swift in Sources */,
 				DA2796751F2AFC4200550ECA /* VEdit.swift in Sources */,
 				DA2796601F2AFC4200550ECA /* ExtensionURL.swift in Sources */,
