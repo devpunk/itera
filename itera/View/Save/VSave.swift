@@ -2,7 +2,10 @@ import UIKit
 
 class VSave:ViewMain
 {
+    private(set) weak var viewProgress:VSaveProgress!
     private let kBottomHeight:CGFloat = 150
+    private let kProgressTop:CGFloat = 160
+    private let kProgressHeight:CGFloat = 200
     
     required init(controller:UIViewController)
     {
@@ -49,8 +52,13 @@ class VSave:ViewMain
         let viewBottom:VSaveBottom = VSaveBottom(
             controller:controller)
         
+        let viewProgress:VSaveProgress = VSaveProgress(
+            controller:controller)
+        self.viewProgress = viewProgress
+        
         addSubview(viewGradient)
         addSubview(viewBottom)
+        addSubview(viewProgress)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
@@ -64,6 +72,17 @@ class VSave:ViewMain
             constant:kBottomHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBottom,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewProgress,
+            toView:self,
+            constant:kProgressTop)
+        NSLayoutConstraint.height(
+            view:viewProgress,
+            constant:kProgressHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewProgress,
             toView:self)
     }
 }

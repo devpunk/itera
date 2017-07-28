@@ -3,7 +3,7 @@ import UIKit
 class VSaveBottom:View<VSave, MSave, CSave>
 {
     private let kTitleHeight:CGFloat = 30
-    private let kSubtitleHeight:CGFloat = 60
+    private let kSubtitleHeight:CGFloat = 35
     
     required init(controller:CSave)
     {
@@ -14,7 +14,7 @@ class VSaveBottom:View<VSave, MSave, CSave>
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.medium(size:17)
+        labelTitle.font = UIFont.medium(size:18)
         labelTitle.textColor = UIColor.white
         labelTitle.text = String.localizedView(
             key:"VSaveBottom_labelTitle")
