@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA0294981F2B16540079382B /* VSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0294971F2B16540079382B /* VSave.swift */; };
+		DA02949B1F2B167D0079382B /* MSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02949A1F2B167D0079382B /* MSave.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -155,6 +156,7 @@
 
 /* Begin PBXFileReference section */
 		DA0294971F2B16540079382B /* VSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSave.swift; sourceTree = "<group>"; };
+		DA02949A1F2B167D0079382B /* MSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSave.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -321,6 +323,14 @@
 			path = Save;
 			sourceTree = "<group>";
 		};
+		DA0294991F2B16700079382B /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				DA02949A1F2B167D0079382B /* MSave.swift */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
 		DA2795591F2AFC4100550ECA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				DA27956E1F2AFC4100550ECA /* Abstract */,
+				DA0294991F2B16700079382B /* Save */,
 				DA2795711F2AFC4100550ECA /* Edit */,
 				DA27957C1F2AFC4100550ECA /* EditCrop */,
 				DA27957F1F2AFC4100550ECA /* EditDuration */,
@@ -939,6 +950,7 @@
 				DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */,
 				DA2796541F2AFC4200550ECA /* DLooperRefactor.xcdatamodeld in Sources */,
 				DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */,
+				DA02949B1F2B167D0079382B /* MSave.swift in Sources */,
 				DA2796271F2AFC4100550ECA /* MEditActionDuration.swift in Sources */,
 				DA2796461F2AFC4200550ECA /* MSourceVideoItem.swift in Sources */,
 				DA2796A31F2AFC4200550ECA /* VSourceVideoTimeNext.swift in Sources */,
