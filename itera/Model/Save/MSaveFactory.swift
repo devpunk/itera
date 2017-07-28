@@ -12,7 +12,7 @@ extension MSave
         {
             return nil
         }
-        print("directory created")
+        
         let file:String = fileName()
         let path:URL = directory.appendingPathComponent(file)
         

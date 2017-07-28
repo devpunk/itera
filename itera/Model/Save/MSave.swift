@@ -6,8 +6,9 @@ class MSave:Model
     let kResourceExtension:String = "plist"
     let kDirectoryKey:String = "directory"
     let kGifExtension:String = ".gif"
+    let kDelayGeneration:TimeInterval = 0.25
     private(set) var sequence:MEditSequence?
-    private weak var controller:CSave?
+    private(set) weak var controller:CSave?
     
     //MARK: private
     

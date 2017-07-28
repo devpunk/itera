@@ -41,6 +41,20 @@ class CSave:Controller<VSave, MSave>
         parent.pop(vertical:ControllerParent.Vertical.bottom)
     }
     
+    private func asyncUpdateProgress(percent:CGFloat)
+    {
+        guard
+            
+            let view:VSave = self.view as? VSave
+            
+        else
+        {
+            return
+        }
+        
+        view.viewProgress.updateProgress(percent:percent)
+    }
+    
     //MARK: public
     
     func done()
@@ -49,6 +63,15 @@ class CSave:Controller<VSave, MSave>
         { [weak self] in
             
             self?.asyncDone()
+        }
+    }
+    
+    func updateProgress(percent:CGFloat)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncUpdateProgress(percent:percent)
         }
     }
 }
