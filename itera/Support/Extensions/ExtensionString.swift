@@ -39,7 +39,7 @@ extension String
             lower:index(startIndex, offsetBy:1),
             upper:index(startIndex, offsetBy:count)))
         let remain:String = self[remainRange].lowercased()
-        let newString:String = "\(firstLetter)\(remain)"
+        let newString:String = firstLetter.appending(remain)
         
         return newString
     }
