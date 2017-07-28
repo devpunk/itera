@@ -54,7 +54,11 @@ class CSave:Controller<VSave, MSave>
             popover.permittedArrowDirections = UIPopoverArrowDirection.any
         }
         
-        present(activity, animated:true, completion:nil)
+        present(activity, animated:true)
+        { [weak self] in
+            
+            self?.asyncClose()
+        }
     }
     
     private func asyncUpdateProgress(percent:CGFloat)

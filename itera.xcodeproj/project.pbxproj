@@ -152,6 +152,7 @@
 		DA2796A21F2AFC4200550ECA /* VSourceVideoTimeBarThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796121F2AFC4100550ECA /* VSourceVideoTimeBarThumb.swift */; };
 		DA2796A31F2AFC4200550ECA /* VSourceVideoTimeNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */; };
 		DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */; };
+		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 		DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */; };
 		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
@@ -308,6 +309,7 @@
 		DA2796121F2AFC4100550ECA /* VSourceVideoTimeBarThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeBarThumb.swift; sourceTree = "<group>"; };
 		DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeNext.swift; sourceTree = "<group>"; };
 		DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeSlider.swift; sourceTree = "<group>"; };
+		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 		DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveBottom.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				DA02949A1F2B167D0079382B /* MSave.swift */,
 				DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */,
 				DACE6BED1F2B3CCF0016DEEB /* MSaveCreator.swift */,
+				DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				DA27967C1F2AFC4200550ECA /* VEditCropImageAdjust.swift in Sources */,
 				DA27966A1F2AFC4200550ECA /* VAlert.swift in Sources */,
 				DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */,
+				DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */,
 				DA2796691F2AFC4200550ECA /* ViewProtocol.swift in Sources */,
 				DA2796751F2AFC4200550ECA /* VEdit.swift in Sources */,
 				DA2796601F2AFC4200550ECA /* ExtensionURL.swift in Sources */,
