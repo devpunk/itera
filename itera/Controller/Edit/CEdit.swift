@@ -2,6 +2,8 @@ import UIKit
 
 class CEdit:Controller<VEdit, MEdit>
 {
+    private let kIndexController:Int = 1
+    
     init(sequence:MEditSequence)
     {
         super.init()
@@ -38,7 +40,25 @@ class CEdit:Controller<VEdit, MEdit>
     
     func save()
     {
+        guard
         
+            let sequence:MEditSequence = model.sequence,
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        let controller:CSave = CSave(sequence:sequence)
+        let indexController:Int = kIndexController
+        
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+        {
+            parent.popSilent(removeIndex:indexController)
+        }
     }
     
     func delete()
