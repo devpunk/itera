@@ -48,15 +48,14 @@ class VEditDurationDisplay:
             string = ""
         }
         
-        string = "\(string)\(minutes):"
+        string = string.appending("\(minutes):")
         
         if seconds < 10
         {
-            string = "\(string)0"
+            string = string.appending("0")
         }
         
-        string = "\(string)\(seconds)"
-        
+        string = string.appending("\(seconds)")        
         label.text = string
     }
 }
