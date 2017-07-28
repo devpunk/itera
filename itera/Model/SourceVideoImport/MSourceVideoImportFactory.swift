@@ -68,14 +68,16 @@ class MSourceVideoImportFactory
         for second:Int in 0 ..< seconds
         {
             var values:[NSValue] = []
+            let prevFrames:Int = second * frames
             
             for frame:Int in 0 ..< frames
             {
-                let secondFrame:Int = second * frame
-                let secondsFrameDouble:Double = Double(secondFrame)
+                let secondFrame:Int = prevFrames + frame
+                let secondsValue:CMTimeValue = CMTimeValue(secondFrame)
+                
                 let time:CMTime = CMTime(
-                    seconds:secondsFrameDouble,
-                    preferredTimescale:timeScale)
+                    value:secondsValue,
+                    timescale:timeScale)
                 let value:NSValue = NSValue(time:time)
                 
                 values.append(value)
@@ -99,6 +101,8 @@ class MSourceVideoImportFactory
         totalTimes = Int(times.count)
         let generator:AVAssetImageGenerator = AVAssetImageGenerator(
             asset:avAsset)
+        generator.requestedTimeToleranceBefore = kCMTimeZero
+        generator.requestedTimeToleranceAfter = kCMTimeZero
         self.generator = generator
         
         recursiveCheck()
