@@ -20,7 +20,6 @@
 		DA27961F1F2AFC4100550ECA /* CSourceVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795691F2AFC4100550ECA /* CSourceVideo.swift */; };
 		DA2796201F2AFC4100550ECA /* CSourceVideoImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27956A1F2AFC4100550ECA /* CSourceVideoImport.swift */; };
 		DA2796211F2AFC4100550ECA /* CSourceVideoTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27956B1F2AFC4100550ECA /* CSourceVideoTime.swift */; };
-		DA2796221F2AFC4100550ECA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA27956C1F2AFC4100550ECA /* Info.plist */; };
 		DA2796231F2AFC4100550ECA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27956F1F2AFC4100550ECA /* Model.swift */; };
 		DA2796241F2AFC4100550ECA /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795701F2AFC4100550ECA /* ModelDelegate.swift */; };
 		DA2796251F2AFC4100550ECA /* MEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795721F2AFC4100550ECA /* MEdit.swift */; };
@@ -792,8 +791,8 @@
 			children = (
 				DA2795591F2AFC4100550ECA /* Controller */,
 				DA27956D1F2AFC4100550ECA /* Model */,
-				DA2795AA1F2AFC4100550ECA /* Support */,
 				DA2795C81F2AFC4100550ECA /* View */,
+				DA2795AA1F2AFC4100550ECA /* Support */,
 				DA27956C1F2AFC4100550ECA /* Info.plist */,
 			);
 			path = itera;
@@ -861,7 +860,6 @@
 				DA2796621F2AFC4200550ECA /* LocalizableModel.strings in Resources */,
 				DA2796511F2AFC4200550ECA /* generic.xcassets in Resources */,
 				DA2796521F2AFC4200550ECA /* LaunchScreen.storyboard in Resources */,
-				DA2796221F2AFC4100550ECA /* Info.plist in Resources */,
 				DA2796631F2AFC4200550ECA /* LocalizableView.strings in Resources */,
 				DA2796641F2AFC4200550ECA /* ResourceURL.plist in Resources */,
 				DA2796501F2AFC4200550ECA /* brand.xcassets in Resources */,
@@ -1053,7 +1051,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1066,6 +1064,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -1091,6 +1090,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1104,7 +1104,7 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1117,6 +1117,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -1134,6 +1135,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1150,6 +1152,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.itera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1163,6 +1166,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.itera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
