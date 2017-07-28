@@ -2,6 +2,8 @@ import UIKit
 
 class VSave:ViewMain
 {
+    private let kBottomHeight:CGFloat = 150
+    
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
@@ -44,10 +46,24 @@ class VSave:ViewMain
             colourTop:colourTop,
             colourBottom:colourBottom)
         
+        let viewBottom:VSaveBottom = VSaveBottom(
+            controller:controller)
+        
         addSubview(viewGradient)
+        addSubview(viewBottom)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewBottom,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewBottom,
+            constant:kBottomHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewBottom,
             toView:self)
     }
 }
