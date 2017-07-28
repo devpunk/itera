@@ -154,6 +154,7 @@
 		DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 		DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */; };
+		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -306,6 +307,7 @@
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 		DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveBottom.swift; sourceTree = "<group>"; };
+		DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 			children = (
 				DA0294971F2B16540079382B /* VSave.swift */,
 				DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */,
+				DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -1039,6 +1042,7 @@
 				DA27963D1F2AFC4200550ECA /* MNew.swift in Sources */,
 				DA2796161F2AFC4100550ECA /* Controller.swift in Sources */,
 				DA27964C1F2AFC4200550ECA /* MSourceVideoTimeItemDuration.swift in Sources */,
+				DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */,
 				DA27968B1F2AFC4200550ECA /* VEditDurationMinutes.swift in Sources */,
 				DA27964E1F2AFC4200550ECA /* MSourceVideoTimeItemProtocol.swift in Sources */,
 				DA27964B1F2AFC4200550ECA /* MSourceVideoTime.swift in Sources */,
