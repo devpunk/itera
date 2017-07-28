@@ -157,6 +157,7 @@
 		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
 		DACE6BE81F2B26F20016DEEB /* VSaveProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */; };
 		DACE6BEA1F2B26FC0016DEEB /* VSaveProgressThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */; };
+		DACE6BEC1F2B31CB0016DEEB /* MSaveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -312,6 +313,7 @@
 		DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgress.swift; sourceTree = "<group>"; };
 		DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressBar.swift; sourceTree = "<group>"; };
 		DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressThumb.swift; sourceTree = "<group>"; };
+		DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DA02949A1F2B167D0079382B /* MSave.swift */,
+				DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -1062,6 +1065,7 @@
 				DA2796391F2AFC4200550ECA /* MPerkThumbnailPurchaseProtocol.swift in Sources */,
 				DA27968C1F2AFC4200550ECA /* VEditDurationOkay.swift in Sources */,
 				DA27967A1F2AFC4200550ECA /* VEditCrop.swift in Sources */,
+				DACE6BEC1F2B31CB0016DEEB /* MSaveFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

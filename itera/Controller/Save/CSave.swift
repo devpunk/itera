@@ -21,5 +21,7 @@ class CSave:Controller<VSave, MSave>
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        model.save()
     }
 }
