@@ -52,11 +52,11 @@ class MEditCrop:Model
         let deltaBottom:CGFloat = viewImage.cornerBottomLeft.deltaTop()
         let deltaLeft:CGFloat = viewImage.cornerTopLeft.deltaLeft()
         let deltaRight:CGFloat = viewImage.cornerTopRight.deltaLeft()
-        
+
         let top:CGFloat = deltaTop / scaledHeight
         let bottom:CGFloat = deltaBottom / scaledHeight
-        let left:CGFloat = deltaLeft / scaledHeight
-        let right:CGFloat = deltaRight / scaledHeight
+        let left:CGFloat = deltaLeft / scaledWidth
+        let right:CGFloat = deltaRight / scaledWidth
         
         let model:MEditSequenceCrop = MEditSequenceCrop(
             top:top,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0294981F2B16540079382B /* VSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0294971F2B16540079382B /* VSave.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -153,6 +154,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0294971F2B16540079382B /* VSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSave.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -311,6 +313,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0294961F2B16460079382B /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				DA0294971F2B16540079382B /* VSave.swift */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
 		DA2795591F2AFC4100550ECA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +618,7 @@
 			children = (
 				DA2795C91F2AFC4100550ECA /* Abstract */,
 				DA2795D01F2AFC4100550ECA /* Basic */,
+				DA0294961F2B16460079382B /* Save */,
 				DA2795DC1F2AFC4100550ECA /* Edit */,
 				DA2795E21F2AFC4100550ECA /* EditCrop */,
 				DA2795F11F2AFC4100550ECA /* EditDuration */,
@@ -886,6 +897,7 @@
 				DA2796741F2AFC4200550ECA /* VToast.swift in Sources */,
 				DA27962D1F2AFC4100550ECA /* MEditSequenceCrop.swift in Sources */,
 				DA2796371F2AFC4200550ECA /* MPerkThumbnailProtocol.swift in Sources */,
+				DA0294981F2B16540079382B /* VSave.swift in Sources */,
 				DA2796361F2AFC4200550ECA /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA2796281F2AFC4100550ECA /* MEditActionProtocol.swift in Sources */,
 				DA2796261F2AFC4100550ECA /* MEditActionCrop.swift in Sources */,
