@@ -2,14 +2,36 @@ import Foundation
 
 class MSave:Model
 {
+    let kResourceName:String = "ResourceURL"
+    let kResourceExtension:String = "plist"
+    let kDirectoryKey:String = "directory"
+    let kGifExtension:String = ".gif"
     private(set) var sequence:MEditSequence?
-    private let kProjectsFolder:String = "itera"
+    private weak var controller:CSave?
     
     //MARK: private
     
     private func asyncSave()
     {
+        guard
         
+            let directory:URL = createDirectory()
+        
+        else
+        {
+            savingError()
+            
+            return
+        }
+    }
+    
+    private func savingError()
+    {
+        let message:String = String.localizedModel(
+            key:"MSave_errorMessage")
+        VAlert.messageFail(message:message)
+        
+        controller?.done()
     }
     
     //MARK: public
@@ -19,8 +41,10 @@ class MSave:Model
         self.sequence = sequence
     }
     
-    func save()
+    func save(controller:CSave)
     {
+        self.controller = controller
+        
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
         

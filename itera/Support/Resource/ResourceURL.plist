@@ -8,5 +8,7 @@
 	<string>https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1247193502&amp;type=Purple+Software&amp;mt=8</string>
 	<key>email</key>
 	<string>mailto:minimancera@iturbi.de</string>
+	<key>directory</key>
+	<string>itera</string>
 </dict>
 </plist>

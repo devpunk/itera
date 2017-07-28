@@ -22,6 +22,33 @@ class CSave:Controller<VSave, MSave>
     {
         super.viewDidLoad()
         
-        model.save()
+        model.save(controller:self)
+    }
+    
+    //MARK: private
+    
+    private func asyncDone()
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        parent.pop(vertical:ControllerParent.Vertical.bottom)
+    }
+    
+    //MARK: public
+    
+    func done()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncDone()
+        }
     }
 }

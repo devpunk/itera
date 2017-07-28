@@ -158,6 +158,7 @@
 		DACE6BE81F2B26F20016DEEB /* VSaveProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */; };
 		DACE6BEA1F2B26FC0016DEEB /* VSaveProgressThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */; };
 		DACE6BEC1F2B31CB0016DEEB /* MSaveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */; };
+		DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BED1F2B3CCF0016DEEB /* MSaveCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -314,6 +315,7 @@
 		DACE6BE71F2B26F20016DEEB /* VSaveProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressBar.swift; sourceTree = "<group>"; };
 		DACE6BE91F2B26FC0016DEEB /* VSaveProgressThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgressThumb.swift; sourceTree = "<group>"; };
 		DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveFactory.swift; sourceTree = "<group>"; };
+		DACE6BED1F2B3CCF0016DEEB /* MSaveCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +346,7 @@
 			children = (
 				DA02949A1F2B167D0079382B /* MSave.swift */,
 				DACE6BEB1F2B31CB0016DEEB /* MSaveFactory.swift */,
+				DACE6BED1F2B3CCF0016DEEB /* MSaveCreator.swift */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 				DA27963B1F2AFC4200550ECA /* MSessionPerks.swift in Sources */,
 				DA2796301F2AFC4100550ECA /* MEditCropLayout.swift in Sources */,
 				DA2796A01F2AFC4200550ECA /* VSourceVideoTimeBarInfo.swift in Sources */,
+				DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */,
 				DA2796861F2AFC4200550ECA /* VEditCropImageTouch.swift in Sources */,
 				DA27961A1F2AFC4100550ECA /* CEditCrop.swift in Sources */,
 				DA2796191F2AFC4100550ECA /* CEdit.swift in Sources */,
