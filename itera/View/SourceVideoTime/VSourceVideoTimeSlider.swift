@@ -11,7 +11,7 @@ class VSourceVideoTimeSlider:
     private let kTitleHeight:CGFloat = 20
     private let kLabelSliderHeight:CGFloat = 32
     private let kMinValue:Float = 1
-    private let kMaxValue:Float = 30
+    private let kMaxValue:Float = 20
     
     required init(controller:CSourceVideoTime)
     {
