@@ -154,6 +154,7 @@
 		DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
+		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 		DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */; };
 		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
@@ -312,6 +313,7 @@
 		DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeSlider.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
+		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 		DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveBottom.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				DA27956E1F2AFC4100550ECA /* Abstract */,
 				DA0294991F2B16700079382B /* Save */,
 				DA2795711F2AFC4100550ECA /* Edit */,
+				DA68B7B41F2BFFB900F4B819 /* EditScale */,
 				DA27957C1F2AFC4100550ECA /* EditCrop */,
 				DA27957F1F2AFC4100550ECA /* EditDuration */,
 				DA2795831F2AFC4100550ECA /* Home */,
@@ -827,6 +830,14 @@
 			path = EditScale;
 			sourceTree = "<group>";
 		};
+		DA68B7B41F2BFFB900F4B819 /* EditScale */ = {
+			isa = PBXGroup;
+			children = (
+				DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */,
+			);
+			path = EditScale;
+			sourceTree = "<group>";
+		};
 		DABEF8571F2AFA35007CE464 = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1056,7 @@
 				DA27961B1F2AFC4100550ECA /* CEditDuration.swift in Sources */,
 				DA27966C1F2AFC4200550ECA /* VBorder.swift in Sources */,
 				DA27963B1F2AFC4200550ECA /* MSessionPerks.swift in Sources */,
+				DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */,
 				DA2796301F2AFC4100550ECA /* MEditCropLayout.swift in Sources */,
 				DA2796A01F2AFC4200550ECA /* VSourceVideoTimeBarInfo.swift in Sources */,
 				DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */,
