@@ -14,7 +14,7 @@ extension VEditScaleImage
     {
         guard
             
-            let image:UIImage = viewPicture.image
+            let image:CGImage = controller.model.edit.sequence?.items.first?.image
             
         else
         {
@@ -23,10 +23,10 @@ extension VEditScaleImage
         
         let canvasWidth:CGFloat = bounds.width
         let canvasHeight:CGFloat = bounds.height
-        let usableWidth:CGFloat = canvasWidth - imageMargin2
-        let usableHeight:CGFloat = canvasHeight - imageMargin2
-        let width:CGFloat = image.size.width
-        let height:CGFloat = image.size.height
+        let usableWidth:CGFloat = canvasWidth - margin2
+        let usableHeight:CGFloat = canvasHeight - margin2
+        let width:CGFloat = CGFloat(image.width)
+        let height:CGFloat = CGFloat(image.height)
         let deltaWidth:CGFloat = width / usableWidth
         let deltaHeight:CGFloat = height / usableHeight
         let maxDelta:CGFloat = max(deltaWidth, deltaHeight)
@@ -40,9 +40,9 @@ extension VEditScaleImage
         controller.model.scaledWidth = scaledWidth
         controller.model.scaledHeight = scaledHeight
         
-        viewPicture.layoutRight.constant = -marginWidth
-        viewPicture.layoutLeft.constant = marginWidth
-        viewPicture.layoutTop.constant = marginHeight
-        viewPicture.layoutBottom.constant = -marginHeight
+        viewOriginal.layoutRight.constant = -marginWidth
+        viewOriginal.layoutLeft.constant = marginWidth
+        viewOriginal.layoutTop.constant = marginHeight
+        viewOriginal.layoutBottom.constant = -marginHeight
     }
 }
