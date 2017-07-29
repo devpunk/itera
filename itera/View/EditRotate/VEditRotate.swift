@@ -45,6 +45,8 @@ class VEditRotate:ViewMain
         let viewOkay:VEditRotateOkay = VEditRotateOkay(
             controller:controller)
         
+        addSubview(viewOkay)
+        
         NSLayoutConstraint.bottomToBottom(
             view:viewOkay,
             toView:self,

@@ -12,6 +12,8 @@ class MEditActionRotate:MEditActionProtocol
     
     func selected(edit:MEdit) -> UIViewController
     {
-        fatalError()
+        let controller:CEditRotate = CEditRotate(edit:edit)
+        
+        return controller
     }
 }
