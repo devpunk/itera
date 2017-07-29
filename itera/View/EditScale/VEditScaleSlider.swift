@@ -13,6 +13,7 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     private let kSliderMarginHorizontal:CGFloat = 30
     private let kLabelPercentHeight:CGFloat = 54
     private let kLabelSizeHeight:CGFloat = 18
+    private let kAnimationDuration:TimeInterval = 0.3
     private let kMinValue:Float = 0.1
     private let kMaxValue:Float = 1
     private let kHalf:Float = 0.5
@@ -126,13 +127,20 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     
     func actionSlider(sender slider:UISlider)
     {
+        updateValue()
+    }
+    
+    //MARK: private
+    
+    private func updateValue()
+    {
         updateModel()
         print()
         
         guard
-        
+            
             let view:VEditScale = controller.view as? VEditScale
-        
+            
         else
         {
             return
@@ -140,8 +148,6 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         
         view.viewImage.updateScale()
     }
-    
-    //MARK: private
     
     private func updateModel()
     {
@@ -184,7 +190,18 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     
     func half()
     {
-        slider.setValue(kHalf, animated:true)
-        updateModel()
+        let half:Float = kHalf
+        
+        UIView.animate(
+            withDuration:kAnimationDuration,
+            animations:
+        { [weak self] in
+            
+            self?.slider.setValue(half, animated:true)
+        })
+        { [weak self] (done:Bool) in
+        
+            self?.updateValue()
+        }
     }
 }

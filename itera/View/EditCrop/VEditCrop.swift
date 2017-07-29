@@ -72,7 +72,7 @@ class VEditCrop:ViewMain
         let buttonReset:UIButton = UIButton()
         buttonReset.translatesAutoresizingMaskIntoConstraints = false
         buttonReset.setTitleColor(
-            UIColor.colourGradientDark.withAlphaComponent(0.5),
+            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
             for:UIControlState.normal)
         buttonReset.setTitleColor(
             UIColor.colourBackgroundGray,

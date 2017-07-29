@@ -11,7 +11,7 @@ class VEditScale:ViewMain
     private let kOkayBottom:CGFloat = -20
     private let kOkayHeight:CGFloat = 64
     private let kSliderHeight:CGFloat = 130
-    private let kHalfHeight:CGFloat = 34
+    private let kHalfHeight:CGFloat = 36
     private let kHalfWidth:CGFloat = 120
     
     required init(controller:UIViewController)
@@ -74,7 +74,7 @@ class VEditScale:ViewMain
         let buttonHalf:UIButton = UIButton()
         buttonHalf.translatesAutoresizingMaskIntoConstraints = false
         buttonHalf.setTitleColor(
-            UIColor.colourGradientDark.withAlphaComponent(0.5),
+            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
             for:UIControlState.normal)
         buttonHalf.setTitleColor(
             UIColor.colourBackgroundGray,
