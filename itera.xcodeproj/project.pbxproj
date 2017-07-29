@@ -14,6 +14,7 @@
 		DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C7C1F2C92D000874EAE /* VEditRotate.swift */; };
 		DA042C801F2C932A00874EAE /* MEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C7F1F2C932A00874EAE /* MEditRotate.swift */; };
 		DA042C821F2C935700874EAE /* CEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C811F2C935700874EAE /* CEditRotate.swift */; };
+		DA042C841F2C99D400874EAE /* VEditRotateOkay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C831F2C99D400874EAE /* VEditRotateOkay.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -185,6 +186,7 @@
 		DA042C7C1F2C92D000874EAE /* VEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotate.swift; sourceTree = "<group>"; };
 		DA042C7F1F2C932A00874EAE /* MEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditRotate.swift; sourceTree = "<group>"; };
 		DA042C811F2C935700874EAE /* CEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEditRotate.swift; sourceTree = "<group>"; };
+		DA042C831F2C99D400874EAE /* VEditRotateOkay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateOkay.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				DA042C7C1F2C92D000874EAE /* VEditRotate.swift */,
+				DA042C831F2C99D400874EAE /* VEditRotateOkay.swift */,
 			);
 			path = EditRotate;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				DA27962D1F2AFC4100550ECA /* MEditSequenceCrop.swift in Sources */,
 				DA68B7BC1F2C06DB00F4B819 /* VEditScaleImage.swift in Sources */,
 				DA2796371F2AFC4200550ECA /* MPerkThumbnailProtocol.swift in Sources */,
+				DA042C841F2C99D400874EAE /* VEditRotateOkay.swift in Sources */,
 				DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */,
 				DA0294981F2B16540079382B /* VSave.swift in Sources */,
 				DA2796361F2AFC4200550ECA /* MPerkThumbnailFreeProtocol.swift in Sources */,

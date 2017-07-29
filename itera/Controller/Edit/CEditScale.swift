@@ -35,15 +35,13 @@ class CEditScale:Controller<VEditScale, MEditScale>
     {
         guard
             
-            let parent:ControllerParent = self.parent as? ControllerParent,
-            let view:VEditScale = self.view as? VEditScale
+            let parent:ControllerParent = self.parent as? ControllerParent
             
         else
         {
             return
         }
         
-//        model.exportCrop(viewImage:view.viewImage)
         parent.dismissAnimateOver(completion:nil)
     }
 }
