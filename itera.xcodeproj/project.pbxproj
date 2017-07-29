@@ -11,6 +11,7 @@
 		DA02949B1F2B167D0079382B /* MSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02949A1F2B167D0079382B /* MSave.swift */; };
 		DA042C781F2C80BB00874EAE /* VEditScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C771F2C80BB00874EAE /* VEditScaleButton.swift */; };
 		DA042C7A1F2C885F00874EAE /* MSaveScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C791F2C885F00874EAE /* MSaveScale.swift */; };
+		DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C7C1F2C92D000874EAE /* VEditRotate.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -179,6 +180,7 @@
 		DA02949A1F2B167D0079382B /* MSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSave.swift; sourceTree = "<group>"; };
 		DA042C771F2C80BB00874EAE /* VEditScaleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScaleButton.swift; sourceTree = "<group>"; };
 		DA042C791F2C885F00874EAE /* MSaveScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveScale.swift; sourceTree = "<group>"; };
+		DA042C7C1F2C92D000874EAE /* VEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotate.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -377,6 +379,14 @@
 				DA042C791F2C885F00874EAE /* MSaveScale.swift */,
 			);
 			path = Save;
+			sourceTree = "<group>";
+		};
+		DA042C7B1F2C92C000874EAE /* EditRotate */ = {
+			isa = PBXGroup;
+			children = (
+				DA042C7C1F2C92D000874EAE /* VEditRotate.swift */,
+			);
+			path = EditRotate;
 			sourceTree = "<group>";
 		};
 		DA2795591F2AFC4100550ECA /* Controller */ = {
@@ -681,6 +691,7 @@
 				DA2795C91F2AFC4100550ECA /* Abstract */,
 				DA2795D01F2AFC4100550ECA /* Basic */,
 				DA0294961F2B16460079382B /* Save */,
+				DA042C7B1F2C92C000874EAE /* EditRotate */,
 				DA2795DC1F2AFC4100550ECA /* Edit */,
 				DA68B7B11F2BFE7F00F4B819 /* EditScale */,
 				DA2795E21F2AFC4100550ECA /* EditCrop */,
@@ -1100,6 +1111,7 @@
 				DA2796301F2AFC4100550ECA /* MEditCropLayout.swift in Sources */,
 				DA2796A01F2AFC4200550ECA /* VSourceVideoTimeBarInfo.swift in Sources */,
 				DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */,
+				DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */,
 				DA2796861F2AFC4200550ECA /* VEditCropImageTouch.swift in Sources */,
 				DA27961A1F2AFC4100550ECA /* CEditCrop.swift in Sources */,
 				DA2796191F2AFC4100550ECA /* CEdit.swift in Sources */,
