@@ -17,9 +17,22 @@ extension MSave
                 return
             }
             
+            let width:CGFloat = CGFloat(firstImage.width)
+            let height:CGFloat = CGFloat(firstImage.height)
+            let size:CGSize = CGSize(
+                width:width,
+                height:height)
+            let rect:CGRect = CGRect(
+                x:0,
+                y:0,
+                width:width,
+                height:height)
+            
             rotateImages(
                 sequence:sequence,
-                rotate:rotate)
+                rotate:rotate,
+                size:size,
+                rect:rect)
         }
     }
     
@@ -27,7 +40,9 @@ extension MSave
     
     private func rotateImages(
         sequence:MEditSequence,
-        rotate:CGFloat)
+        rotate:CGFloat,
+        size:CGSize,
+        rect:CGRect)
     {
         let items:[MEditSequenceItem] = sequence.items
         
@@ -37,10 +52,11 @@ extension MSave
             
             guard
                 
-                let newImage:CGImage = drawImage(
+                let newImage:CGImage = rotateImage(
                     image:image,
+                    rotate:rotate,
                     size:size,
-                    drawRect:rect)
+                    rect:rect)
                 
             else
             {
@@ -49,5 +65,45 @@ extension MSave
             
             item.update(image:newImage)
         }
+    }
+    
+    private func rotateImage(
+        image:CGImage,
+        rotate:CGFloat,
+        size:CGSize,
+        rect:CGRect) -> CGImage?
+    {
+        UIGraphicsBeginImageContext(size)
+        
+        guard
+            
+            let context:CGContext = UIGraphicsGetCurrentContext()
+            
+            else
+        {
+            UIGraphicsEndImageContext()
+            
+            return nil
+        }
+        
+        context.rotate(by:rotate)
+        context.translateBy(x:0, y:rect.height)
+        context.scaleBy(x:1, y:-1)
+        context.draw(image, in:rect)
+        
+        guard
+            
+            let newImage:CGImage = context.makeImage()
+            
+        else
+        {
+            UIGraphicsEndImageContext()
+            
+            return nil
+        }
+        
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
 }
