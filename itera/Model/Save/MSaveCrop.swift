@@ -65,7 +65,7 @@ extension MSave
             
             guard
                 
-                let cropped:CGImage = cropImage(
+                let cropped:CGImage = drawImage(
                     image:original,
                     size:size,
                     drawRect:drawRect)
@@ -77,43 +77,5 @@ extension MSave
             
             item.update(image:cropped)
         }
-    }
-    
-    private func cropImage(
-        image:CGImage,
-        size:CGSize,
-        drawRect:CGRect) -> CGImage?
-    {
-        UIGraphicsBeginImageContext(size)
-        
-        guard
-            
-            let context:CGContext = UIGraphicsGetCurrentContext()
-            
-        else
-        {
-            UIGraphicsEndImageContext()
-            
-            return nil
-        }
-        
-        context.translateBy(x:0, y:drawRect.height)
-        context.scaleBy(x:1, y:-1)
-        context.draw(image, in:drawRect)
-        
-        guard
-            
-            let newImage:CGImage = context.makeImage()
-            
-        else
-        {
-            UIGraphicsEndImageContext()
-            
-            return nil
-        }
-        
-        UIGraphicsEndImageContext()
-        
-        return newImage
     }
 }
