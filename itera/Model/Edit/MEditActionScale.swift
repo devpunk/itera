@@ -12,6 +12,8 @@ class MEditActionScale:MEditActionProtocol
     
     func selected(edit:MEdit) -> UIViewController
     {
-        fatalError()
+        let controller:CEditScale = CEditScale(edit:edit)
+        
+        return controller
     }
 }
