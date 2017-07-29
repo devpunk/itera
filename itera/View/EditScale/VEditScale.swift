@@ -57,7 +57,7 @@ class VEditScale:ViewMain
         viewSlider.half()
     }
     
-    func actionQuater(sender button:UIButton)
+    func actionQuarter(sender button:UIButton)
     {
         viewSlider.quarter()
     }
@@ -82,59 +82,34 @@ class VEditScale:ViewMain
         let viewOkay:VEditScaleOkay = VEditScaleOkay(
             controller:controller)
         
-        let buttonHalf:UIButton = UIButton()
-        buttonHalf.translatesAutoresizingMaskIntoConstraints = false
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
-            for:UIControlState.normal)
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundGray,
-            for:UIControlState.highlighted)
-        buttonHalf.setTitle(
-            String.localizedView(key:"VEditScale_buttonHalf"),
-            for:UIControlState.normal)
-        buttonHalf.titleLabel!.font = UIFont.medium(size:15)
+        let buttonHalf:VEditScaleButton = VEditScaleButton(
+            title:
+            String.localizedView(key:"VEditScale_buttonHalf"))
         buttonHalf.addTarget(
             self,
             action:#selector(actionHalf(sender:)),
             for:UIControlEvents.touchUpInside)
         
-        let buttonQuarter:UIButton = UIButton()
-        buttonHalf.translatesAutoresizingMaskIntoConstraints = false
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
-            for:UIControlState.normal)
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundGray,
-            for:UIControlState.highlighted)
-        buttonHalf.setTitle(
-            String.localizedView(key:"VEditScale_buttonHalf"),
-            for:UIControlState.normal)
-        buttonHalf.titleLabel!.font = UIFont.medium(size:15)
-        buttonHalf.addTarget(
+        let buttonQuarter:VEditScaleButton = VEditScaleButton(
+            title:
+            String.localizedView(key:"VEditScale_buttonQuarter"))
+        buttonQuarter.addTarget(
             self,
-            action:#selector(actionHalf(sender:)),
+            action:#selector(actionQuarter(sender:)),
             for:UIControlEvents.touchUpInside)
         
-        let buttonHalf:UIButton = UIButton()
-        buttonHalf.translatesAutoresizingMaskIntoConstraints = false
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
-            for:UIControlState.normal)
-        buttonHalf.setTitleColor(
-            UIColor.colourBackgroundGray,
-            for:UIControlState.highlighted)
-        buttonHalf.setTitle(
-            String.localizedView(key:"VEditScale_buttonHalf"),
-            for:UIControlState.normal)
-        buttonHalf.titleLabel!.font = UIFont.medium(size:15)
-        buttonHalf.addTarget(
+        let buttonThreeQuarters:VEditScaleButton = VEditScaleButton(
+            title:
+            String.localizedView(key:"VEditScale_buttonThreeQuarters"))
+        buttonThreeQuarters.addTarget(
             self,
-            action:#selector(actionHalf(sender:)),
+            action:#selector(actionThreeQuarters(sender:)),
             for:UIControlEvents.touchUpInside)
         
         addSubview(viewImage)
         addSubview(buttonHalf)
+        addSubview(buttonQuarter)
+        addSubview(buttonThreeQuarters)
         addSubview(viewSlider)
         addSubview(viewOkay)
         
@@ -169,6 +144,32 @@ class VEditScale:ViewMain
         layoutHalfLeft = NSLayoutConstraint.leftToLeft(
             view:buttonHalf,
             toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:buttonQuarter,
+            toView:viewSlider)
+        NSLayoutConstraint.height(
+            view:buttonQuarter,
+            constant:kButtonHeight)
+        NSLayoutConstraint.width(
+            view:buttonQuarter,
+            constant:kButtonWidth)
+        NSLayoutConstraint.rightToLeft(
+            view:buttonQuarter,
+            toView:buttonHalf)
+        
+        NSLayoutConstraint.topToBottom(
+            view:buttonThreeQuarters,
+            toView:viewSlider)
+        NSLayoutConstraint.height(
+            view:buttonThreeQuarters,
+            constant:kButtonHeight)
+        NSLayoutConstraint.width(
+            view:buttonThreeQuarters,
+            constant:kButtonWidth)
+        NSLayoutConstraint.leftToRight(
+            view:buttonThreeQuarters,
+            toView:buttonHalf)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewOkay,

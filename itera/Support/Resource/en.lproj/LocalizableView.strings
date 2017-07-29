@@ -15,4 +15,6 @@
 "VSaveBottom_labelTitle"="Saving";
 "VSaveBottom_labelSubtitle"="Wait a moment";
 "VEditScaleOkay_button"="Okay";
-"VEditScale_buttonHalf"="50 %";
+"VEditScale_buttonHalf"="50%";
+"VEditScale_buttonQuarter"="25%";
+"VEditScale_buttonThreeQuarters"="75%";
