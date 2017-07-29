@@ -19,9 +19,22 @@ extension MSave
             
             let width:CGFloat = CGFloat(firstImage.width)
             let height:CGFloat = CGFloat(firstImage.height)
-            let size:CGSize = CGSize(
-                width:width,
-                height:height)
+            let absRotate:CGFloat = abs(rotate)
+            let size:CGSize
+            
+            if absRotate == CGFloat.pi
+            {
+                size = CGSize(
+                    width:width,
+                    height:height)
+            }
+            else
+            {
+                size = CGSize(
+                    width:height,
+                    height:width)
+            }
+            
             let rect:CGRect = CGRect(
                 x:0,
                 y:0,
@@ -79,15 +92,19 @@ extension MSave
             
             let context:CGContext = UIGraphicsGetCurrentContext()
             
-            else
+        else
         {
             UIGraphicsEndImageContext()
             
             return nil
         }
         
+        let width_2:CGFloat = size.width / 2.0
+        let height_2:CGFloat = size.height / 2.0
+        
+        context.translateBy(x:width_2, y:height_2)
         context.rotate(by:rotate)
-        context.translateBy(x:0, y:rect.height)
+        context.translateBy(x:-rect.midX, y:rect.midY)
         context.scaleBy(x:1, y:-1)
         context.draw(image, in:rect)
         
