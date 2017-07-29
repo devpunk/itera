@@ -1,7 +1,7 @@
 import UIKit
 
 extension VEditRotateImage
-{
+{   
     func layout()
     {
         guard
@@ -33,5 +33,25 @@ extension VEditRotateImage
         viewPicture.layoutLeft.constant = marginWidth
         viewPicture.layoutTop.constant = marginHeight
         viewPicture.layoutBottom.constant = -marginHeight
+    }
+    
+    func rotate()
+    {
+        guard
+            
+            let rotate:CGFloat = controller.model.edit.sequence?.rotate
+            
+        else
+        {
+            return
+        }
+        
+        let transform:CGAffineTransform = CGAffineTransform(rotationAngle:rotate)
+        
+        UIView.animate(withDuration:kAnimationDuration)
+        { [weak self] in
+            
+            self?.viewPicture.transform = transform
+        }
     }
 }

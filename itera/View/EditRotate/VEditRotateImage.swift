@@ -5,6 +5,7 @@ class VEditRotateImage:View<VEditRotate, MEditRotate, CEditRotate>
     weak var viewPicture:VEditRotateImagePicture!
     let margin2:CGFloat
     let kMargin:CGFloat = 50
+    let kAnimationDuration:TimeInterval = 0.3
     
     required init(controller:CEditRotate)
     {

@@ -2,12 +2,13 @@ import UIKit
 
 class VEditRotate:ViewMain
 {
-    private weak var viewImage:VEditRotateImage!
+    private(set) weak var viewImage:VEditRotateImage!
     private weak var layoutImageHeight:NSLayoutConstraint!
     private weak var layoutOkayLeft:NSLayoutConstraint!
     private let kOkayWidth:CGFloat = 195
     private let kOkayBottom:CGFloat = -20
     private let kOkayHeight:CGFloat = 64
+    private let kControlsHeight:CGFloat = 150
     
     required init(controller:UIViewController)
     {
@@ -52,7 +53,11 @@ class VEditRotate:ViewMain
         let viewOkay:VEditRotateOkay = VEditRotateOkay(
             controller:controller)
         
+        let viewControls:VEditRotateControls = VEditRotateControls(
+            controller:controller)
+        
         addSubview(viewImage)
+        addSubview(viewControls)
         addSubview(viewOkay)
         
         NSLayoutConstraint.topToTop(
@@ -62,6 +67,16 @@ class VEditRotate:ViewMain
             view:viewImage)
         NSLayoutConstraint.equalsHorizontal(
             view:viewImage,
+            toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:viewControls,
+            toView:viewImage)
+        NSLayoutConstraint.height(
+            view:viewControls,
+            constant:kControlsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewControls,
             toView:self)
         
         NSLayoutConstraint.bottomToBottom(
@@ -84,5 +99,6 @@ class VEditRotate:ViewMain
     func viewDidAppear()
     {
         viewImage.layout()
+        viewImage.rotate()
     }
 }

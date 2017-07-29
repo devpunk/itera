@@ -7,7 +7,7 @@ class VEditRotateImagePicture:
     weak var layoutBottom:NSLayoutConstraint!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutRight:NSLayoutConstraint!
-    private let kBorderWidth:CGFloat = 3
+    private let kBorderWidth:CGFloat = 2
     
     required init(controller:CEditRotate)
     {
