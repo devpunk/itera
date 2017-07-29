@@ -2,6 +2,8 @@ import UIKit
 
 class VEditRotate:ViewMain
 {
+    private weak var viewImage:VEditRotateImage!
+    private weak var layoutImageHeight:NSLayoutConstraint!
     private weak var layoutOkayLeft:NSLayoutConstraint!
     private let kOkayWidth:CGFloat = 195
     private let kOkayBottom:CGFloat = -20
@@ -34,6 +36,7 @@ class VEditRotate:ViewMain
         let remainOkay:CGFloat = width - kOkayWidth
         let okayMarginLeft:CGFloat = remainOkay / 2.0
         layoutOkayLeft.constant = okayMarginLeft
+        layoutImageHeight.constant = width
         
         super.layoutSubviews()
     }
@@ -42,10 +45,24 @@ class VEditRotate:ViewMain
     
     private func factoryViews(controller:CEditRotate)
     {
+        let viewImage:VEditRotateImage = VEditRotateImage(
+            controller:controller)
+        self.viewImage = viewImage
+        
         let viewOkay:VEditRotateOkay = VEditRotateOkay(
             controller:controller)
         
+        addSubview(viewImage)
         addSubview(viewOkay)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewImage,
+            toView:self)
+        layoutImageHeight = NSLayoutConstraint.height(
+            view:viewImage)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewImage,
+            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewOkay,
