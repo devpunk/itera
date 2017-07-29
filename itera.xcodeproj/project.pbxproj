@@ -13,6 +13,7 @@
 		DA042C7A1F2C885F00874EAE /* MSaveScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C791F2C885F00874EAE /* MSaveScale.swift */; };
 		DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C7C1F2C92D000874EAE /* VEditRotate.swift */; };
 		DA042C801F2C932A00874EAE /* MEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C7F1F2C932A00874EAE /* MEditRotate.swift */; };
+		DA042C821F2C935700874EAE /* CEditRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C811F2C935700874EAE /* CEditRotate.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -183,6 +184,7 @@
 		DA042C791F2C885F00874EAE /* MSaveScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveScale.swift; sourceTree = "<group>"; };
 		DA042C7C1F2C92D000874EAE /* VEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotate.swift; sourceTree = "<group>"; };
 		DA042C7F1F2C932A00874EAE /* MEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditRotate.swift; sourceTree = "<group>"; };
+		DA042C811F2C935700874EAE /* CEditRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEditRotate.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				DA2795611F2AFC4100550ECA /* CEditCrop.swift */,
 				DA2795621F2AFC4100550ECA /* CEditDuration.swift */,
 				DA68B7B71F2C018300F4B819 /* CEditScale.swift */,
+				DA042C811F2C935700874EAE /* CEditRotate.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				DA2796451F2AFC4200550ECA /* MSourceVideoFactory.swift in Sources */,
 				DA27961D1F2AFC4100550ECA /* CNew.swift in Sources */,
 				DA2796321F2AFC4100550ECA /* MEditDurationFactory.swift in Sources */,
+				DA042C821F2C935700874EAE /* CEditRotate.swift in Sources */,
 				DA2796891F2AFC4200550ECA /* VEditDurationCell.swift in Sources */,
 				DA2796911F2AFC4200550ECA /* VNew.swift in Sources */,
 				DA2796851F2AFC4200550ECA /* VEditCropImageShade.swift in Sources */,
