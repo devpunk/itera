@@ -100,6 +100,6 @@ class VEditScale:ViewMain
     
     func viewDidAppear()
     {
-        
+        viewImage.layout()
     }
 }

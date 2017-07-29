@@ -8,6 +8,25 @@ extension VEditScaleImage
         importLayout()
     }
     
+    func scaledTo(scale:CGFloat)
+    {
+        let scaledWidth:CGFloat = controller.model.scaledWidth
+        let scaledHeight:CGFloat = controller.model.scaledHeight
+        let usableWidth:CGFloat = scaledWidth - scaledMargin2
+        let usableHeight:CGFloat = scaledHeight - scaledMargin2
+        let width:CGFloat = scale * usableWidth
+        let height:CGFloat = scale * usableHeight
+        let remainWidth:CGFloat = scaledWidth - width
+        let remainHeight:CGFloat = scaledHeight - height
+        let marginHorizontal:CGFloat = remainWidth / 2.0
+        let marginVertical:CGFloat = remainHeight / 2.0
+        
+        viewScaled.layoutTop.constant = marginVertical
+        viewScaled.layoutBottom.constant = -marginVertical
+        viewScaled.layoutLeft.constant = marginHorizontal
+        viewScaled.layoutRight.constant = -marginHorizontal
+    }
+    
     //MARK: private
     
     private func constraintImage()
@@ -57,21 +76,6 @@ extension VEditScaleImage
             return
         }
         
-        if scale < 1
-        {
-            let scaledWidth:CGFloat = controller.model.scaledWidth
-            let scaledHeight:CGFloat = controller.model.scaledHeight
-            let width:CGFloat = scale * scaledWidth
-            let height:CGFloat = scale * scaledHeight
-            let remainWidth:CGFloat = scaledWidth - width
-            let remainHeight:CGFloat = scaledHeight - height
-            let marginHorizontal:CGFloat = remainWidth / 2.0
-            let marginVertical:CGFloat = remainHeight / 2.0
-            
-            viewScaled.layoutTop.constant = marginVertical
-            viewScaled.layoutBottom.constant = -marginVertical
-            viewScaled.layoutLeft.constant = marginHorizontal
-            viewScaled.layoutRight.constant = -marginHorizontal
-        }
+        scaledTo(scale:scale)
     }
 }
