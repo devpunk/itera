@@ -5,26 +5,21 @@ extension VEditScaleImage
     func layout()
     {
         constraintImage()
-        importLayout()
+        updateScale()
     }
     
-    func scaledTo(scale:CGFloat)
+    func updateScale()
     {
-        let scaledWidth:CGFloat = controller.model.scaledWidth
-        let scaledHeight:CGFloat = controller.model.scaledHeight
-        let usableWidth:CGFloat = scaledWidth - scaledMargin2
-        let usableHeight:CGFloat = scaledHeight - scaledMargin2
-        let width:CGFloat = scale * usableWidth
-        let height:CGFloat = scale * usableHeight
-        let remainWidth:CGFloat = scaledWidth - width
-        let remainHeight:CGFloat = scaledHeight - height
-        let marginHorizontal:CGFloat = remainWidth / 2.0
-        let marginVertical:CGFloat = remainHeight / 2.0
+        guard
+            
+            let scale:CGFloat = controller.model.edit.sequence?.scale
+            
+        else
+        {
+            return
+        }
         
-        viewScaled.layoutTop.constant = marginVertical
-        viewScaled.layoutBottom.constant = -marginVertical
-        viewScaled.layoutLeft.constant = marginHorizontal
-        viewScaled.layoutRight.constant = -marginHorizontal
+        scaledTo(scale:scale)
     }
     
     //MARK: private
@@ -65,17 +60,22 @@ extension VEditScaleImage
         viewOriginal.layoutBottom.constant = -marginHeight
     }
     
-    private func importLayout()
+    private func scaledTo(scale:CGFloat)
     {
-        guard
+        let scaledWidth:CGFloat = controller.model.scaledWidth
+        let scaledHeight:CGFloat = controller.model.scaledHeight
+        let usableWidth:CGFloat = scaledWidth - scaledMargin2
+        let usableHeight:CGFloat = scaledHeight - scaledMargin2
+        let width:CGFloat = scale * usableWidth
+        let height:CGFloat = scale * usableHeight
+        let remainWidth:CGFloat = scaledWidth - width
+        let remainHeight:CGFloat = scaledHeight - height
+        let marginHorizontal:CGFloat = remainWidth / 2.0
+        let marginVertical:CGFloat = remainHeight / 2.0
         
-            let scale:CGFloat = controller.model.edit.sequence?.scale
-        
-        else
-        {
-            return
-        }
-        
-        scaledTo(scale:scale)
+        viewScaled.layoutTop.constant = marginVertical
+        viewScaled.layoutBottom.constant = -marginVertical
+        viewScaled.layoutLeft.constant = marginHorizontal
+        viewScaled.layoutRight.constant = -marginHorizontal
     }
 }
