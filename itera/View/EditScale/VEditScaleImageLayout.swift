@@ -5,7 +5,7 @@ extension VEditScaleImage
     func layout()
     {
         constraintImage()
-//        importLayout()
+        importLayout()
     }
     
     //MARK: private
@@ -44,5 +44,34 @@ extension VEditScaleImage
         viewOriginal.layoutLeft.constant = marginWidth
         viewOriginal.layoutTop.constant = marginHeight
         viewOriginal.layoutBottom.constant = -marginHeight
+    }
+    
+    private func importLayout()
+    {
+        guard
+        
+            let scale:CGFloat = controller.model.edit.sequence?.scale
+        
+        else
+        {
+            return
+        }
+        
+        if scale < 1
+        {
+            let scaledWidth:CGFloat = controller.model.scaledWidth
+            let scaledHeight:CGFloat = controller.model.scaledHeight
+            let width:CGFloat = scale * scaledWidth
+            let height:CGFloat = scale * scaledHeight
+            let remainWidth:CGFloat = scaledWidth - width
+            let remainHeight:CGFloat = scaledHeight - height
+            let marginHorizontal:CGFloat = remainWidth / 2.0
+            let marginVertical:CGFloat = remainHeight / 2.0
+            
+            viewScaled.layoutTop.constant = marginVertical
+            viewScaled.layoutBottom.constant = -marginVertical
+            viewScaled.layoutLeft.constant = marginHorizontal
+            viewScaled.layoutRight.constant = -marginHorizontal
+        }
     }
 }
