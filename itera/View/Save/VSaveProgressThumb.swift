@@ -5,7 +5,6 @@ class VSaveProgressThumb:View<VSave, MSave, CSave>
     private weak var layoutImageLeft:NSLayoutConstraint!
     private weak var layoutImageTop:NSLayoutConstraint!
     private let kImageSize:CGFloat = 150
-    private let kBorderWidth:CGFloat = 10
     
     required init(controller:CSave)
     {
@@ -18,8 +17,6 @@ class VSaveProgressThumb:View<VSave, MSave, CSave>
         imageView.clipsToBounds = true
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.layer.cornerRadius = kImageSize / 2.0
-        imageView.layer.borderWidth = kBorderWidth
-        imageView.layer.borderColor = UIColor.white.cgColor
         
         addSubview(imageView)
         

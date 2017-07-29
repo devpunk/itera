@@ -16,8 +16,8 @@ class VSaveProgress:View<VSave, MSave, CSave>
         let viewThumb:VSaveProgressThumb = VSaveProgressThumb(
             controller:controller)
         
-        addSubview(viewBar)
         addSubview(viewThumb)
+        addSubview(viewBar)
         
         NSLayoutConstraint.equals(
             view:viewBar,

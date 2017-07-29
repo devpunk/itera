@@ -5,18 +5,23 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
     private var percent:CGFloat
     private let colourSmall:UIColor
     private let colourBig:UIColor
+    private let colourInner:UIColor
     private let startAngle:CGFloat
     private let pi_2:CGFloat
     private let pi2:CGFloat
     private let endAngle:CGFloat
-    private let kRadius:CGFloat = 82
-    private let kSmallLineWidth:CGFloat = 17
-    private let kBigLineWidth:CGFloat = 17
+    private let kSmallRadius:CGFloat = 92
+    private let kBigRadius:CGFloat = 87
+    private let kInnerRadius:CGFloat  = 80
+    private let kInnerLineWidth:CGFloat = 10
+    private let kSmallLineWidth:CGFloat = 14
+    private let kBigLineWidth:CGFloat = 24
     
     required init(controller:CSave)
     {
         colourSmall = UIColor(white:1, alpha:0.2)
         colourBig = UIColor.white
+        colourInner = UIColor.white
         percent = 0
         pi2 = CGFloat.pi + CGFloat.pi
         pi_2 = CGFloat.pi / 2.0
@@ -51,11 +56,21 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
         let endPercent:CGFloat = pi2 * percent
         let endAnglePercent:CGFloat = startAngle + endPercent
         
+        context.setLineWidth(kInnerLineWidth)
+        context.setStrokeColor(colourInner.cgColor)
+        context.addArc(
+            center:centre,
+            radius:kInnerRadius,
+            startAngle:startAngle,
+            endAngle:endAngle,
+            clockwise:false)
+        context.drawPath(using:CGPathDrawingMode.stroke)
+        
         context.setLineWidth(kSmallLineWidth)
         context.setStrokeColor(colourSmall.cgColor)
         context.addArc(
             center:centre,
-            radius:kRadius,
+            radius:kSmallRadius,
             startAngle:startAngle,
             endAngle:endAngle,
             clockwise:false)
@@ -65,7 +80,7 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
         context.setStrokeColor(colourBig.cgColor)
         context.addArc(
             center:centre,
-            radius:kRadius,
+            radius:kBigRadius,
             startAngle:startAngle,
             endAngle:endAnglePercent,
             clockwise:false)
