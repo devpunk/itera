@@ -12,8 +12,7 @@ class VEditScaleImageOriginal:View<VEditScale, MEditScale, CEditScale>
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.colourBackgroundGray
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.colourBackgroundDark.cgColor
         layer.borderWidth = kBorderWidth
     }
     

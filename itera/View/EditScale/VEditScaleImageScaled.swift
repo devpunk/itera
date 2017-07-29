@@ -11,7 +11,7 @@ class VEditScaleImageScaled:View<VEditScale, MEditScale, CEditScale>
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.colourSuccess
+        backgroundColor = UIColor.colourBackgroundDark.withAlphaComponent(0.65)
     }
     
     required init?(coder:NSCoder)
