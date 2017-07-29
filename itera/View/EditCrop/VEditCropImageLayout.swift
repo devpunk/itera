@@ -57,18 +57,18 @@ extension VEditCropImage
         let maxX:CGFloat = canvasWidth + viewPicture.layoutRight.constant - kCornerSize
         let maxY:CGFloat = canvasHeight + viewPicture.layoutBottom.constant - kCornerSize
         
-        cornerTopLeft.layout(
-            initialX:minX,
-            initialY:minY)
-        cornerTopRight.layout(
-            initialX:maxX,
-            initialY:minY)
         cornerBottomLeft.layout(
             initialX:minX,
             initialY:maxY)
         cornerBottomRight.layout(
             initialX:maxX,
             initialY:maxY)
+        cornerTopLeft.layout(
+            initialX:minX,
+            initialY:minY)
+        cornerTopRight.layout(
+            initialX:maxX,
+            initialY:minY)
     }
     
     private func factoryBorders()
