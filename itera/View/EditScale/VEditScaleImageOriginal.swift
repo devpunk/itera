@@ -6,7 +6,7 @@ class VEditScaleImageOriginal:View<VEditScale, MEditScale, CEditScale>
     weak var layoutBottom:NSLayoutConstraint!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutRight:NSLayoutConstraint!
-    private let kCornerWidth:CGFloat = 4
+    private let kCornerWidth:CGFloat = 3
     private let kCornerLength:CGFloat = 20
     
     required init(controller:CEditScale)

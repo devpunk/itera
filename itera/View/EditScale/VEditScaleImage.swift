@@ -7,7 +7,7 @@ class VEditScaleImage:View<VEditScale, MEditScale, CEditScale>
     let margin2:CGFloat
     let scaledMargin2:CGFloat
     let kMargin:CGFloat = 50
-    let kScaledMargin:CGFloat = 4
+    let kScaledMargin:CGFloat = 3
     
     required init(controller:CEditScale)
     {

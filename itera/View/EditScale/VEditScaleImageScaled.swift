@@ -6,12 +6,15 @@ class VEditScaleImageScaled:View<VEditScale, MEditScale, CEditScale>
     weak var layoutBottom:NSLayoutConstraint!
     weak var layoutLeft:NSLayoutConstraint!
     weak var layoutRight:NSLayoutConstraint!
+    private let kBorderWidth:CGFloat = 2
     
     required init(controller:CEditScale)
     {
         super.init(controller:controller)
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.colourBackgroundDark.withAlphaComponent(0.65)
+        backgroundColor = UIColor.colourBackgroundGray
+        layer.borderWidth = kBorderWidth
+        layer.borderColor = UIColor.colourBackgroundDark.cgColor
     }
     
     required init?(coder:NSCoder)
