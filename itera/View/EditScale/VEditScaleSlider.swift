@@ -5,26 +5,37 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     private weak var slider:UISlider!
     private weak var labelPercent:UILabel!
     private weak var labelSize:UILabel!
+    private let numberFormatter:NumberFormatter
     private let attributesPercentNumber:[String:AnyObject]
     private let stringSing:NSAttributedString
     private let kSign:String = "%"
-    private let kSliderHeight:CGFloat = 60
+    private let kSliderHeight:CGFloat = 58
     private let kSliderMarginHorizontal:CGFloat = 30
-    private let kLabelPercentHeight:CGFloat = 50
-    private let kLabelSizeHeight:CGFloat = 30
+    private let kLabelPercentHeight:CGFloat = 54
+    private let kLabelSizeHeight:CGFloat = 18
     private let kMinValue:Float = 0.1
     private let kMaxValue:Float = 1
+    private let kHalf:Float = 0.5
+    private let kMaxDecimals:Int = 1
+    private let kMinDecimals:Int = 1
+    private let kMinIntegers:Int = 1
     
     required init(controller:CEditScale)
     {
         let attributesPercentSign:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.light(size:16)]
+            NSFontAttributeName:UIFont.light(size:22)]
         stringSing = NSAttributedString(
             string:kSign,
             attributes:attributesPercentSign)
         
         attributesPercentNumber = [
-            NSFontAttributeName:UIFont.light(size:40)]
+            NSFontAttributeName:UIFont.light(size:50)]
+        
+        numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        numberFormatter.minimumIntegerDigits = kMinIntegers
+        numberFormatter.maximumFractionDigits = kMaxDecimals
+        numberFormatter.minimumFractionDigits = kMinDecimals
         
         super.init(controller:controller)
         
@@ -53,8 +64,8 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         labelSize.translatesAutoresizingMaskIntoConstraints = false
         labelSize.backgroundColor = UIColor.clear
         labelSize.textAlignment = NSTextAlignment.center
-        labelSize.textColor = UIColor.colourBackgroundDark.withAlphaComponent(0.6)
-        labelSize.font = UIFont.regular(size:14)
+        labelSize.textColor = UIColor.colourBackgroundDark.withAlphaComponent(0.82)
+        labelSize.font = UIFont.light(size:14)
         self.labelSize = labelSize
         
         addSubview(labelSize)
@@ -115,10 +126,8 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     
     func actionSlider(sender slider:UISlider)
     {
+        updateModel()
         print()
-        
-        let value:CGFloat = CGFloat(slider.value)
-        controller.model.edit.sequence?.scale = value
         
         guard
         
@@ -134,11 +143,31 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     
     //MARK: private
     
+    private func updateModel()
+    {
+        let value:CGFloat = CGFloat(slider.value)
+        controller.model.edit.sequence?.scale = value
+    }
+    
     private func print()
     {
         let value:CGFloat = CGFloat(slider.value)
-        let valueInt:Int = Int(value)
-        let stringValue:String = "\(value)"
+        let width:CGFloat = controller.model.originalWidth
+        let height:CGFloat = controller.model.originalHeight
+        let scaledWidth:Int = Int(width * value)
+        let scaledHeight:Int = Int(height * value)
+        let valueNumber:NSNumber = (value * 100) as NSNumber
+        let stringSize:String = "\(scaledWidth) × \(scaledHeight)"
+        
+        guard
+            
+            let stringValue:String = numberFormatter.string(from:valueNumber)
+        
+        else
+        {
+            return
+        }
+        
         let stringNumber:NSAttributedString = NSAttributedString(
             string:stringValue,
             attributes:attributesPercentNumber)
@@ -148,5 +177,14 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         mutableString.append(stringSing)
         
         labelPercent.attributedText = mutableString
+        labelSize.text = stringSize
+    }
+    
+    //MARK: public
+    
+    func half()
+    {
+        slider.setValue(kHalf, animated:true)
+        updateModel()
     }
 }

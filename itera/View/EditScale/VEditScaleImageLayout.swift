@@ -26,21 +26,12 @@ extension VEditScaleImage
     
     private func constraintImage()
     {
-        guard
-            
-            let image:CGImage = controller.model.edit.sequence?.items.first?.image
-            
-        else
-        {
-            return
-        }
-        
         let canvasWidth:CGFloat = bounds.width
         let canvasHeight:CGFloat = bounds.height
         let usableWidth:CGFloat = canvasWidth - margin2
         let usableHeight:CGFloat = canvasHeight - margin2
-        let width:CGFloat = CGFloat(image.width)
-        let height:CGFloat = CGFloat(image.height)
+        let width:CGFloat = controller.model.originalWidth
+        let height:CGFloat = controller.model.originalHeight
         let deltaWidth:CGFloat = width / usableWidth
         let deltaHeight:CGFloat = height / usableHeight
         let maxDelta:CGFloat = max(deltaWidth, deltaHeight)
