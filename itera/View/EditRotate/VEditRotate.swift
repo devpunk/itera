@@ -78,4 +78,11 @@ class VEditRotate:ViewMain
             view:viewOkay,
             toView:self)
     }
+    
+    //MARK: public
+    
+    func viewDidAppear()
+    {
+        viewImage.layout()
+    }
 }

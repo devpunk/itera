@@ -13,6 +13,22 @@ class CEditRotate:Controller<VEditRotate, MEditRotate>
         return nil
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        guard
+            
+            let view:VEditRotate = self.view as? VEditRotate
+            
+        else
+        {
+            return
+        }
+        
+        view.viewDidAppear()
+    }
+    
     //MARK: public
     
     func okay()

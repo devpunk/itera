@@ -6,12 +6,14 @@ class MEditSequence
     var duration:TimeInterval
     var crop:MEditSequenceCrop
     var scale:CGFloat
+    var rotate:CGFloat
     
     init(items:[MEditSequenceItem], duration:TimeInterval)
     {
         self.items = items
         self.duration = duration
         scale = 1
+        rotate = 0
         crop = MEditSequenceCrop(
             top:0,
             bottom:0,
