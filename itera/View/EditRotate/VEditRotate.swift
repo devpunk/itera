@@ -8,7 +8,7 @@ class VEditRotate:ViewMain
     private let kOkayWidth:CGFloat = 195
     private let kOkayBottom:CGFloat = -20
     private let kOkayHeight:CGFloat = 64
-    private let kControlsHeight:CGFloat = 150
+    private let kControlsHeight:CGFloat = 115
     
     required init(controller:UIViewController)
     {

@@ -4,7 +4,9 @@ class VEditRotateControls:
     View<VEditRotate, MEditRotate, CEditRotate>
 {
     private weak var layoutRotateRightLeft:NSLayoutConstraint!
+    private weak var label:UILabel!
     private let kButtonsSize:CGFloat = 60
+    private let k180Deg:CGFloat = 180
     
     required init(controller:CEditRotate)
     {
@@ -42,6 +44,15 @@ class VEditRotateControls:
             action:#selector(actionRotateRight(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        let label:UILabel = UILabel()
+        label.isUserInteractionEnabled = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor.clear
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont.light(size:45)
+        self.label = label
+        
+        addSubview(label)
         addSubview(buttonRotateLeft)
         addSubview(buttonRotateRight)
         
@@ -64,6 +75,18 @@ class VEditRotateControls:
         NSLayoutConstraint.rightToLeft(
             view:buttonRotateLeft,
             toView:buttonRotateRight)
+        
+        NSLayoutConstraint.topToTop(
+            view:label,
+            toView:self)
+        NSLayoutConstraint.bottomToTop(
+            view:label,
+            toView:buttonRotateRight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:label,
+            toView:self)
+        
+        print()
     }
     
     required init?(coder:NSCoder)
@@ -96,6 +119,31 @@ class VEditRotateControls:
     
     //MARK: private
     
+    private func print()
+    {
+        guard
+        
+            let rotate:CGFloat = controller.model.edit.sequence?.rotate
+        
+        else
+        {
+            return
+        }
+        
+        let degree:CGFloat = (rotate * k180Deg) / CGFloat.pi
+        let degreeInt:Int = Int(degree)
+        var string:String = ""
+        
+        if degreeInt > 0
+        {
+            string = string.appending("+")
+        }
+        
+        string = string.appending("\(degreeInt)º")
+        
+        label.text = string
+    }
+    
     private func updateRotation()
     {
         guard
@@ -108,5 +156,6 @@ class VEditRotateControls:
         }
         
         view.viewImage.rotate()
+        print()
     }
 }
