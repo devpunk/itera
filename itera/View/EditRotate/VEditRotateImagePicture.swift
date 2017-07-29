@@ -3,6 +3,10 @@ import UIKit
 class VEditRotateImagePicture:
     View<VEditRotate, MEditRotate, CEditRotate>
 {
+    weak var layoutTop:NSLayoutConstraint!
+    weak var layoutBottom:NSLayoutConstraint!
+    weak var layoutLeft:NSLayoutConstraint!
+    weak var layoutRight:NSLayoutConstraint!
     private let kMargin:CGFloat = 3
     private let kBorderWidth:CGFloat = 1
     
