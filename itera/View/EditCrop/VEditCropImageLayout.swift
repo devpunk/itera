@@ -25,8 +25,8 @@ extension VEditCropImage
         
         let canvasWidth:CGFloat = bounds.width
         let canvasHeight:CGFloat = bounds.height
-        let usableWidth:CGFloat = canvasWidth - imageMargin2
-        let usableHeight:CGFloat = canvasHeight - imageMargin2
+        let usableWidth:CGFloat = canvasWidth - margin2
+        let usableHeight:CGFloat = canvasHeight - margin2
         let width:CGFloat = image.size.width
         let height:CGFloat = image.size.height
         let deltaWidth:CGFloat = width / usableWidth
