@@ -17,6 +17,8 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
     private let kMinValue:Float = 0.1
     private let kMaxValue:Float = 1
     private let kHalf:Float = 0.5
+    private let kQuarter:Float = 0.25
+    private let kThreeQuarters:Float = 0.75
     private let kMaxDecimals:Int = 1
     private let kMinDecimals:Int = 1
     private let kMinIntegers:Int = 1
@@ -186,22 +188,35 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         labelSize.text = stringSize
     }
     
+    private func animateTo(value:Float)
+    {
+        UIView.animate(
+            withDuration:kAnimationDuration,
+            animations:
+            { [weak self] in
+                
+                self?.slider.setValue(value, animated:true)
+            })
+        { [weak self] (done:Bool) in
+            
+            self?.updateValue()
+        }
+    }
+    
     //MARK: public
     
     func half()
     {
-        let half:Float = kHalf
-        
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
-        { [weak self] in
-            
-            self?.slider.setValue(half, animated:true)
-        })
-        { [weak self] (done:Bool) in
-        
-            self?.updateValue()
-        }
+        animateTo(value:kHalf)
+    }
+    
+    func quarter()
+    {
+        animateTo(value:kQuarter)
+    }
+    
+    func threeQuarters()
+    {
+        animateTo(value:kThreeQuarters)
     }
 }

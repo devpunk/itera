@@ -11,8 +11,9 @@ class VEditScale:ViewMain
     private let kOkayBottom:CGFloat = -20
     private let kOkayHeight:CGFloat = 64
     private let kSliderHeight:CGFloat = 130
-    private let kHalfHeight:CGFloat = 36
-    private let kHalfWidth:CGFloat = 120
+    private let kButtonTop:CGFloat = 10
+    private let kButtonHeight:CGFloat = 32
+    private let kButtonWidth:CGFloat = 100
     
     required init(controller:UIViewController)
     {
@@ -40,7 +41,7 @@ class VEditScale:ViewMain
         let width:CGFloat = bounds.width
         let remainOkay:CGFloat = width - kOkayWidth
         let okayMarginLeft:CGFloat = remainOkay / 2.0
-        let remainHalf:CGFloat = width - kHalfWidth
+        let remainHalf:CGFloat = width - kButtonWidth
         let halfMarginLeft:CGFloat = remainHalf / 2.0
         layoutOkayLeft.constant = okayMarginLeft
         layoutImageHeight.constant = width
@@ -54,6 +55,16 @@ class VEditScale:ViewMain
     func actionHalf(sender button:UIButton)
     {
         viewSlider.half()
+    }
+    
+    func actionQuater(sender button:UIButton)
+    {
+        viewSlider.quarter()
+    }
+    
+    func actionThreeQuarters(sender button:UIButton)
+    {
+        viewSlider.threeQuarters()
     }
     
     //MARK: private
@@ -70,6 +81,40 @@ class VEditScale:ViewMain
         
         let viewOkay:VEditScaleOkay = VEditScaleOkay(
             controller:controller)
+        
+        let buttonHalf:UIButton = UIButton()
+        buttonHalf.translatesAutoresizingMaskIntoConstraints = false
+        buttonHalf.setTitleColor(
+            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
+            for:UIControlState.normal)
+        buttonHalf.setTitleColor(
+            UIColor.colourBackgroundGray,
+            for:UIControlState.highlighted)
+        buttonHalf.setTitle(
+            String.localizedView(key:"VEditScale_buttonHalf"),
+            for:UIControlState.normal)
+        buttonHalf.titleLabel!.font = UIFont.medium(size:15)
+        buttonHalf.addTarget(
+            self,
+            action:#selector(actionHalf(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
+        let buttonQuarter:UIButton = UIButton()
+        buttonHalf.translatesAutoresizingMaskIntoConstraints = false
+        buttonHalf.setTitleColor(
+            UIColor.colourBackgroundDark.withAlphaComponent(0.5),
+            for:UIControlState.normal)
+        buttonHalf.setTitleColor(
+            UIColor.colourBackgroundGray,
+            for:UIControlState.highlighted)
+        buttonHalf.setTitle(
+            String.localizedView(key:"VEditScale_buttonHalf"),
+            for:UIControlState.normal)
+        buttonHalf.titleLabel!.font = UIFont.medium(size:15)
+        buttonHalf.addTarget(
+            self,
+            action:#selector(actionHalf(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         let buttonHalf:UIButton = UIButton()
         buttonHalf.translatesAutoresizingMaskIntoConstraints = false
@@ -117,10 +162,10 @@ class VEditScale:ViewMain
             toView:viewSlider)
         NSLayoutConstraint.height(
             view:buttonHalf,
-            constant:kHalfHeight)
+            constant:kButtonHeight)
         NSLayoutConstraint.width(
             view:buttonHalf,
-            constant:kHalfWidth)
+            constant:kButtonWidth)
         layoutHalfLeft = NSLayoutConstraint.leftToLeft(
             view:buttonHalf,
             toView:self)
