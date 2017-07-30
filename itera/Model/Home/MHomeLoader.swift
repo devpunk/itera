@@ -40,6 +40,25 @@ extension MHome
     
     private func projectsLoaded(projects:[DProject])
     {
+        guard
         
+            let directory:URL = MSave.projectsDirectory()
+        
+        else
+        {
+            return
+        }
+        
+        var items:[MHomeItem] = []
+        
+        for project:DProject in projects
+        {
+            let item:MHomeItem = MHomeItem(
+                project:project,
+                directory:directory)
+            items.append(item)
+        }
+        
+        itemsLoaded(items:items)
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 
 class MHomeItem
 {
-    init(project:DProject, projectsDirectory:URL)
+    init(project:DProject, directory:URL)
     {
         
     }

@@ -10,4 +10,12 @@ class MHome:Model
         
         super.init()
     }
+    
+    //MARK: public
+    
+    func itemsLoaded(items:[MHomeItem])
+    {
+        self.items = items
+        delegate?.modelRefresh()
+    }
 }
