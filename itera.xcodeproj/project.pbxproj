@@ -82,7 +82,6 @@
 		DA2796511F2AFC4200550ECA /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2795AD1F2AFC4100550ECA /* generic.xcassets */; };
 		DA2796521F2AFC4200550ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2795AE1F2AFC4100550ECA /* LaunchScreen.storyboard */; };
 		DA2796531F2AFC4200550ECA /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2795AF1F2AFC4100550ECA /* spinner.xcassets */; };
-		DA2796541F2AFC4200550ECA /* DLooperRefactor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA2795B11F2AFC4100550ECA /* DLooperRefactor.xcdatamodeld */; };
 		DA2796551F2AFC4200550ECA /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795B31F2AFC4100550ECA /* DManager.swift */; };
 		DA2796561F2AFC4200550ECA /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795B41F2AFC4100550ECA /* DSettingsExtension.swift */; };
 		DA2796571F2AFC4200550ECA /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2795B61F2AFC4100550ECA /* ExtensionDictionary.swift */; };
@@ -261,7 +260,6 @@
 		DA2795AD1F2AFC4100550ECA /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DA2795AE1F2AFC4100550ECA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA2795AF1F2AFC4100550ECA /* spinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = spinner.xcassets; sourceTree = "<group>"; };
-		DA2795B21F2AFC4100550ECA /* DLooperRefactor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DLooperRefactor.xcdatamodel; sourceTree = "<group>"; };
 		DA2795B31F2AFC4100550ECA /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA2795B41F2AFC4100550ECA /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA2795B61F2AFC4100550ECA /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
@@ -684,7 +682,6 @@
 		DA2795B01F2AFC4100550ECA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DA2795B11F2AFC4100550ECA /* DLooperRefactor.xcdatamodeld */,
 				DA2795B31F2AFC4100550ECA /* DManager.swift */,
 				DA2795B41F2AFC4100550ECA /* DSettingsExtension.swift */,
 				DA39F3461F2D799100AF9256 /* DItera.xcdatamodeld */,
@@ -1094,7 +1091,6 @@
 				DA2796941F2AFC4200550ECA /* VSourceImage.swift in Sources */,
 				DA27961E1F2AFC4100550ECA /* CSourceImage.swift in Sources */,
 				DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */,
-				DA2796541F2AFC4200550ECA /* DLooperRefactor.xcdatamodeld in Sources */,
 				DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */,
 				DA02949B1F2B167D0079382B /* MSave.swift in Sources */,
 				DA2796271F2AFC4100550ECA /* MEditActionDuration.swift in Sources */,
@@ -1378,16 +1374,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DA2795B11F2AFC4100550ECA /* DLooperRefactor.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DA2795B21F2AFC4100550ECA /* DLooperRefactor.xcdatamodel */,
-			);
-			currentVersion = DA2795B21F2AFC4100550ECA /* DLooperRefactor.xcdatamodel */;
-			path = DLooperRefactor.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		DA39F3461F2D799100AF9256 /* DItera.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
