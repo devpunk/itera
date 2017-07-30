@@ -7,6 +7,12 @@ extension VGif
     {
         let view:VGif = VGif()
         
+        view.queueGif.async
+        { [weak view] in
+            
+            view?.loadWithURL(url:url)
+        }
+        
         return view
     }
     
@@ -23,8 +29,7 @@ extension VGif
             return
         }
         
-        let count:Int = CGImageSourceGetCount(source)
-        
+        loadFrames(source:source)
     }
     
     private func factorySource(url:URL) -> CGImageSource?
@@ -81,5 +86,47 @@ extension VGif
         let cfDictionary:CFDictionary = dictionary as CFDictionary
         
         return cfDictionary
+    }
+    
+    private func loadFrames(source:CGImageSource)
+    {
+        let count:Int = CGImageSourceGetCount(source)
+        
+        for index:Int in 0 ..< count
+        {
+        }
+    }
+    
+    private func frameDuration(
+        source:CGImageSource,
+        index:Int) -> TimeInterval
+    {
+        let properties:[String:AnyObject] = frameProperties(
+            source:source, index:index)
+        
+        print(properties)
+        
+        return 0
+    }
+    
+    private func frameProperties(
+        source:CGImageSource,
+        index:Int) -> [String:AnyObject]?
+    {
+        guard
+        
+            let properties:CFDictionary = CGImageSourceCopyPropertiesAtIndex(
+                source,
+                0,
+                nil)
+        
+        else
+        {
+            return nil
+        }
+        
+        let dictionary:[String:AnyObject]? = properties as? [String:AnyObject]
+        
+        return dictionary
     }
 }
