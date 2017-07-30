@@ -2,6 +2,13 @@ import Foundation
 
 class CHome:Controller<VHome, MHome>
 {
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        
+    }
+    
     //MARK: public
     
     func openNew()
