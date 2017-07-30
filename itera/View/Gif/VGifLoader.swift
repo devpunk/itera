@@ -93,13 +93,55 @@ extension VGif
     private func loadFrames(source:CGImageSource)
     {
         let count:Int = CGImageSourceGetCount(source)
+        let options:CFDictionary = frameOptions()
         
         for index:Int in 0 ..< count
         {
-            let itemDuation:TimeInterval =  frameDuration(
+            guard
+                
+                let image:CGImage = frameImage(
+                    source:source,
+                    index:index,
+                    options:options)
+            
+            else
+            {
+                continue
+            }
+            
+            let itemDuration:TimeInterval =  frameDuration(
                 source:source,
                 index:index)
         }
+    }
+    
+    private func frameImage(
+        source:CGImageSource,
+        index:Int,
+        options:CFDictionary) -> CGImage?
+    {
+        guard
+        
+            let image:CGImage = CGImageSourceCreateImageAtIndex(
+                source,
+                index,
+                options)
+        
+        else
+        {
+            return nil
+        }
+        
+        return image
+    }
+    
+    private func frameOptions() -> CFDictionary
+    {
+        let dictionary:[String:Any] = [
+            kCGImageSourceShouldCache as String:kCFBooleanFalse]
+        let cfDictionary:CFDictionary = dictionary as CFDictionary
+        
+        return cfDictionary
     }
     
     private func frameDuration(
