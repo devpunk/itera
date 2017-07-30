@@ -76,4 +76,11 @@ class VHome:ViewMain
             view:viewProjects,
             toView:self)
     }
+    
+    //MARK: public
+    
+    func refresh()
+    {
+        viewProjects.collectionView.reloadData()
+    }
 }

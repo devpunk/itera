@@ -4,7 +4,11 @@ class CHome:Controller<VHome, MHome>
 {
     override func modelRefresh()
     {
-        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.refreshView()
+        }
     }
     
     override func viewDidAppear(_ animated:Bool)
@@ -12,6 +16,22 @@ class CHome:Controller<VHome, MHome>
         super.viewDidAppear(animated)
         
         model.load()
+    }
+    
+    //MARK: private
+    
+    private func refreshView()
+    {
+        guard
+        
+            let view:VHome = self.view as? VHome
+        
+        else
+        {
+            return
+        }
+        
+        view.refresh()
     }
     
     //MARK: public
