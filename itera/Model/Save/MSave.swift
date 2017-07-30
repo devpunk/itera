@@ -3,9 +3,6 @@ import CoreData
 
 class MSave:Model
 {
-    let kResourceName:String = "ResourceURL"
-    let kResourceExtension:String = "plist"
-    let kDirectoryKey:String = "directory"
     let kGifExtension:String = ".gif"
     let kDelayGeneration:TimeInterval = 0.25
     private(set) var sequence:MEditSequence?

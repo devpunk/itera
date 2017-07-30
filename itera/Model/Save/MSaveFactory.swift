@@ -24,17 +24,13 @@ extension MSave
     private func createDirectory() -> URL?
     {
         guard
-            
-            let projectsDirectory:String = directoryName()
+        
+            let projectsPath:URL = MSave.projectsDirectory()
         
         else
         {
             return nil
         }
-        
-        let appDirectory:URL = FileManager.appDirectory
-        let projectsPath:URL = appDirectory.appendingPathComponent(
-            projectsDirectory)
         
         do
         {
@@ -60,25 +56,5 @@ extension MSave
         let nameExtension:String = randomName.appending(kGifExtension)
         
         return nameExtension
-    }
-    
-    private func directoryName() -> String?
-    {
-        guard
-            
-            let resourceUrl:URL = Bundle.main.url(
-                forResource:kResourceName,
-                withExtension:kResourceExtension),
-            let urlDictionary:NSDictionary = NSDictionary(
-                contentsOf:resourceUrl),
-            let urlMap:[String:String] = urlDictionary as? [String:String],
-            let directory:String = urlMap[kDirectoryKey]
-            
-        else
-        {
-            return nil
-        }
-        
-        return directory
     }
 }
