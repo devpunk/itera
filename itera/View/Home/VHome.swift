@@ -3,7 +3,7 @@ import UIKit
 class VHome:ViewMain
 {
     private(set) weak var viewProjects:VHomeProjects!
-    private let kProjectsHeight:CGFloat = 350
+    private let kProjectsHeight:CGFloat = 360
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
     

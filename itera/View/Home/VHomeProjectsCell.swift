@@ -15,7 +15,7 @@ class VHomeProjectsCell:UICollectionViewCell
         imageView.isUserInteractionEnabled = false
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = UIViewContentMode.center
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
         self.imageView = imageView
         
         addSubview(imageView)

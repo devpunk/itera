@@ -6,8 +6,8 @@ class VHomeProjects:VCollection<
     CHome,
     VHomeProjectsCell>
 {
-    private let kCollectionTop:CGFloat = 200
-    private let kCellSize:CGFloat = 70
+    private let kCollectionTop:CGFloat = 255
+    private let kCellSize:CGFloat = 105
     private let kInterItem:CGFloat = 5
     
     required init(controller:CHome)
