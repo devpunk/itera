@@ -36,12 +36,24 @@ class MSave:Model
         factoryGif(sequence:sequence, path:path)
     }
     
-    private func saveToCD(path:URL)
+    private func saveToCD(
+        path:URL,
+        duration:TimeInterval)
     {
         DManager.sharedInstance?.create(entity:DProject.self)
         { [weak self] (data:NSManagedObject?) in
             
+            guard
             
+                let project:DProject = data as? DProject
+            
+            else
+            {
+                return
+            }
+            
+            project.save(path:path, duration:duration)
+            self?.controller?.close()
         }
     }
     
@@ -76,7 +88,8 @@ class MSave:Model
     {
         guard
             
-            let path:URL = self.path
+            let path:URL = self.path,
+            let duration:TimeInterval = sequence?.duration
         
         else
         {
@@ -85,7 +98,7 @@ class MSave:Model
             return
         }
         
-        saveToCD(path:path)
+        saveToCD(path:path, duration:duration)
     }
     
     func drawImage(
