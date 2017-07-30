@@ -101,7 +101,7 @@ extension VGif
         source:CGImageSource,
         index:Int) -> TimeInterval
     {
-        let properties:[String:AnyObject] = frameProperties(
+        let properties:[String:AnyObject]? = frameProperties(
             source:source, index:index)
         
         print(properties)

@@ -4,6 +4,7 @@ class VHomeProjectsCell:UICollectionViewCell
 {
     private weak var model:MHomeItem?
     private weak var imageView:UIImageView!
+    private weak var viewGif:VGif?
     
     override init(frame:CGRect)
     {
@@ -80,12 +81,37 @@ class VHomeProjectsCell:UICollectionViewCell
         imageView.image = model?.image
     }
     
+    private func loadGif()
+    {
+        self.viewGif?.removeFromSuperview()
+        
+        guard
+            
+            let url:URL = model?.path
+        
+        else
+        {
+            return
+        }
+        
+        let viewGif:VGif = VGif.withURL(url:url)
+        self.viewGif = viewGif
+        
+        addSubview(viewGif)
+        
+        NSLayoutConstraint.equals(
+            view:viewGif,
+            toView:self)
+    }
+    
     //MARK: public
     
     func config(model:MHomeItem)
     {
         self.model = model
+        loadGif()
         
+        /*
         guard
         
             let image:UIImage = model.image
@@ -101,6 +127,6 @@ class VHomeProjectsCell:UICollectionViewCell
             return
         }
         
-        imageView.image = image
+        imageView.image = image*/
     }
 }
