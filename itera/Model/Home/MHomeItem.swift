@@ -1,9 +1,12 @@
-import Foundation
+import UIKit
 
 class MHomeItem
 {
-    init(project:DProject, directory:URL)
+    var image:UIImage?
+    let path:URL
+    
+    init(project:DProject, path:URL)
     {
-        
+        self.path = path
     }
 }

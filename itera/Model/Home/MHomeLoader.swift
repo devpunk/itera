@@ -53,9 +53,19 @@ extension MHome
         
         for project:DProject in projects
         {
+            guard
+                
+                let name:String = project.name
+            
+            else
+            {
+                continue
+            }
+            
+            let path:URL = directory.appendingPathComponent(name)
             let item:MHomeItem = MHomeItem(
                 project:project,
-                directory:directory)
+                path:path)
             items.append(item)
         }
         
