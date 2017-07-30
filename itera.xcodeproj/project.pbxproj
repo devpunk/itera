@@ -163,6 +163,7 @@
 		DA2796A31F2AFC4200550ECA /* VSourceVideoTimeNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */; };
 		DA2796A41F2AFC4200550ECA /* VSourceVideoTimeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */; };
 		DA39F3481F2D799100AF9256 /* DItera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3461F2D799100AF9256 /* DItera.xcdatamodeld */; };
+		DA39F34A1F2D7E5200AF9256 /* DProjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3491F2D7E5200AF9256 /* DProjectExtension.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
 		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
@@ -341,6 +342,7 @@
 		DA2796131F2AFC4100550ECA /* VSourceVideoTimeNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeNext.swift; sourceTree = "<group>"; };
 		DA2796141F2AFC4100550ECA /* VSourceVideoTimeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceVideoTimeSlider.swift; sourceTree = "<group>"; };
 		DA39F3471F2D799100AF9256 /* DItera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DItera.xcdatamodel; sourceTree = "<group>"; };
+		DA39F3491F2D7E5200AF9256 /* DProjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DProjectExtension.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
 		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 			children = (
 				DA2795B31F2AFC4100550ECA /* DManager.swift */,
 				DA2795B41F2AFC4100550ECA /* DSettingsExtension.swift */,
+				DA39F3491F2D7E5200AF9256 /* DProjectExtension.swift */,
 				DA39F3461F2D799100AF9256 /* DItera.xcdatamodeld */,
 			);
 			path = Data;
@@ -1108,6 +1111,7 @@
 				DA2796591F2AFC4200550ECA /* ExtensionNotification.swift in Sources */,
 				DA68B7C21F2C13A100F4B819 /* VEditScaleImageOriginal.swift in Sources */,
 				DA2796201F2AFC4100550ECA /* CSourceVideoImport.swift in Sources */,
+				DA39F34A1F2D7E5200AF9256 /* DProjectExtension.swift in Sources */,
 				DA2796651F2AFC4200550ECA /* View.swift in Sources */,
 				DA2796231F2AFC4100550ECA /* Model.swift in Sources */,
 				DA2796671F2AFC4200550ECA /* ViewParent.swift in Sources */,

@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class MSave:Model
 {
@@ -33,6 +34,15 @@ class MSave:Model
         cropSequence(sequence:sequence)
         rotateSequence(sequence:sequence)
         factoryGif(sequence:sequence, path:path)
+    }
+    
+    private func saveToCD(path:URL)
+    {
+        DManager.sharedInstance?.create(entity:DProject.self)
+        { [weak self] (data:NSManagedObject?) in
+            
+            
+        }
     }
     
     //MARK: public
@@ -75,7 +85,7 @@ class MSave:Model
             return
         }
         
-        controller?.export(url:path)
+        saveToCD(path:path)
     }
     
     func drawImage(
