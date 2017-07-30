@@ -1,4 +1,5 @@
 import UIKit
+import ImageIO
 
 extension VGif
 {
@@ -15,17 +16,45 @@ extension VGif
     {
         guard
         
-            let data:Data = loadData(url:url)
+            let source:CGImageSource = factorySource(url:url)
         
         else
         {
             return
         }
         
+        let count:Int = CGImageSourceGetCount(source)
         
     }
     
-    private func loadData(url:URL) -> Data?
+    private func factorySource(url:URL) -> CGImageSource?
+    {
+        guard
+            
+            let data:CFData = loadData(url:url)
+            
+        else
+        {
+            return nil
+        }
+        
+        let options:CFDictionary = sourceOptions()
+        
+        guard
+        
+            let source:CGImageSource = CGImageSourceCreateWithData(
+                data,
+                options)
+        
+        else
+        {
+            return nil
+        }
+        
+        return source
+    }
+    
+    private func loadData(url:URL) -> CFData?
     {
         let data:Data
         
@@ -40,6 +69,17 @@ extension VGif
             return nil
         }
         
-        return data
+        let cfData:CFData = data as CFData
+        
+        return cfData
+    }
+    
+    private func sourceOptions() -> CFDictionary
+    {
+        let dictionary:[String:Any] = [
+            String(kCGImageSourceShouldCache):kCFBooleanFalse]
+        let cfDictionary:CFDictionary = dictionary as CFDictionary
+        
+        return cfDictionary
     }
 }
