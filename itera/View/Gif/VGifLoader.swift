@@ -3,6 +3,8 @@ import ImageIO
 
 extension VGif
 {
+    private static let kDefaultDuration:TimeInterval = 1
+    
     class func withURL(url:URL) -> VGif
     {
         let view:VGif = VGif()
@@ -82,7 +84,7 @@ extension VGif
     private func sourceOptions() -> CFDictionary
     {
         let dictionary:[String:Any] = [
-            String(kCGImageSourceShouldCache):kCFBooleanFalse]
+            kCGImageSourceShouldCache as String:kCFBooleanFalse]
         let cfDictionary:CFDictionary = dictionary as CFDictionary
         
         return cfDictionary
@@ -94,6 +96,9 @@ extension VGif
         
         for index:Int in 0 ..< count
         {
+            let itemDuation:TimeInterval =  frameDuration(
+                source:source,
+                index:index)
         }
     }
     
@@ -101,12 +106,24 @@ extension VGif
         source:CGImageSource,
         index:Int) -> TimeInterval
     {
-        let properties:[String:AnyObject]? = frameProperties(
-            source:source, index:index)
+        guard
+            
+            let properties:[String:AnyObject] = frameProperties(
+                source:source,
+                index:index),
+            let gifProperties:[String:AnyObject] = properties[
+                kCGImagePropertyGIFDictionary as String] as? [String:AnyObject],
+            let delayTime:Double = gifProperties[
+                kCGImagePropertyGIFDelayTime as String] as? Double
         
-        print(properties)
+        else
+        {
+            return VGif.kDefaultDuration
+        }
         
-        return 0
+        let duration:TimeInterval = TimeInterval(delayTime)
+        
+        return duration
     }
     
     private func frameProperties(
