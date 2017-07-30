@@ -2,6 +2,8 @@ import UIKit
 
 class VHome:ViewMain
 {
+    private(set) weak var viewProjects:VHomeProjects!
+    private let kProjectsHeight:CGFloat = 350
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
     
@@ -34,9 +36,14 @@ class VHome:ViewMain
             colourTop:UIColor.colourGradientDark,
             colourBottom:UIColor.colourGradientLight)
         
+        let viewProjects:VHomeProjects = VHomeProjects(
+            controller:controller)
+        self.viewProjects = viewProjects
+        
         let viewMenu:VHomeMenu = VHomeMenu(controller:controller)
         
         addSubview(viewGradient)
+        addSubview(viewProjects)
         addSubview(viewMenu)
         
         NSLayoutConstraint.topToTop(
@@ -57,6 +64,16 @@ class VHome:ViewMain
             constant:kMenuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewMenu,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewProjects,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewProjects,
+            constant:kProjectsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewProjects,
             toView:self)
     }
 }
