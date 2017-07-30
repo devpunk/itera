@@ -169,6 +169,7 @@
 		DA39F3501F2D856F00AF9256 /* MSaveDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F34F1F2D856F00AF9256 /* MSaveDirectory.swift */; };
 		DA39F3521F2D874700AF9256 /* VHomeProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3511F2D874700AF9256 /* VHomeProjects.swift */; };
 		DA39F3541F2D876700AF9256 /* VHomeProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */; };
+		DA39F3571F2E919B00AF9256 /* VGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3561F2E919B00AF9256 /* VGif.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
 		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
@@ -353,6 +354,7 @@
 		DA39F34F1F2D856F00AF9256 /* MSaveDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveDirectory.swift; sourceTree = "<group>"; };
 		DA39F3511F2D874700AF9256 /* VHomeProjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeProjects.swift; sourceTree = "<group>"; };
 		DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeProjectsCell.swift; sourceTree = "<group>"; };
+		DA39F3561F2E919B00AF9256 /* VGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGif.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
 		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
@@ -738,6 +740,7 @@
 			children = (
 				DA2795C91F2AFC4100550ECA /* Abstract */,
 				DA2795D01F2AFC4100550ECA /* Basic */,
+				DA39F3551F2E916900AF9256 /* Gif */,
 				DA0294961F2B16460079382B /* Save */,
 				DA042C7B1F2C92C000874EAE /* EditRotate */,
 				DA2795DC1F2AFC4100550ECA /* Edit */,
@@ -905,6 +908,14 @@
 			path = SourceVideoTime;
 			sourceTree = "<group>";
 		};
+		DA39F3551F2E916900AF9256 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				DA39F3561F2E919B00AF9256 /* VGif.swift */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		DA68B7B11F2BFE7F00F4B819 /* EditScale */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,6 +1072,7 @@
 				DA0294981F2B16540079382B /* VSave.swift in Sources */,
 				DA2796361F2AFC4200550ECA /* MPerkThumbnailFreeProtocol.swift in Sources */,
 				DA2796281F2AFC4100550ECA /* MEditActionProtocol.swift in Sources */,
+				DA39F3571F2E919B00AF9256 /* VGif.swift in Sources */,
 				DA2796261F2AFC4100550ECA /* MEditActionCrop.swift in Sources */,
 				DACE6BE81F2B26F20016DEEB /* VSaveProgressBar.swift in Sources */,
 				DA2796931F2AFC4200550ECA /* VNewSourceCell.swift in Sources */,
