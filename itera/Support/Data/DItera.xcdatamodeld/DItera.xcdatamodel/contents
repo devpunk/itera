@@ -13,7 +13,7 @@
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
         <attribute name="review" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ttl" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="perks" maxCount="1" deletionRule="Nullify" destinationEntity="DPerk" inverseName="settings" inverseEntity="DPerk" syncable="YES"/>
+        <relationship name="perks" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DPerk" inverseName="settings" inverseEntity="DPerk" syncable="YES"/>
     </entity>
     <elements>
         <element name="DPerk" positionX="-63" positionY="-18" width="128" height="90"/>
