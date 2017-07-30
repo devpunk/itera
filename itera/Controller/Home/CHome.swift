@@ -2,11 +2,16 @@ import Foundation
 
 class CHome:Controller<VHome, MHome>
 {
+    override func modelRefresh()
+    {
+        
+    }
+    
     override func viewDidAppear(_ animated:Bool)
     {
         super.viewDidAppear(animated)
         
-        
+        model.load()
     }
     
     //MARK: public
