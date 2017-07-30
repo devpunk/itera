@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="DPerk" representedClassName="DPerk" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="domainIdentifier" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <relationship name="settings" maxCount="1" deletionRule="Nullify" destinationEntity="DSettings" inverseName="perks" inverseEntity="DSettings" syncable="YES"/>
+    </entity>
+    <entity name="DPerkFree" representedClassName="DPerkFree" parentEntity="DPerk" syncable="YES" codeGenerationType="class"/>
+    <entity name="DPerkPurchase" representedClassName="DPerkPurchase" parentEntity="DPerk" syncable="YES" codeGenerationType="class">
+        <attribute name="purchased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="DProject" representedClassName="DProject" syncable="YES" codeGenerationType="class"/>
+    <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
+        <attribute name="review" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ttl" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="perks" maxCount="1" deletionRule="Nullify" destinationEntity="DPerk" inverseName="settings" inverseEntity="DPerk" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DPerk" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="DPerkFree" positionX="-54" positionY="-9" width="128" height="45"/>
+        <element name="DPerkPurchase" positionX="-36" positionY="9" width="128" height="60"/>
+        <element name="DSettings" positionX="-18" positionY="27" width="128" height="90"/>
+        <element name="DProject" positionX="0" positionY="45" width="128" height="45"/>
+    </elements>
 </model>
