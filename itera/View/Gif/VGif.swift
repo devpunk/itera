@@ -23,11 +23,23 @@ class VGif:UIView
         return nil
     }
     
+    deinit
+    {
+        displayLink?.invalidate()
+        print("invalidate")
+    }
+    
+    override func removeFromSuperview()
+    {
+        super.removeFromSuperview()
+        
+        displayLink?.invalidate()
+    }
+    
     //MARK: action
     
     func actionDisplayLink(sender displayLink:CADisplayLink)
     {
-        print("update")
     }
     
     //MARK: private
