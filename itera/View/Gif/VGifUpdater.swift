@@ -23,6 +23,7 @@ extension VGif
     
     func updateFrame(displayLink:CADisplayLink)
     {
-        print(displayLink.timestamp)
+        let timestamp:TimeInterval = displayLink.timestamp
+//        let item:VGifFrame = 
     }
 }

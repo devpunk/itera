@@ -2,8 +2,8 @@ import UIKit
 
 class VGif:UIView
 {
+    var currentFrame:Int
     private(set) var frames:[VGifFrame]
-    private(set) var currentFrame:Int
     private weak var displayLink:CADisplayLink?
     
     init()
