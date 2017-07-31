@@ -175,6 +175,7 @@
 		DA39F35D1F2F356800AF9256 /* VGifDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35C1F2F356800AF9256 /* VGifDraw.swift */; };
 		DA39F35F1F2F363900AF9256 /* VGifUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */; };
 		DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */; };
+		DA632E601F2FE02E00DF8F9A /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
 		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
@@ -365,6 +366,7 @@
 		DA39F35C1F2F356800AF9256 /* VGifDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifDraw.swift; sourceTree = "<group>"; };
 		DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifUpdater.swift; sourceTree = "<group>"; };
 		DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeImage.swift; sourceTree = "<group>"; };
+		DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
 		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
@@ -731,6 +733,7 @@
 				DA2795BD1F2AFC4100550ECA /* ExtensionUIColor.swift */,
 				DA2795BE1F2AFC4100550ECA /* ExtensionUIFont.swift */,
 				DA2795BF1F2AFC4100550ECA /* ExtensionURL.swift */,
+				DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1201,6 +1204,7 @@
 				DA27963B1F2AFC4200550ECA /* MSessionPerks.swift in Sources */,
 				DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */,
 				DA2796301F2AFC4100550ECA /* MEditCropLayout.swift in Sources */,
+				DA632E601F2FE02E00DF8F9A /* ExtensionCGImage.swift in Sources */,
 				DA2796A01F2AFC4200550ECA /* VSourceVideoTimeBarInfo.swift in Sources */,
 				DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */,
 				DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */,
