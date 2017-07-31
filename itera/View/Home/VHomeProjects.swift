@@ -6,12 +6,22 @@ class VHomeProjects:VCollection<
     CHome,
     VHomeProjectsCell>
 {
+    private var cellSizeSelected:CGSize
+    private var cellSize:CGSize
     private let kCollectionTop:CGFloat = 255
     private let kCellSize:CGFloat = 105
+    private let kCellSelectedWidth:CGFloat = 200
     private let kInterItem:CGFloat = 5
     
     required init(controller:CHome)
     {
+        cellSizeSelected = CGSize(
+            width:kCellSelectedWidth,
+            height:kCellSize)
+        cellSize = CGSize(
+            width:kCellSize,
+            height:kCellSize)
+        
         super.init(controller:controller)
         collectionView.alwaysBounceHorizontal = true
         
@@ -20,9 +30,6 @@ class VHomeProjects:VCollection<
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
-            flow.itemSize = CGSize(
-                width:kCellSize,
-                height:kCellSize)
         }
     }
     
@@ -46,6 +53,26 @@ class VHomeProjects:VCollection<
             right:0)
         
         return insets
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let item:Int = indexPath.item
+        let size:CGSize
+        
+        if item == controller.model.selected
+        {
+            size = cellSizeSelected
+        }
+        else
+        {
+            size = cellSize
+        }
+        
+        return size
     }
     
     override func collectionView(
@@ -75,5 +102,31 @@ class VHomeProjects:VCollection<
         let item:MHomeItem = controller.model.items[index.item]
         
         return item
+    }
+    
+    private func selectCurrent()
+    {
+        let selected:Int = controller.model.selected
+        let count:Int = controller.model.items.count
+        
+        if selected < count
+        {
+            let index:IndexPath = IndexPath(
+                item:selected,
+                section:0)
+            
+            collectionView.selectItem(
+                at:index,
+                animated:true,
+                scrollPosition:
+                UICollectionViewScrollPosition.centeredHorizontally)
+        }
+    }
+    
+    //MARK: public
+    
+    func refresh()
+    {
+        collectionView.reloadData()
     }
 }

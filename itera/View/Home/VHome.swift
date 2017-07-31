@@ -81,6 +81,6 @@ class VHome:ViewMain
     
     func refresh()
     {
-        viewProjects.collectionView.reloadData()
+        viewProjects.refresh()
     }
 }

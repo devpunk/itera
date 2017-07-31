@@ -2,10 +2,12 @@ import Foundation
 
 class MHome:Model
 {
+    var selected:Int
     private(set) var items:[MHomeItem]
     
     required init()
     {
+        selected = 0
         items = []
         
         super.init()
