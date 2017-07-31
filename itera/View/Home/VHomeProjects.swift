@@ -11,7 +11,6 @@ class VHomeProjects:VCollection<
     private var trackScroll:Bool
     private let kCollectionTop:CGFloat = 20
     private let kCollectionBottom:CGFloat = 20
-    private let kCellSelectedWidth:CGFloat = 200
     private let kInterItem:CGFloat = 5
     private let kAnimationDuration:TimeInterval = 0.3
     
@@ -109,7 +108,7 @@ class VHomeProjects:VCollection<
                 let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
                 let usableHeight:CGFloat = height - verticalMargin
                 let cellSizeSelected:CGSize = CGSize(
-                    width:kCellSelectedWidth,
+                    width:VHomeCard.kWidth,
                     height:usableHeight)
                 self.cellSizeSelected = cellSizeSelected
                 
