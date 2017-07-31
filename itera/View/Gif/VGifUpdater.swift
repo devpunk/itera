@@ -25,7 +25,7 @@ extension VGif
     {
         let frame:VGifFrame?
         
-        if indexFrame > 0 && indexFrame < frames.count
+        if indexFrame >= 0 && indexFrame < frames.count
         {
             frame = frames[indexFrame]
         }
@@ -35,6 +35,15 @@ extension VGif
         }
         
         return frame
+    }
+    
+    func asyncNeedsDisplay()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.setNeedsDisplay()
+        }
     }
     
     func updateFrame(displayLink:CADisplayLink)

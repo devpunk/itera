@@ -4,6 +4,8 @@ extension VGif
 {
     override func draw(_ rect:CGRect)
     {
+        print("draw")
+        
         guard
         
             let frame:VGifFrame = currentFrame(),
@@ -14,7 +16,12 @@ extension VGif
             return
         }
         
-        draw(frame:frame, context:context, rect:rect)
+        print("draw 2")
+        
+        draw(
+            frame:frame,
+            context:context,
+            rect:rect)
     }
     
     //MARK: private
