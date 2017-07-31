@@ -47,7 +47,6 @@ class VGif:UIView
     func framesLoaded(frames:[VGifFrame])
     {
         self.frames = frames
-        
         asyncNeedsDisplay()
         displayLink = factoryDisplayLink()
     }

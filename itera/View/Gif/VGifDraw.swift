@@ -35,6 +35,8 @@ extension VGif
         let imageRect:CGRect = drawRect(
             rect:rect,
             image:image)
+        context.translateBy(x:0, y:rect.height)
+        context.scaleBy(x:1, y:-1)
         context.draw(image, in:imageRect)
     }
     
