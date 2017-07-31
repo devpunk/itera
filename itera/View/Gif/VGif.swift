@@ -3,7 +3,7 @@ import UIKit
 class VGif:UIView
 {
     let queueGif:DispatchQueue
-    private weak var displayLink:CADisplayLink?
+    private var displayLink:CADisplayLink?
     private var frames:[VGifFrame]
     private var currentFrame:Int
     private let kQueueLabel:String = "iturbide.itera.gif"
@@ -44,6 +44,9 @@ class VGif:UIView
         displayLink = CADisplayLink(
             target:self,
             selector:#selector(actionDisplayLink(sender:)))
+        displayLink?.add(
+            to:RunLoop.main,
+            forMode:RunLoopMode.commonModes)
     }
     
     //MARK: public
