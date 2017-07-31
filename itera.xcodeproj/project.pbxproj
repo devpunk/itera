@@ -172,6 +172,7 @@
 		DA39F3571F2E919B00AF9256 /* VGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3561F2E919B00AF9256 /* VGif.swift */; };
 		DA39F3591F2E91D200AF9256 /* VGifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3581F2E91D200AF9256 /* VGifLoader.swift */; };
 		DA39F35B1F2F2A0100AF9256 /* VGifFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */; };
+		DA39F35D1F2F356800AF9256 /* VGifDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35C1F2F356800AF9256 /* VGifDraw.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
 		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
@@ -359,6 +360,7 @@
 		DA39F3561F2E919B00AF9256 /* VGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGif.swift; sourceTree = "<group>"; };
 		DA39F3581F2E91D200AF9256 /* VGifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifLoader.swift; sourceTree = "<group>"; };
 		DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifFrame.swift; sourceTree = "<group>"; };
+		DA39F35C1F2F356800AF9256 /* VGifDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifDraw.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
 		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
@@ -918,6 +920,7 @@
 				DA39F3561F2E919B00AF9256 /* VGif.swift */,
 				DA39F3581F2E91D200AF9256 /* VGifLoader.swift */,
 				DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */,
+				DA39F35C1F2F356800AF9256 /* VGifDraw.swift */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -1174,6 +1177,7 @@
 				DA2796921F2AFC4200550ECA /* VNewSource.swift in Sources */,
 				DA2796771F2AFC4200550ECA /* VEditActionsCell.swift in Sources */,
 				DA27964F1F2AFC4200550ECA /* MSourceVideoTimeItemWidth.swift in Sources */,
+				DA39F35D1F2F356800AF9256 /* VGifDraw.swift in Sources */,
 				DA39F35B1F2F2A0100AF9256 /* VGifFrame.swift in Sources */,
 				DA2796971F2AFC4200550ECA /* VSourceVideoList.swift in Sources */,
 				DA27968F1F2AFC4200550ECA /* VHomeMenu.swift in Sources */,

@@ -26,7 +26,6 @@ class VGif:UIView
     deinit
     {
         displayLink?.invalidate()
-        print("invalidate")
     }
     
     override func removeFromSuperview()
