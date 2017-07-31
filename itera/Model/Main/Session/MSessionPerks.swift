@@ -34,6 +34,8 @@ extension MSession
     {
         for thumbnail:MPerkThumbnailProtocol in thumbnails
         {
+            dispatchGroup.enter()
+            
             let identifier:String = thumbnail.identifier()
             
             guard
@@ -81,8 +83,6 @@ extension MSession
         thumbnail:MPerkThumbnailFreeProtocol,
         dispatchGroup:DispatchGroup)
     {
-        dispatchGroup.enter()
-        
         let identifier:String = thumbnail.identifier()
         let domainIdentifier:String = thumbnail.domainIdentifier()
         
@@ -110,8 +110,6 @@ extension MSession
         thumbnail:MPerkThumbnailPurchaseProtocol,
         dispatchGroup:DispatchGroup)
     {
-        dispatchGroup.enter()
-        
         let identifier:String = thumbnail.identifier()
         let domainIdentifier:String = thumbnail.domainIdentifier()
         
