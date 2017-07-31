@@ -14,23 +14,34 @@ extension VGif
             return
         }
         
+        let image:CGImage = frame.image
+        let imageRect:CGRect
+        
+        if let rect:CGRect = self.imageRect
+        {
+            imageRect = rect
+        }
+        else
+        {
+            imageRect = drawRect(rect:rect, image:image)
+            self.imageRect = imageRect
+        }
+        
         draw(
-            frame:frame,
+            image:image,
             context:context,
-            rect:rect)
+            rect:rect,
+            imageRect:imageRect)
     }
     
     //MARK: private
     
     private func draw(
-        frame:VGifFrame,
+        image:CGImage,
         context:CGContext,
-        rect:CGRect)
+        rect:CGRect,
+        imageRect:CGRect)
     {
-        let image:CGImage = frame.image
-        let imageRect:CGRect = drawRect(
-            rect:rect,
-            image:image)
         context.translateBy(x:0, y:rect.height)
         context.scaleBy(x:1, y:-1)
         context.draw(image, in:imageRect)

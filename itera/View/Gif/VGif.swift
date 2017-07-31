@@ -2,6 +2,7 @@ import UIKit
 
 class VGif:UIView
 {
+    var imageRect:CGRect?
     var indexFrame:Int
     private(set) var frames:[VGifFrame]
     private weak var displayLink:CADisplayLink?
@@ -33,6 +34,21 @@ class VGif:UIView
         super.removeFromSuperview()
         
         displayLink?.invalidate()
+    }
+    
+    override func layoutSubviews()
+    {
+        imageRect = nil
+        
+        super.layoutSubviews()
+    }
+    
+    override var contentMode:UIViewContentMode
+    {
+        didSet
+        {
+            imageRect = nil
+        }
     }
     
     //MARK: selectors
