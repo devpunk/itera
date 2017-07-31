@@ -43,14 +43,17 @@ class VHomeProjects:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         insetForSectionAt section:Int) -> UIEdgeInsets
     {
+        let width:CGFloat = collectionView.bounds.width
         let height:CGFloat = collectionView.bounds.height
+        let width_selected:CGFloat = width - kCellSelectedWidth
+        let horizontalMargin:CGFloat = width_selected / 2.0
         let cellTop:CGFloat = kCellSize + kCollectionTop
         let remainHeight:CGFloat = height - cellTop
         let insets:UIEdgeInsets = UIEdgeInsets(
             top:kCollectionTop,
-            left:0,
+            left:horizontalMargin,
             bottom:remainHeight,
-            right:0)
+            right:horizontalMargin)
         
         return insets
     }
