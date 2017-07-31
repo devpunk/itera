@@ -158,8 +158,6 @@ extension MHome
             return nil
         }
         
-        print("data size: \(data.count)")
-        
         guard
             
             let image:UIImage = UIImage(data:data)

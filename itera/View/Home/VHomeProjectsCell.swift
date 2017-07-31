@@ -2,7 +2,9 @@ import UIKit
 
 class VHomeProjectsCell:UICollectionViewCell
 {
+    static let kImageSize:CGFloat = 50
     private weak var imageView:UIImageView!
+    private weak var layoutImageLeft:NSLayoutConstraint!
     private let kAlphaSelected:CGFloat = 0
     private let kAlphaHighlighted:CGFloat = 0.2
     private let kAlphaStand:CGFloat = 1
@@ -22,7 +24,13 @@ class VHomeProjectsCell:UICollectionViewCell
         
         addSubview(imageView)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.bottomToBottom(
+            view:imageView,
+            toView:self)
+        NSLayoutConstraint.size(
+            view:imageView,
+            constant:VHomeProjectsCell.kImageSize)
+        layoutImageLeft = NSLayoutConstraint.leftToLeft(
             view:imageView,
             toView:self)
     }
@@ -30,6 +38,16 @@ class VHomeProjectsCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.width
+        let remainWidth:CGFloat = width - VHomeProjectsCell.kImageSize
+        let marginLeft:CGFloat = remainWidth / 2.0
+        layoutImageLeft.constant = marginLeft
+        
+        super.layoutSubviews()
     }
     
     override var isSelected:Bool
