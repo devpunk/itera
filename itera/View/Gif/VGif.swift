@@ -5,7 +5,6 @@ class VGif:UIView
     private(set) var frames:[VGifFrame]
     private(set) var currentFrame:Int
     private weak var displayLink:CADisplayLink?
-    private let kMaxFramesPerSecond:Int = 20
     
     init()
     {
@@ -36,29 +35,10 @@ class VGif:UIView
         displayLink?.invalidate()
     }
     
-    //MARK: action
+    //MARK: selectors
     
-    func actionDisplayLink(sender displayLink:CADisplayLink)
+    func updateDisplayLink(sender displayLink:CADisplayLink)
     {
-    }
-    
-    //MARK: private
-    
-    private func factoryDisplayLink()
-    {
-        let displayLink:CADisplayLink = CADisplayLink(
-            target:self,
-            selector:#selector(actionDisplayLink(sender:)))
-        displayLink.add(
-            to:RunLoop.main,
-            forMode:RunLoopMode.commonModes)
-        
-        if #available(iOS 10.0, *)
-        {
-            displayLink.preferredFramesPerSecond = kMaxFramesPerSecond
-        }
-        
-        self.displayLink = displayLink
     }
     
     //MARK: public
@@ -66,6 +46,6 @@ class VGif:UIView
     func framesLoaded(frames:[VGifFrame])
     {
         self.frames = frames
-        factoryDisplayLink()
+        displayLink = factoryDisplayLink()
     }
 }
