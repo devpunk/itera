@@ -130,8 +130,7 @@ extension VGif
             
             let frame:VGifFrame = VGifFrame(
                 image:image,
-                duration:itemDuration,
-                timestamp:0)
+                duration:itemDuration)
             frames.append(frame)
         }
         

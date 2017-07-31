@@ -2,14 +2,14 @@ import UIKit
 
 class VGif:UIView
 {
-    var currentFrame:Int
+    var indexFrame:Int
     private(set) var frames:[VGifFrame]
     private weak var displayLink:CADisplayLink?
     
     init()
     {
         frames = []
-        currentFrame = 0
+        indexFrame = 0
         
         super.init(frame:CGRect.zero)
         clipsToBounds = true

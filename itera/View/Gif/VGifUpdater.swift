@@ -21,9 +21,27 @@ extension VGif
         return displayLink
     }
     
+    func currentFrame() -> VGifFrame?
+    {
+        let frame:VGifFrame?
+        
+        if indexFrame > 0 && indexFrame < frames.count
+        {
+            frame = frames[indexFrame]
+        }
+        else
+        {
+            frame = nil
+        }
+        
+        return frame
+    }
+    
     func updateFrame(displayLink:CADisplayLink)
     {
         let timestamp:TimeInterval = displayLink.timestamp
-//        let item:VGifFrame = 
+        let item:VGifFrame = frames[indexFrame]
+        let itemTimestamp:TimeInterval = item.duration
+        let itemDuration:TimeInterval = item.timestamp
     }
 }
