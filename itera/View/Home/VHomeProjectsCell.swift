@@ -2,7 +2,6 @@ import UIKit
 
 class VHomeProjectsCell:UICollectionViewCell
 {
-    private weak var model:MHomeItem?
     private weak var imageView:UIImageView!
     private let kAlphaSelected:CGFloat = 0
     private let kAlphaHighlighted:CGFloat = 0.2
@@ -51,54 +50,6 @@ class VHomeProjectsCell:UICollectionViewCell
     
     //MARK: private
     
-    private func loadImage()
-    {
-        guard
-        
-            let model:MHomeItem = self.model
-        
-        else
-        {
-            return
-        }
-        
-        let data:Data?
-        
-        do
-        {
-            try data = Data(
-                contentsOf:model.path,
-                options:Data.ReadingOptions.uncached)
-        }
-        catch
-        {
-            data = nil
-        }
-        
-        guard
-        
-            let loadedData:Data = data,
-            let image:UIImage = UIImage(data:loadedData)
-        
-        else
-        {
-            return
-        }
-        
-        model.image = image
-        
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.imageLoaded()
-        }
-    }
-    
-    private func imageLoaded()
-    {
-        imageView.image = model?.image
-    }
-    
     private func hover()
     {
         if isSelected
@@ -119,25 +70,7 @@ class VHomeProjectsCell:UICollectionViewCell
     
     func config(model:MHomeItem)
     {
-        self.model = model
-        imageView.image = nil
+        imageView.image = model.image
         hover()
-        
-        guard
-        
-            let image:UIImage = model.image
-        
-        else
-        {
-            DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-            { [weak self] in
-                
-                self?.loadImage()
-            }
-            
-            return
-        }
-        
-        imageView.image = image
     }
 }
