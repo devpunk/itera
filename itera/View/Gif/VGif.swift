@@ -3,7 +3,9 @@ import UIKit
 class VGif:UIView
 {
     let queueGif:DispatchQueue
+    private weak var displayLink:CADisplayLink?
     private var frames:[VGifFrame]
+    private var currentFrame:Int
     private let kQueueLabel:String = "iturbide.itera.gif"
     
     init()
@@ -15,6 +17,7 @@ class VGif:UIView
             autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
             target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
         frames = []
+        currentFrame = 0
         
         super.init(frame:CGRect.zero)
         clipsToBounds = true
@@ -25,5 +28,29 @@ class VGif:UIView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: action
+    
+    func actionDisplayLink(sender displayLink:CADisplayLink)
+    {
+        print("update")
+    }
+    
+    //MARK: private
+    
+    private func factoryDisplayLink()
+    {
+        displayLink = CADisplayLink(
+            target:self,
+            selector:#selector(actionDisplayLink(sender:)))
+    }
+    
+    //MARK: public
+    
+    func framesLoaded(frames:[VGifFrame])
+    {
+        self.frames = frames
+        factoryDisplayLink()
     }
 }

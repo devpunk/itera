@@ -94,6 +94,7 @@ extension VGif
     {
         let count:Int = CGImageSourceGetCount(source)
         let options:CFDictionary = frameOptions()
+        var frames:[VGifFrame] = []
         
         for index:Int in 0 ..< count
         {
@@ -112,7 +113,14 @@ extension VGif
             let itemDuration:TimeInterval =  frameDuration(
                 source:source,
                 index:index)
+            
+            let frame:VGifFrame = VGifFrame(
+                image:image,
+                duration:itemDuration)
+            frames.append(frame)
         }
+        
+        framesLoaded(frames:frames)
     }
     
     private func frameImage(
