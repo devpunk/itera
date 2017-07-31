@@ -16,6 +16,7 @@ class VGif:UIView
         clipsToBounds = true
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = UIColor.clear
     }
     
     required init?(coder:NSCoder)
