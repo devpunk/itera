@@ -6,23 +6,18 @@ class VHomeProjects:VCollection<
     CHome,
     VHomeProjectsCell>
 {
-    private var cellSizeSelected:CGSize
-    private var cellSize:CGSize
+    private var cellSizeSelected:CGSize?
+    private var cellSize:CGSize?
     private var trackScroll:Bool
-    private let kCollectionTop:CGFloat = 255
-    private let kCellSize:CGFloat = 105
+    private let kCollectionTop:CGFloat = 20
+    private let kCollectionBottom:CGFloat = 20
+    private let kCellWidth:CGFloat = 50
     private let kCellSelectedWidth:CGFloat = 200
     private let kInterItem:CGFloat = 5
     private let kAnimationDuration:TimeInterval = 0.3
     
     required init(controller:CHome)
     {
-        cellSizeSelected = CGSize(
-            width:kCellSelectedWidth,
-            height:kCellSize)
-        cellSize = CGSize(
-            width:kCellSize,
-            height:kCellSize)
         trackScroll = true
         
         super.init(controller:controller)
@@ -85,15 +80,12 @@ class VHomeProjects:VCollection<
         insetForSectionAt section:Int) -> UIEdgeInsets
     {
         let width:CGFloat = collectionView.bounds.width
-        let height:CGFloat = collectionView.bounds.height
         let width_selected:CGFloat = width - kCellSelectedWidth
         let horizontalMargin:CGFloat = width_selected / 2.0
-        let cellTop:CGFloat = kCellSize + kCollectionTop
-        let remainHeight:CGFloat = height - cellTop
         let insets:UIEdgeInsets = UIEdgeInsets(
             top:kCollectionTop,
             left:horizontalMargin,
-            bottom:remainHeight,
+            bottom:kCollectionBottom,
             right:horizontalMargin)
         
         return insets
@@ -105,18 +97,49 @@ class VHomeProjects:VCollection<
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         let item:Int = indexPath.item
-        let size:CGSize
         
         if item == controller.model.selected
         {
-            size = cellSizeSelected
+            guard
+                
+                let cellSizeSelected:CGSize = self.cellSizeSelected
+            
+            else
+            {
+                let height:CGFloat = collectionView.bounds.height
+                let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
+                let usableHeight:CGFloat = height - verticalMargin
+                let cellSizeSelected:CGSize = CGSize(
+                    width:kCellSelectedWidth,
+                    height:usableHeight)
+                self.cellSizeSelected = cellSizeSelected
+                
+                return cellSizeSelected
+            }
+            
+            return cellSizeSelected
         }
         else
         {
-            size = cellSize
+            guard
+                
+                let cellSize:CGSize = self.cellSize
+                
+            else
+            {
+                let height:CGFloat = collectionView.bounds.height
+                let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
+                let usableHeight:CGFloat = height - verticalMargin
+                let cellSize:CGSize = CGSize(
+                    width:kCellWidth,
+                    height:usableHeight)
+                self.cellSize = cellSize
+                
+                return cellSize
+            }
+            
+            return cellSize
         }
-        
-        return size
     }
     
     override func collectionView(
