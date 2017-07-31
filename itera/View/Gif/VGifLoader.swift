@@ -20,6 +20,62 @@ extension VGif
         return view
     }
     
+    class func factorySource(url:URL) -> CGImageSource?
+    {
+        guard
+            
+            let data:CFData = loadData(url:url)
+            
+        else
+        {
+            return nil
+        }
+        
+        let options:CFDictionary = sourceOptions()
+        
+        guard
+            
+            let source:CGImageSource = CGImageSourceCreateWithData(
+                data,
+                options)
+            
+        else
+        {
+            return nil
+        }
+        
+        return source
+    }
+    
+    class func frameOptions() -> CFDictionary
+    {
+        let dictionary:[String:Any] = [
+            kCGImageSourceShouldCache as String:kCFBooleanFalse]
+        let cfDictionary:CFDictionary = dictionary as CFDictionary
+        
+        return cfDictionary
+    }
+    
+    class func frameImage(
+        source:CGImageSource,
+        index:Int,
+        options:CFDictionary) -> CGImage?
+    {
+        guard
+            
+            let image:CGImage = CGImageSourceCreateImageAtIndex(
+                source,
+                index,
+                options)
+            
+        else
+        {
+            return nil
+        }
+        
+        return image
+    }
+    
     //MARK: private
     
     private class func factoryQueue() -> DispatchQueue
@@ -34,48 +90,7 @@ extension VGif
         return queue
     }
     
-    private func loadWithURL(url:URL)
-    {
-        guard
-        
-            let source:CGImageSource = factorySource(url:url)
-        
-        else
-        {
-            return
-        }
-        
-        loadFrames(source:source)
-    }
-    
-    private func factorySource(url:URL) -> CGImageSource?
-    {
-        guard
-            
-            let data:CFData = loadData(url:url)
-            
-        else
-        {
-            return nil
-        }
-        
-        let options:CFDictionary = sourceOptions()
-        
-        guard
-        
-            let source:CGImageSource = CGImageSourceCreateWithData(
-                data,
-                options)
-        
-        else
-        {
-            return nil
-        }
-        
-        return source
-    }
-    
-    private func loadData(url:URL) -> CFData?
+    private class func loadData(url:URL) -> CFData?
     {
         let data:Data
         
@@ -95,7 +110,7 @@ extension VGif
         return cfData
     }
     
-    private func sourceOptions() -> CFDictionary
+    private class func sourceOptions() -> CFDictionary
     {
         let dictionary:[String:Any] = [
             kCGImageSourceShouldCache as String:kCFBooleanFalse]
@@ -104,17 +119,31 @@ extension VGif
         return cfDictionary
     }
     
+    private func loadWithURL(url:URL)
+    {
+        guard
+        
+            let source:CGImageSource = VGif.factorySource(url:url)
+        
+        else
+        {
+            return
+        }
+        
+        loadFrames(source:source)
+    }
+    
     private func loadFrames(source:CGImageSource)
     {
         let count:Int = CGImageSourceGetCount(source)
-        let options:CFDictionary = frameOptions()
+        let options:CFDictionary = VGif.frameOptions()
         var frames:[VGifFrame] = []
         
         for index:Int in 0 ..< count
         {
             guard
                 
-                let image:CGImage = frameImage(
+                let image:CGImage = VGif.frameImage(
                     source:source,
                     index:index,
                     options:options)
@@ -135,35 +164,6 @@ extension VGif
         }
         
         framesLoaded(frames:frames)
-    }
-    
-    private func frameImage(
-        source:CGImageSource,
-        index:Int,
-        options:CFDictionary) -> CGImage?
-    {
-        guard
-        
-            let image:CGImage = CGImageSourceCreateImageAtIndex(
-                source,
-                index,
-                options)
-        
-        else
-        {
-            return nil
-        }
-        
-        return image
-    }
-    
-    private func frameOptions() -> CFDictionary
-    {
-        let dictionary:[String:Any] = [
-            kCGImageSourceShouldCache as String:kCFBooleanFalse]
-        let cfDictionary:CFDictionary = dictionary as CFDictionary
-        
-        return cfDictionary
     }
     
     private func frameDuration(
