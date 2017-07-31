@@ -103,15 +103,15 @@ class VHomeProjectsCell:UICollectionViewCell
     {
         if isSelected
         {
-            alpha = kAlphaSelected
+            imageView.alpha = kAlphaSelected
         }
         else if isHighlighted
         {
-            alpha = kAlphaHighlighted
+            imageView.alpha = kAlphaHighlighted
         }
         else
         {
-            alpha = kAlphaStand
+            imageView.alpha = kAlphaStand
         }
     }
     
@@ -121,6 +121,7 @@ class VHomeProjectsCell:UICollectionViewCell
     {
         self.model = model
         imageView.image = nil
+        hover()
         
         guard
         
@@ -138,6 +139,5 @@ class VHomeProjectsCell:UICollectionViewCell
         }
         
         imageView.image = image
-        hover()
     }
 }

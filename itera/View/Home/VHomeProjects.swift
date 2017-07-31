@@ -75,7 +75,7 @@ class VHomeProjects:VCollection<
                 at:indexPath,
                 animated:true,
                 scrollPosition:UICollectionViewScrollPosition())
-            animateLayout()
+            animateLayout(selected:indexPath)
         }
     }
     
@@ -169,12 +169,7 @@ class VHomeProjects:VCollection<
     {
         trackScroll = false
         controller.model.selected = indexPath.item
-        collectionView.scrollToItem(
-            at:indexPath,
-            at:UICollectionViewScrollPosition.centeredHorizontally,
-            animated:true)
-        
-        animateLayout()
+        animateLayout(selected:indexPath)
     }
     
     //MARK: private
@@ -205,12 +200,21 @@ class VHomeProjects:VCollection<
         }
     }
     
-    private func animateLayout()
+    private func animateLayout(selected:IndexPath)
     {
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(
+            withDuration:kAnimationDuration,
+            animations:
         { [weak self] in
             
             self?.collectionView.collectionViewLayout.invalidateLayout()
+        })
+        { [weak self] (done:Bool) in
+        
+            self?.collectionView.scrollToItem(
+                at:selected,
+                at:UICollectionViewScrollPosition.centeredHorizontally,
+                animated:true)
         }
     }
     
