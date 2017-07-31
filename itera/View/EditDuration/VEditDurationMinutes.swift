@@ -63,11 +63,9 @@ class VEditDurationMinutes:VCollection<
     {
         if trackScroll
         {
-            let offsetX:CGFloat = scrollView.contentOffset.x
-            let midX:CGFloat = scrollView.bounds.width / 2.0
-            let midY:CGFloat = scrollView.bounds.height / 2.0
-            let totalX:CGFloat = midX + offsetX
-            let point:CGPoint = CGPoint(x:totalX, y:midY)
+            let midX:CGFloat = scrollView.bounds.midX
+            let midY:CGFloat = scrollView.bounds.midY
+            let point:CGPoint = CGPoint(x:midX, y:midY)
             
             guard
                 

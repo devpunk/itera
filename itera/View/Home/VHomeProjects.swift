@@ -58,11 +58,8 @@ class VHomeProjects:VCollection<
     {
         if trackScroll
         {
-            let offsetX:CGFloat = scrollView.contentOffset.x
-            let midX:CGFloat = collectionView.bounds.width / 2.0
-            let totalX:CGFloat = midX + offsetX
-            let totalY:CGFloat = kCollectionTop + kInterItem
-            let point:CGPoint = CGPoint(x:totalX, y:totalY)
+            let midX:CGFloat = collectionView.bounds.midX
+            let point:CGPoint = CGPoint(x:midX, y:kCollectionTop)
             
             guard
                 
