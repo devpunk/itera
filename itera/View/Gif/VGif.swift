@@ -2,21 +2,13 @@ import UIKit
 
 class VGif:UIView
 {
-    let queueGif:DispatchQueue
     private weak var displayLink:CADisplayLink?
     private var frames:[VGifFrame]
     private var currentFrame:Int
-    private let kQueueLabel:String = "iturbide.itera.gif"
     private let kMaxFramesPerSecond:Int = 20
     
     init()
     {
-        queueGif = DispatchQueue(
-            label:kQueueLabel,
-            qos:DispatchQoS.background,
-            attributes:DispatchQueue.Attributes(),
-            autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
-            target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
         frames = []
         currentFrame = 0
         

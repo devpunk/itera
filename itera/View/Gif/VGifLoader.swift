@@ -3,13 +3,15 @@ import ImageIO
 
 extension VGif
 {
+    private static let kQueueLabel:String = "iturbide.itera.gif"
     private static let kDefaultDuration:TimeInterval = 1
     
     class func withURL(url:URL) -> VGif
     {
         let view:VGif = VGif()
+        let queue:DispatchQueue = factoryQueue()
         
-        view.queueGif.async
+        queue.async
         { [weak view] in
             
             view?.loadWithURL(url:url)
@@ -19,6 +21,18 @@ extension VGif
     }
     
     //MARK: private
+    
+    private class func factoryQueue() -> DispatchQueue
+    {
+        let queue = DispatchQueue(
+            label:kQueueLabel,
+            qos:DispatchQoS.background,
+            attributes:DispatchQueue.Attributes(),
+            autoreleaseFrequency:DispatchQueue.AutoreleaseFrequency.inherit,
+            target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        
+        return queue
+    }
     
     private func loadWithURL(url:URL)
     {
