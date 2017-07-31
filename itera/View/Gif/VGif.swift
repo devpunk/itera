@@ -2,9 +2,9 @@ import UIKit
 
 class VGif:UIView
 {
+    private(set) var frames:[VGifFrame]
+    private(set) var currentFrame:Int
     private weak var displayLink:CADisplayLink?
-    private var frames:[VGifFrame]
-    private var currentFrame:Int
     private let kMaxFramesPerSecond:Int = 20
     
     init()
