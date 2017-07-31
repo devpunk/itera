@@ -55,19 +55,35 @@ extension VGif
         let imageHeight:CGFloat = CGFloat(image.height)
         let ratioWidth:CGFloat = imageWidth / width
         let ratioHeight:CGFloat = imageHeight / height
-        let maxRatio:CGFloat = max(ratioWidth, ratioHeight)
-        let scaledWidth:CGFloat = imageWidth / maxRatio
-        let scaledHeight:CGFloat = imageHeight / maxRatio
+        let ratio:CGFloat
+        
+        switch contentMode
+        {
+        case UIViewContentMode.scaleAspectFit:
+            
+            ratio = max(ratioWidth, ratioHeight)
+            
+            break
+            
+        default:
+            
+            ratio = min(ratioWidth, ratioHeight)
+            
+            break
+        }
+        
+        let scaledWidth:CGFloat = imageWidth / ratio
+        let scaledHeight:CGFloat = imageHeight / ratio
         let remainWidth:CGFloat = width - scaledWidth
         let remainHeight:CGFloat = height - scaledHeight
         let marginX:CGFloat = remainWidth / 2.0
         let marginY:CGFloat = remainHeight / 2.0
-        let rect:CGRect = CGRect(
+        let draw:CGRect = CGRect(
             x:marginX,
             y:marginY,
             width:scaledWidth,
             height:scaledHeight)
         
-        return rect
+        return draw
     }
 }
