@@ -8,11 +8,12 @@ class VHomeProjects:VCollection<
 {
     private var cellSizeSelected:CGSize
     private var cellSize:CGSize
+    private var trackScroll:Bool
     private let kCollectionTop:CGFloat = 255
     private let kCellSize:CGFloat = 105
     private let kCellSelectedWidth:CGFloat = 200
     private let kInterItem:CGFloat = 5
-    private let kAnimationDuration:TimeInterval = 0.5
+    private let kAnimationDuration:TimeInterval = 0.3
     
     required init(controller:CHome)
     {
@@ -22,6 +23,7 @@ class VHomeProjects:VCollection<
         cellSize = CGSize(
             width:kCellSize,
             height:kCellSize)
+        trackScroll = true
         
         super.init(controller:controller)
         collectionView.alwaysBounceHorizontal = true
@@ -37,6 +39,47 @@ class VHomeProjects:VCollection<
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func scrollViewWillBeginDragging(
+        _ scrollView:UIScrollView)
+    {
+        trackScroll = true
+    }
+    
+    override func scrollViewDidEndScrollingAnimation(
+        _ scrollView:UIScrollView)
+    {
+        trackScroll = true
+    }
+    
+    override func scrollViewDidScroll(
+        _ scrollView:UIScrollView)
+    {
+        if trackScroll
+        {
+            let offsetX:CGFloat = scrollView.contentOffset.x
+            let midX:CGFloat = collectionView.bounds.width / 2.0
+            let totalX:CGFloat = midX + offsetX
+            let totalY:CGFloat = kCollectionTop + kInterItem
+            let point:CGPoint = CGPoint(x:totalX, y:totalY)
+            
+            guard
+                
+                let indexPath:IndexPath = collectionView.indexPathForItem(at:point)
+                
+            else
+            {
+                return
+            }
+            
+            controller.model.selected = indexPath.item
+            collectionView.selectItem(
+                at:indexPath,
+                animated:true,
+                scrollPosition:UICollectionViewScrollPosition())
+            animateLayout()
+        }
     }
     
     override func collectionView(
@@ -127,6 +170,7 @@ class VHomeProjects:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
+        trackScroll = false
         controller.model.selected = indexPath.item
         collectionView.scrollToItem(
             at:indexPath,
