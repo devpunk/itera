@@ -48,9 +48,50 @@ extension VGif
     
     func updateFrame(displayLink:CADisplayLink)
     {
+        guard
+            
+            let item:VGifFrame = currentFrame()
+        
+        else
+        {
+            return
+        }
+        
         let timestamp:TimeInterval = displayLink.timestamp
-        let item:VGifFrame = frames[indexFrame]
-        let itemTimestamp:TimeInterval = item.duration
-        let itemDuration:TimeInterval = item.timestamp
+        let itemChange:TimeInterval = item.expectChange()
+        
+        if timestamp >= itemChange
+        {
+            nextFrame(timestamp:timestamp)
+        }
+    }
+    
+    //MARK: private
+    
+    private func nextFrame(timestamp:TimeInterval)
+    {
+        let totalFrames:Int = frames.count
+        
+        if indexFrame < totalFrames - 1
+        {
+            indexFrame += 1
+        }
+        else
+        {
+            indexFrame = 0
+        }
+        
+        guard
+            
+            let item:VGifFrame = currentFrame()
+            
+        else
+        {
+            return
+        }
+        
+        item.timestamp = timestamp
+        
+        setNeedsDisplay()
     }
 }
