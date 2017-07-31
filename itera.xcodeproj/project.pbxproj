@@ -174,6 +174,7 @@
 		DA39F35B1F2F2A0100AF9256 /* VGifFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */; };
 		DA39F35D1F2F356800AF9256 /* VGifDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35C1F2F356800AF9256 /* VGifDraw.swift */; };
 		DA39F35F1F2F363900AF9256 /* VGifUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */; };
+		DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */; };
 		DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */; };
 		DA68B7B31F2BFE8D00F4B819 /* VEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */; };
 		DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */; };
@@ -363,6 +364,7 @@
 		DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifFrame.swift; sourceTree = "<group>"; };
 		DA39F35C1F2F356800AF9256 /* VGifDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifDraw.swift; sourceTree = "<group>"; };
 		DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifUpdater.swift; sourceTree = "<group>"; };
+		DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeImage.swift; sourceTree = "<group>"; };
 		DA682D021F2B57A500EA4E35 /* MSaveCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveCrop.swift; sourceTree = "<group>"; };
 		DA68B7B21F2BFE8D00F4B819 /* VEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScale.swift; sourceTree = "<group>"; };
 		DA68B7B51F2BFFC600F4B819 /* MEditScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MEditScale.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 			children = (
 				DA2795841F2AFC4100550ECA /* MHome.swift */,
 				DA39F34D1F2D82A800AF9256 /* MHomeLoader.swift */,
+				DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */,
 				DA39F34B1F2D81C600AF9256 /* MHomeItem.swift */,
 			);
 			path = Home;
@@ -1187,6 +1190,7 @@
 				DA27968F1F2AFC4200550ECA /* VHomeMenu.swift in Sources */,
 				DA27963C1F2AFC4200550ECA /* MSessionSettings.swift in Sources */,
 				DA27969E1F2AFC4200550ECA /* VSourceVideoTime.swift in Sources */,
+				DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */,
 				DA2796721F2AFC4200550ECA /* VSliderBar.swift in Sources */,
 				DA27964A1F2AFC4200550ECA /* MSourceVideoImportFactorySequence.swift in Sources */,
 				DA2796A21F2AFC4200550ECA /* VSourceVideoTimeBarThumb.swift in Sources */,
