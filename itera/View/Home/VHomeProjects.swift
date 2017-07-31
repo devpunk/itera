@@ -78,7 +78,7 @@ class VHomeProjects:VCollection<
         insetForSectionAt section:Int) -> UIEdgeInsets
     {
         let width:CGFloat = collectionView.bounds.width
-        let width_selected:CGFloat = width - kCellSelectedWidth
+        let width_selected:CGFloat = width - VHomeCard.kWidth
         let horizontalMargin:CGFloat = width_selected / 2.0
         let insets:UIEdgeInsets = UIEdgeInsets(
             top:kCollectionTop,
