@@ -98,6 +98,37 @@ class VHomeProjects:VCollection<
         return cell
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        if indexPath.item == controller.model.selected
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        if indexPath.item == controller.model.selected
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        controller.model.selected = indexPath.item
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MHomeItem

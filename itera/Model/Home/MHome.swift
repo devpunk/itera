@@ -18,6 +18,7 @@ class MHome:Model
     func itemsLoaded(items:[MHomeItem])
     {
         self.items = items
+        selected = 0
         delegate?.modelRefresh()
     }
 }
