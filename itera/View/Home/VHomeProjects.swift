@@ -12,6 +12,7 @@ class VHomeProjects:VCollection<
     private let kCellSize:CGFloat = 105
     private let kCellSelectedWidth:CGFloat = 200
     private let kInterItem:CGFloat = 5
+    private let kAnimationDuration:TimeInterval = 0.5
     
     required init(controller:CHome)
     {
@@ -127,6 +128,12 @@ class VHomeProjects:VCollection<
         didSelectItemAt indexPath:IndexPath)
     {
         controller.model.selected = indexPath.item
+        collectionView.scrollToItem(
+            at:indexPath,
+            at:UICollectionViewScrollPosition.centeredHorizontally,
+            animated:true)
+        
+        animateLayout()
     }
     
     //MARK: private
@@ -154,6 +161,15 @@ class VHomeProjects:VCollection<
                 animated:true,
                 scrollPosition:
                 UICollectionViewScrollPosition.centeredHorizontally)
+        }
+    }
+    
+    private func animateLayout()
+    {
+        UIView.animate(withDuration:kAnimationDuration)
+        { [weak self] in
+            
+            self?.collectionView.collectionViewLayout.invalidateLayout()
         }
     }
     
