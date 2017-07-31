@@ -65,10 +65,9 @@ extension MSave
             
             guard
                 
-                let cropped:CGImage = drawImage(
-                    image:original,
-                    size:size,
-                    drawRect:drawRect)
+                let cropped:CGImage = original.resize(
+                    canvasSize:size,
+                    imageRect:drawRect)
             
             else
             {
