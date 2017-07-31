@@ -4,6 +4,9 @@ class VHomeProjectsCell:UICollectionViewCell
 {
     private weak var model:MHomeItem?
     private weak var imageView:UIImageView!
+    private let kAlphaSelected:CGFloat = 0
+    private let kAlphaHighlighted:CGFloat = 0.2
+    private let kAlphaStand:CGFloat = 1
     
     override init(frame:CGRect)
     {
@@ -28,6 +31,22 @@ class VHomeProjectsCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
     }
     
     //MARK: private
@@ -80,6 +99,22 @@ class VHomeProjectsCell:UICollectionViewCell
         imageView.image = model?.image
     }
     
+    private func hover()
+    {
+        if isSelected
+        {
+            alpha = kAlphaSelected
+        }
+        else if isHighlighted
+        {
+            alpha = kAlphaHighlighted
+        }
+        else
+        {
+            alpha = kAlphaStand
+        }
+    }
+    
     //MARK: public
     
     func config(model:MHomeItem)
@@ -103,5 +138,6 @@ class VHomeProjectsCell:UICollectionViewCell
         }
         
         imageView.image = image
+        hover()
     }
 }
