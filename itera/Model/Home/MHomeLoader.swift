@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 import CoreData
 
 extension MHome
@@ -60,27 +60,116 @@ extension MHome
             return
         }
         
+        let dispatchGroup:DispatchGroup = DispatchGroup()
+        dispatchGroup.setTarget(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        
+        updateProjects(
+            projects:projects,
+            directory:directory,
+            dispatchGroup:dispatchGroup)
+    }
+    
+    private func updateProjects(
+        projects:[DProject],
+        directory:URL,
+        dispatchGroup:DispatchGroup)
+    {
         var items:[MHomeItem] = []
         
         for project:DProject in projects
         {
+            dispatchGroup.enter()
+            
             guard
                 
-                let name:String = project.name
-                
+                let item:MHomeItem = loadProject(
+                    project:project,
+                    directory:directory,
+                    dispatchGroup:dispatchGroup)
+            
             else
             {
                 continue
             }
             
-            let path:URL = directory.appendingPathComponent(name)
-            let item:MHomeItem = MHomeItem(
-                project:project,
-                path:path)
             items.append(item)
+            dispatchGroup.leave()
         }
         
-        itemsLoaded(items:items)
+        dispatchGroup.notify(
+            queue:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
+        { [weak self] in
+            
+            self?.itemsLoaded(items:items)
+        }
+    }
+    
+    private func loadProject(
+        project:DProject,
+        directory:URL,
+        dispatchGroup:DispatchGroup) -> MHomeItem?
+    {
+        guard
+            
+            let name:String = project.name
+            
+        else
+        {
+            dispatchGroup.leave()
+            
+            return nil
+        }
+        
+        let path:URL = directory.appendingPathComponent(name)
+        
+        guard
+            
+            let image:UIImage = loadImage(path:path)
+        
+        else
+        {
+            dispatchGroup.leave()
+            
+            return nil
+        }
+        
+        let item:MHomeItem = MHomeItem(
+            project:project,
+            path:path,
+            image:image)
+        
+        return item
+    }
+    
+    private func loadImage(path:URL) -> UIImage?
+    {
+        let data:Data
+        
+        do
+        {
+            try data = Data(
+                contentsOf:path,
+                options:Data.ReadingOptions.uncached)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        print("data size: \(data.count)")
+        
+        guard
+            
+            let image:UIImage = UIImage(data:data)
+            
+        else
+        {
+            return nil
+        }
+        
+        return image
     }
     
     private func shouldUpdateProjects(projects:[DProject]) -> Bool
