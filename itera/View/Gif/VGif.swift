@@ -17,6 +17,7 @@ class VGif:UIView
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
+        contentMode = UIViewContentMode.scaleAspectFill
     }
     
     required init?(coder:NSCoder)
