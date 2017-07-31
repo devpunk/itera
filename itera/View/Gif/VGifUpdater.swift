@@ -11,7 +11,7 @@ extension VGif
             selector:#selector(updateDisplayLink(sender:)))
         displayLink.add(
             to:RunLoop.main,
-            forMode:RunLoopMode.commonModes)
+            forMode:RunLoopMode.defaultRunLoopMode)
         
         if #available(iOS 10.0, *)
         {
