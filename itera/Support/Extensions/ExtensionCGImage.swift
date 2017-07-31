@@ -19,7 +19,7 @@ extension CGImage
             return nil
         }
         
-        context.translateBy(x:0, y:imageRect.height)
+        context.translateBy(x:0, y:canvasSize.height)
         context.scaleBy(x:1, y:-1)
         context.draw(self, in:imageRect)
         
