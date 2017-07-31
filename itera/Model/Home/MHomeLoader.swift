@@ -143,33 +143,6 @@ extension MHome
         return item
     }
     
-    private func loadImage(path:URL) -> UIImage?
-    {
-        let data:Data
-        
-        do
-        {
-            try data = Data(
-                contentsOf:path,
-                options:Data.ReadingOptions.uncached)
-        }
-        catch
-        {
-            return nil
-        }
-        
-        guard
-            
-            let image:UIImage = UIImage(data:data)
-            
-        else
-        {
-            return nil
-        }
-        
-        return image
-    }
-    
     private func shouldUpdateProjects(projects:[DProject]) -> Bool
     {
         let currentMap:[NSManagedObjectID:Int] = currentProjectsMap()

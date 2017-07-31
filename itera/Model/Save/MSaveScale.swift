@@ -52,7 +52,7 @@ extension MSave
             
             guard
                 
-                let newImage:CGImage = original.resize(
+                let newImage:CGImage = image.resize(
                     canvasSize:size,
                     imageRect:rect)
                 
