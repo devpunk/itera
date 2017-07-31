@@ -3,10 +3,11 @@ import UIKit
 class VGif:UIView
 {
     let queueGif:DispatchQueue
-    private var displayLink:CADisplayLink?
+    private weak var displayLink:CADisplayLink?
     private var frames:[VGifFrame]
     private var currentFrame:Int
     private let kQueueLabel:String = "iturbide.itera.gif"
+    private let kMaxFramesPerSecond:Int = 20
     
     init()
     {
@@ -41,12 +42,19 @@ class VGif:UIView
     
     private func factoryDisplayLink()
     {
-        displayLink = CADisplayLink(
+        let displayLink:CADisplayLink = CADisplayLink(
             target:self,
             selector:#selector(actionDisplayLink(sender:)))
-        displayLink?.add(
+        displayLink.add(
             to:RunLoop.main,
             forMode:RunLoopMode.commonModes)
+        
+        if #available(iOS 10.0, *)
+        {
+            displayLink.preferredFramesPerSecond = kMaxFramesPerSecond
+        }
+        
+        self.displayLink = displayLink
     }
     
     //MARK: public
