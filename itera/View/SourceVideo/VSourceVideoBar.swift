@@ -86,7 +86,7 @@ class VSourceVideoBar:View<VSourceVideo, MSourceVideo, CSourceVideo>
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionBack(sender button:UIButton)
     {

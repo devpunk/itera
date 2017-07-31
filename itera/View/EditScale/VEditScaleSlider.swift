@@ -125,7 +125,7 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionSlider(sender slider:UISlider)
     {

@@ -47,7 +47,7 @@ class VEditCrop:ViewMain
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionReset(sender button:UIButton)
     {

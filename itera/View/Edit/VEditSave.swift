@@ -48,7 +48,7 @@ class VEditSave:View<VEdit, MEdit, CEdit>
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionSave(sender button:UIButton)
     {

@@ -39,6 +39,7 @@ class VGif:UIView
     
     func updateDisplayLink(sender displayLink:CADisplayLink)
     {
+        updateFrame(displayLink:displayLink)
     }
     
     //MARK: public

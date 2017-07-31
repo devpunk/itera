@@ -141,7 +141,7 @@ View<VSourceVideoTime, MSourceVideoTime, CSourceVideoTime>
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionClose(sender button:UIButton)
     {

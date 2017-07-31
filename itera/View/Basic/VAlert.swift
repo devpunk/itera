@@ -95,7 +95,7 @@ class VAlert:UIView
         animate(open:false)
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionButton(sender button:UIButton)
     {

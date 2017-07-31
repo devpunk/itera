@@ -50,7 +50,7 @@ class VHomeMenuNew:View<VHome, MHome, CHome>
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionHover(sender button:UIButton)
     {

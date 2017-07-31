@@ -31,7 +31,7 @@ class ViewParent:UIView, UIGestureRecognizerDelegate
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionPanRecognized(sender panGesture:UIPanGestureRecognizer)
     {

@@ -41,7 +41,7 @@ class VNew:ViewMain
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionCancel(sender button:UIButton)
     {

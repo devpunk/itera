@@ -20,4 +20,9 @@ extension VGif
         
         return displayLink
     }
+    
+    func updateFrame(displayLink:CADisplayLink)
+    {
+        print(displayLink.timestamp)
+    }
 }

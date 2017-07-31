@@ -78,7 +78,7 @@ class VSlider:UIView, UIGestureRecognizerDelegate
         layoutSlider()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionPanning(sender gesture:UIPanGestureRecognizer)
     {

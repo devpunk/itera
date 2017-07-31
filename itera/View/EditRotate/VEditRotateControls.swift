@@ -103,7 +103,7 @@ class VEditRotateControls:
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionRotateLeft(sender button:UIButton)
     {

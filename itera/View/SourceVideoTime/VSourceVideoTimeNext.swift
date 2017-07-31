@@ -49,7 +49,7 @@ class VSourceVideoTimeNext:
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionNext(sender button:UIButton)
     {

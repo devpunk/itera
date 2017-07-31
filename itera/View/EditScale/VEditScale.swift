@@ -50,7 +50,7 @@ class VEditScale:ViewMain
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionHalf(sender button:UIButton)
     {

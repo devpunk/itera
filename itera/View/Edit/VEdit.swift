@@ -51,7 +51,7 @@ class VEdit:ViewMain
         super.layoutSubviews()
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionDelete(sender button:UIButton)
     {

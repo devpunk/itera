@@ -95,7 +95,7 @@ class VSourceVideoTimeSlider:
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionSlider(sender slider:UISlider)
     {

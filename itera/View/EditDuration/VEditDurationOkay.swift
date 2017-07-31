@@ -49,7 +49,7 @@ class VEditDurationOkay:
         return nil
     }
     
-    //MARK: actions
+    //MARK: selectors
     
     func actionOkay(sender button:UIButton)
     {
