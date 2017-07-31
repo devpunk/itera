@@ -85,6 +85,7 @@ class VHomeProjectsCell:UICollectionViewCell
     func config(model:MHomeItem)
     {
         self.model = model
+        imageView.image = nil
         
         guard
         

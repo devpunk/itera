@@ -178,5 +178,6 @@ class VHomeProjects:VCollection<
     func refresh()
     {
         collectionView.reloadData()
+        selectCurrent()
     }
 }
