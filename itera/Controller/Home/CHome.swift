@@ -74,4 +74,19 @@ class CHome:Controller<VHome, MHome>
         let controller:CNew = CNew()
         parent.centreOver(controller:controller)
     }
+    
+    func openFullScreen(item:MHomeItem)
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        let controller:CFullScreen = CFullScreen(item:item)
+        parent.animateOver(controller:controller)
+    }
 }
