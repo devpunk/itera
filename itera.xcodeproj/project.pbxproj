@@ -188,6 +188,7 @@
 		DA5490391F311CC7003E6472 /* CFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5490381F311CC7003E6472 /* CFullScreen.swift */; };
 		DA54903B1F3124E4003E6472 /* VFullScreenMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903A1F3124E4003E6472 /* VFullScreenMenu.swift */; };
 		DA54903D1F312553003E6472 /* VFullScreenMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903C1F312553003E6472 /* VFullScreenMenuCell.swift */; };
+		DA54903F1F313DDD003E6472 /* VFullScreenDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54903E1F313DDD003E6472 /* VFullScreenDisplay.swift */; };
 		DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */; };
 		DA632E601F2FE02E00DF8F9A /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */; };
 		DA632E621F2FE4DE00DF8F9A /* VHomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */; };
@@ -394,6 +395,7 @@
 		DA5490381F311CC7003E6472 /* CFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFullScreen.swift; sourceTree = "<group>"; };
 		DA54903A1F3124E4003E6472 /* VFullScreenMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFullScreenMenu.swift; sourceTree = "<group>"; };
 		DA54903C1F312553003E6472 /* VFullScreenMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFullScreenMenuCell.swift; sourceTree = "<group>"; };
+		DA54903E1F313DDD003E6472 /* VFullScreenDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFullScreenDisplay.swift; sourceTree = "<group>"; };
 		DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeImage.swift; sourceTree = "<group>"; };
 		DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCard.swift; sourceTree = "<group>"; };
@@ -981,6 +983,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5490321F311B47003E6472 /* VFullScreen.swift */,
+				DA54903E1F313DDD003E6472 /* VFullScreenDisplay.swift */,
 				DA54903A1F3124E4003E6472 /* VFullScreenMenu.swift */,
 				DA54903C1F312553003E6472 /* VFullScreenMenuCell.swift */,
 			);
@@ -1196,6 +1199,7 @@
 				DA2796691F2AFC4200550ECA /* ViewProtocol.swift in Sources */,
 				DA2796751F2AFC4200550ECA /* VEdit.swift in Sources */,
 				DA2796601F2AFC4200550ECA /* ExtensionURL.swift in Sources */,
+				DA54903F1F313DDD003E6472 /* VFullScreenDisplay.swift in Sources */,
 				DA2796901F2AFC4200550ECA /* VHomeMenuNew.swift in Sources */,
 				DA2796181F2AFC4100550ECA /* ControllerParentTransitions.swift in Sources */,
 				DA2796821F2AFC4200550ECA /* VEditCropImageFactory.swift in Sources */,
