@@ -1,6 +1,6 @@
 import UIKit
 
-class VFullScreenMenu:UICollectionView<
+class VFullScreenMenu:VCollection<
     VFullScreen,
     MFullScreen,
     CFullScreen>
