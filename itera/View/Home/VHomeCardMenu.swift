@@ -1,6 +1,10 @@
 import UIKit
 
-class VHomeCardMenu:View<VHome, MHome, CHome>
+class VHomeCardMenu:VCollection<
+    VHome,
+    MHome,
+    CHome,
+    VHomeCardMenuCell>
 {
     
 }

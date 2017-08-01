@@ -10,7 +10,7 @@ class MHome:Model
     {
         selected = 0
         items = []
-        menu = []
+        menu = MHome.factoryMenu()
         
         super.init()
     }
