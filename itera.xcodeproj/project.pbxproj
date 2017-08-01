@@ -21,6 +21,7 @@
 		DA042C8E1F2CAC1800874EAE /* VEditRotateControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */; };
 		DA042C921F2CC4D600874EAE /* MSaveRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C911F2CC4D600874EAE /* MSaveRotate.swift */; };
 		DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */; };
+		DA0FAA461F305D3F00CACF2F /* VHomeCardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -213,6 +214,7 @@
 		DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateControls.swift; sourceTree = "<group>"; };
 		DA042C911F2CC4D600874EAE /* MSaveRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveRotate.swift; sourceTree = "<group>"; };
 		DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardDisplay.swift; sourceTree = "<group>"; };
+		DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardMenu.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -869,6 +871,7 @@
 				DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */,
 				DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */,
 				DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */,
+				DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1105,6 +1108,7 @@
 				DA2796441F2AFC4200550ECA /* MSourceVideoAuth.swift in Sources */,
 				DA2796841F2AFC4200550ECA /* VEditCropImagePicture.swift in Sources */,
 				DA27961F1F2AFC4100550ECA /* CSourceVideo.swift in Sources */,
+				DA0FAA461F305D3F00CACF2F /* VHomeCardMenu.swift in Sources */,
 				DA2796761F2AFC4200550ECA /* VEditActions.swift in Sources */,
 				DA2796991F2AFC4200550ECA /* VSourceVideoImport.swift in Sources */,
 				DA2796811F2AFC4200550ECA /* VEditCropImageCornerTopRight.swift in Sources */,
