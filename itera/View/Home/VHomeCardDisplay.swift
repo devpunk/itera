@@ -2,6 +2,7 @@ import UIKit
 
 class VHomeCardDisplay:View<VHome, MHome, CHome>
 {
+    private(set) weak var viewGif:VGif?
     private weak var item:MHomeItem?
     private weak var imageView:UIImageView!
     private let kCornerRadius:CGFloat = 4
@@ -25,6 +26,24 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         
         NSLayoutConstraint.equals(
             view:imageView,
+            toView:self)
+        
+        guard
+        
+            let path:URL = item?.path
+        
+        else
+        {
+            return
+        }
+        
+        let viewGif:VGif = VGif.withURL(url:path)
+        self.viewGif = viewGif
+        
+        addSubview(viewGif)
+        
+        NSLayoutConstraint.equals(
+            view:viewGif,
             toView:self)
     }
     

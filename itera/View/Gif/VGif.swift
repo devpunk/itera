@@ -56,7 +56,6 @@ class VGif:UIView
     
     func updateDisplayLink(sender displayLink:CADisplayLink)
     {
-        print("update")
         updateFrame(displayLink:displayLink)
     }
     
