@@ -6,7 +6,7 @@ class VFullScreenMenu:VCollection<
     CFullScreen,
     VFullScreenMenuCell>
 {
-    private let kBorderWidth:CGFloat = 1
+    private let kBorderHeight:CGFloat = 1
     
     required init(controller:CFullScreen)
     {
@@ -17,7 +17,14 @@ class VFullScreenMenu:VCollection<
         addSubview(border)
         
         NSLayoutConstraint.topToTop(
-            view:border,toView:self)
+            view:border,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:border,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:border,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
