@@ -5,6 +5,7 @@ class VHomeProjectsCell:UICollectionViewCell
     static let kImageSize:CGFloat = 50
     private weak var imageView:UIImageView!
     private weak var layoutImageLeft:NSLayoutConstraint!
+    private let kBorderWidth:CGFloat = 1
     private let kAlphaSelected:CGFloat = 0
     private let kAlphaHighlighted:CGFloat = 0.2
     private let kAlphaStand:CGFloat = 1
@@ -20,6 +21,8 @@ class VHomeProjectsCell:UICollectionViewCell
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.layer.borderWidth = kBorderWidth
+        imageView.layer.borderColor = UIColor.colourBackgroundDark.cgColor
         self.imageView = imageView
         
         addSubview(imageView)
