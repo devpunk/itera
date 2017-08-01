@@ -232,7 +232,7 @@ class VHomeProjects:VCollection<
     private func animateLayout(selected:IndexPath)
     {
         UIView.animate(
-            withDuration:kAnimationDuration,
+            withDuration:0,
             animations:
         { [weak self] in
             
@@ -240,10 +240,7 @@ class VHomeProjects:VCollection<
         })
         { [weak self] (done:Bool) in
         
-            self?.collectionView.scrollToItem(
-                at:selected,
-                at:UICollectionViewScrollPosition.centeredHorizontally,
-                animated:true)
+            self?.centerSelected(index:selected)
         }
     }
     
@@ -268,6 +265,14 @@ class VHomeProjects:VCollection<
         controller.model.selected = index.item
         animateLayout(selected:index)
         updateCard()
+    }
+    
+    private func centerSelected(index:IndexPath)
+    {
+        collectionView.scrollToItem(
+            at:index,
+            at:UICollectionViewScrollPosition.centeredHorizontally,
+            animated:true)
     }
     
     private func updateCard()
