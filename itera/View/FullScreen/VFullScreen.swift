@@ -2,6 +2,7 @@ import UIKit
 
 class VFullScreen:ViewMain
 {
+    private(set) weak var viewDisplay:VFullScreenDisplay!
     private let kMenuHeight:CGFloat = 70
     
     required init(controller:UIViewController)
@@ -29,10 +30,24 @@ class VFullScreen:ViewMain
     
     private func factoryViews(controller:CFullScreen)
     {
+        let viewDisplay:VFullScreenDisplay = VFullScreenDisplay(
+            controller:controller)
+        
         let viewMenu:VFullScreenMenu = VFullScreenMenu(
             controller:controller)
         
+        addSubview(viewDisplay)
         addSubview(viewMenu)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewDisplay,
+            toView:self)
+        NSLayoutConstraint.bottomToTop(
+            view:viewDisplay,
+            toView:viewMenu)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewDisplay,
+            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewMenu,
