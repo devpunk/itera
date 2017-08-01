@@ -79,4 +79,11 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         let isPaused:Bool = viewGif.isPaused()
         viewGif.pause(paused:!isPaused)
     }
+    
+    //MARK: public
+    
+    func forcePause()
+    {
+        viewGif?.pause(paused:true)
+    }
 }

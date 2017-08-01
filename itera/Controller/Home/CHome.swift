@@ -26,6 +26,22 @@ class CHome:Controller<VHome, MHome>
         model.load()
     }
     
+    override func viewWillDisappear(_ animated:Bool)
+    {
+        super.viewWillDisappear(animated)
+        
+        guard
+        
+            let view:VHome = self.view as? VHome
+        
+        else
+        {
+            return
+        }
+        
+        view.viewWillDisappear()
+    }
+    
     //MARK: private
     
     private func refreshView()

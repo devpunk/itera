@@ -5,7 +5,7 @@ class VHomeCard:View<VHome, MHome, CHome>
     static let kWidth:CGFloat = 214
     let kHeight:CGFloat = 320
     weak var layoutTop:NSLayoutConstraint!
-    private weak var viewDisplay:VHomeCardDisplay!
+    private(set) weak var viewDisplay:VHomeCardDisplay!
     private let kDisplayHeight:CGFloat = 256
     private let kContentMarginVertical:CGFloat = 12.5
     private let kContentMarginHorizontal:CGFloat = 9.2

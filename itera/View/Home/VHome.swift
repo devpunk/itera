@@ -172,6 +172,11 @@ class VHome:ViewMain
     
     //MARK: public
     
+    func viewWillDisappear()
+    {
+        viewCard?.viewDisplay.forcePause()
+    }
+    
     func refresh()
     {
         viewProjects.refresh()
