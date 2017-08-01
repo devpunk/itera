@@ -22,6 +22,7 @@
 		DA042C921F2CC4D600874EAE /* MSaveRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C911F2CC4D600874EAE /* MSaveRotate.swift */; };
 		DA051E631F30B16900568F72 /* VHomeCardBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051E621F30B16900568F72 /* VHomeCardBottom.swift */; };
 		DA051E671F30BD7200568F72 /* VHomeCardMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051E661F30BD7200568F72 /* VHomeCardMenuCell.swift */; };
+		DA051E691F30C14F00568F72 /* MHomeMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051E681F30C14F00568F72 /* MHomeMenuProtocol.swift */; };
 		DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */; };
 		DA0FAA461F305D3F00CACF2F /* VHomeCardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
@@ -217,6 +218,7 @@
 		DA042C911F2CC4D600874EAE /* MSaveRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveRotate.swift; sourceTree = "<group>"; };
 		DA051E621F30B16900568F72 /* VHomeCardBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardBottom.swift; sourceTree = "<group>"; };
 		DA051E661F30BD7200568F72 /* VHomeCardMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardMenuCell.swift; sourceTree = "<group>"; };
+		DA051E681F30C14F00568F72 /* MHomeMenuProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuProtocol.swift; sourceTree = "<group>"; };
 		DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardDisplay.swift; sourceTree = "<group>"; };
 		DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardMenu.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				DA39F34D1F2D82A800AF9256 /* MHomeLoader.swift */,
 				DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */,
 				DA39F34B1F2D81C600AF9256 /* MHomeItem.swift */,
+				DA051E681F30C14F00568F72 /* MHomeMenuProtocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1207,6 +1210,7 @@
 				DA39F35B1F2F2A0100AF9256 /* VGifFrame.swift in Sources */,
 				DA2796971F2AFC4200550ECA /* VSourceVideoList.swift in Sources */,
 				DA27968F1F2AFC4200550ECA /* VHomeMenu.swift in Sources */,
+				DA051E691F30C14F00568F72 /* MHomeMenuProtocol.swift in Sources */,
 				DA27963C1F2AFC4200550ECA /* MSessionSettings.swift in Sources */,
 				DA27969E1F2AFC4200550ECA /* VSourceVideoTime.swift in Sources */,
 				DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */,
