@@ -6,6 +6,7 @@ class VHomeProjects:VCollection<
     CHome,
     VHomeProjectsCell>
 {
+    private var edgeInsets:UIEdgeInsets?
     private var cellSizeSelected:CGSize?
     private var cellSize:CGSize?
     private var trackScroll:Bool
@@ -72,16 +73,26 @@ class VHomeProjects:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         insetForSectionAt section:Int) -> UIEdgeInsets
     {
-        let width:CGFloat = collectionView.bounds.width
-        let width_selected:CGFloat = width - VHomeCard.kWidth
-        let horizontalMargin:CGFloat = width_selected / 2.0
-        let insets:UIEdgeInsets = UIEdgeInsets(
-            top:kCollectionTop,
-            left:horizontalMargin,
-            bottom:kCollectionBottom,
-            right:horizontalMargin)
+        guard
+            
+            let edgeInsets:UIEdgeInsets = self.edgeInsets
+            
+        else
+        {
+            let width:CGFloat = collectionView.bounds.width
+            let width_selected:CGFloat = width - VHomeCard.kWidth
+            let horizontalMargin:CGFloat = width_selected / 2.0
+            let edgeInsets:UIEdgeInsets = UIEdgeInsets(
+                top:kCollectionTop,
+                left:horizontalMargin,
+                bottom:kCollectionBottom,
+                right:horizontalMargin)
+            self.edgeInsets = edgeInsets
+            
+            return edgeInsets
+        }
         
-        return insets
+        return edgeInsets
     }
     
     override func collectionView(
@@ -184,7 +195,7 @@ class VHomeProjects:VCollection<
         didSelectItemAt indexPath:IndexPath)
     {
         trackScroll = false
-        makeSelection(index:indexPath)
+        makeScroll(index:indexPath)
     }
     
     //MARK: private
@@ -244,11 +255,18 @@ class VHomeProjects:VCollection<
             controller.model.selected = index.item
             collectionView.selectItem(
                 at:index,
-                animated:true,
+                animated:false,
                 scrollPosition:UICollectionViewScrollPosition())
             animateLayout(selected:index)
             updateCard()
         }
+    }
+    
+    private func makeScroll(index:IndexPath)
+    {
+        controller.model.selected = index.item
+        animateLayout(selected:index)
+        updateCard()
     }
     
     private func updateCard()
