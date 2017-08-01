@@ -9,7 +9,7 @@ class VHome:ViewMain
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
     private let kCardMinTop:CGFloat = 40
-    private let kCardMidMinTop:CGFloat = 70
+    private let kCardMidMinTop:CGFloat = 80
     private let kCardMaxTop:CGFloat = 180
     private let kCardMidMaxTop:CGFloat = 100
     private let kAnimationDuration:TimeInterval = 0.3
