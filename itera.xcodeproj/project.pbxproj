@@ -180,6 +180,7 @@
 		DA39F35B1F2F2A0100AF9256 /* VGifFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */; };
 		DA39F35D1F2F356800AF9256 /* VGifDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35C1F2F356800AF9256 /* VGifDraw.swift */; };
 		DA39F35F1F2F363900AF9256 /* VGifUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */; };
+		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA632E5E1F2FDBD800DF8F9A /* MHomeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */; };
 		DA632E601F2FE02E00DF8F9A /* ExtensionCGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */; };
 		DA632E621F2FE4DE00DF8F9A /* VHomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */; };
@@ -378,6 +379,7 @@
 		DA39F35A1F2F2A0100AF9256 /* VGifFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifFrame.swift; sourceTree = "<group>"; };
 		DA39F35C1F2F356800AF9256 /* VGifDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifDraw.swift; sourceTree = "<group>"; };
 		DA39F35E1F2F363900AF9256 /* VGifUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGifUpdater.swift; sourceTree = "<group>"; };
+		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeImage.swift; sourceTree = "<group>"; };
 		DA632E5F1F2FE02E00DF8F9A /* ExtensionCGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionCGImage.swift; sourceTree = "<group>"; };
 		DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCard.swift; sourceTree = "<group>"; };
@@ -599,6 +601,7 @@
 				DA051E6A1F30C1F400568F72 /* MHomeFactory.swift */,
 				DA39F34B1F2D81C600AF9256 /* MHomeItem.swift */,
 				DA051E681F30C14F00568F72 /* MHomeMenuProtocol.swift */,
+				DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1179,6 +1182,7 @@
 				DA042C8A1F2CA4F400874EAE /* VEditRotateImagePicture.swift in Sources */,
 				DA2796381F2AFC4200550ECA /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DA68B7BE1F2C06E700F4B819 /* VEditScaleSlider.swift in Sources */,
+				DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */,
 				DA2796591F2AFC4200550ECA /* ExtensionNotification.swift in Sources */,
 				DA68B7C21F2C13A100F4B819 /* VEditScaleImageOriginal.swift in Sources */,
 				DA2796201F2AFC4100550ECA /* CSourceVideoImport.swift in Sources */,
