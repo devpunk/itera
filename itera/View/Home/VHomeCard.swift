@@ -10,6 +10,7 @@ class VHomeCard:View<VHome, MHome, CHome>
     private let kContentMarginVertical:CGFloat = 12.5
     private let kContentMarginHorizontal:CGFloat = 9.2
     private let kBottomHeight:CGFloat = 80
+    private let kMenuHeight:CGFloat = 60
     
     required init(controller:CHome)
     {
@@ -30,6 +31,10 @@ class VHomeCard:View<VHome, MHome, CHome>
         let viewBottom:VHomeCardBottom = VHomeCardBottom(
             controller:controller)
         
+        let viewMenu:VHomeCardMenu = VHomeCardMenu(
+            controller:controller)
+        
+        viewBottom.addSubview(viewMenu)
         addSubview(background)
         addSubview(viewDisplay)
         addSubview(viewBottom)
@@ -61,6 +66,16 @@ class VHomeCard:View<VHome, MHome, CHome>
             view:viewBottom,
             toView:self,
             margin:kContentMarginHorizontal)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewMenu,
+            toView:viewBottom)
+        NSLayoutConstraint.height(
+            view:viewMenu,
+            constant:kMenuHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewMenu,
+            toView:viewBottom)
     }
     
     required init?(coder:NSCoder)
