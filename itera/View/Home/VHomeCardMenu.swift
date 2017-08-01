@@ -71,6 +71,16 @@ class VHomeCardMenu:VCollection<
         return cell
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        super.collectionView(collectionView, didSelectItemAt:indexPath)
+        
+        let item:MHomeMenuProtocol = modelAtIndex(index:indexPath)
+        item.selected(controller:controller)
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MHomeMenuProtocol
