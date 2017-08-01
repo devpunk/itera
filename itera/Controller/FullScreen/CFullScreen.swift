@@ -12,4 +12,12 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
     {
         return nil
     }
+    
+    override var prefersStatusBarHidden:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
 }
