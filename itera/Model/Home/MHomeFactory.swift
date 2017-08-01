@@ -6,10 +6,12 @@ extension MHome
     {
         let itemShare:MHomeMenuShare = MHomeMenuShare()
         let itemFullScreen:MHomeMenuFullScreen = MHomeMenuFullScreen()
+        let itemDelete:MHomeMenuDelete = MHomeMenuDelete()
         
         let items:[MHomeMenuProtocol] = [
             itemShare,
-            itemFullScreen]
+            itemFullScreen,
+            itemDelete]
         
         return items
     }

@@ -6,7 +6,7 @@ class VHomeCardMenu:VCollection<
     CHome,
     VHomeCardMenuCell>
 {
-    private let kCellWidth:CGFloat = 50
+    private var cellSize:CGSize?
     
     required init(controller:CHome)
     {
@@ -30,12 +30,25 @@ class VHomeCardMenu:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.height
-        let size:CGSize = CGSize(
-            width:kCellWidth,
-            height:height)
+        guard
         
-        return size
+            let cellSize:CGSize = self.cellSize
+        
+        else
+        {
+            let width:CGFloat = collectionView.bounds.width
+            let height:CGFloat = collectionView.bounds.height
+            let count:CGFloat = CGFloat(controller.model.menu.count)
+            let cellWidth:CGFloat = width / count
+            let cellSize:CGSize = CGSize(
+                width:cellWidth,
+                height:height)
+            self.cellSize = cellSize
+            
+            return cellSize
+        }
+        
+        return cellSize
     }
     
     override func collectionView(
