@@ -3,12 +3,14 @@ import Foundation
 class MHome:Model
 {
     var selected:Int
+    let menu:[MHomeMenuProtocol]
     private(set) var items:[MHomeItem]
     
     required init()
     {
         selected = 0
         items = []
+        menu = []
         
         super.init()
     }
