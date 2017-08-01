@@ -20,6 +20,7 @@
 		DA042C8C1F2CA7CD00874EAE /* VEditRotateImageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C8B1F2CA7CD00874EAE /* VEditRotateImageLayout.swift */; };
 		DA042C8E1F2CAC1800874EAE /* VEditRotateControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */; };
 		DA042C921F2CC4D600874EAE /* MSaveRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C911F2CC4D600874EAE /* MSaveRotate.swift */; };
+		DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
 		DA2796161F2AFC4100550ECA /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955C1F2AFC4100550ECA /* Controller.swift */; };
 		DA2796171F2AFC4100550ECA /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955D1F2AFC4100550ECA /* ControllerParent.swift */; };
@@ -211,6 +212,7 @@
 		DA042C8B1F2CA7CD00874EAE /* VEditRotateImageLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateImageLayout.swift; sourceTree = "<group>"; };
 		DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateControls.swift; sourceTree = "<group>"; };
 		DA042C911F2CC4D600874EAE /* MSaveRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveRotate.swift; sourceTree = "<group>"; };
+		DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardDisplay.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA27955C1F2AFC4100550ECA /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA27955D1F2AFC4100550ECA /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -866,6 +868,7 @@
 				DA39F3511F2D874700AF9256 /* VHomeProjects.swift */,
 				DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */,
 				DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */,
+				DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				DA68B7C41F2C13D400F4B819 /* VEditScaleImageScaled.swift in Sources */,
 				DA68B7BA1F2C057E00F4B819 /* VEditScaleOkay.swift in Sources */,
 				DA27961B1F2AFC4100550ECA /* CEditDuration.swift in Sources */,
+				DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */,
 				DA27966C1F2AFC4200550ECA /* VBorder.swift in Sources */,
 				DA27963B1F2AFC4200550ECA /* MSessionPerks.swift in Sources */,
 				DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */,
