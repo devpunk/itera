@@ -3,17 +3,19 @@ import UIKit
 class VHome:ViewMain
 {
     private(set) weak var viewProjects:VHomeProjects!
-    private(set) weak var viewCard:VHomeCard!
-    private weak var layoutCardTop:NSLayoutConstraint!
-    private weak var layoutCardLeft:NSLayoutConstraint!
+    private(set) weak var viewCard:VHomeCard?
+    private var cardLeft:CGFloat
     private let kProjectsHeight:CGFloat = 360
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
     private let kCardMinTop:CGFloat = 50
     private let kCardMaxTop:CGFloat = 150
+    private let kAnimationDuration:TimeInterval = 0.4
     
     required init(controller:UIViewController)
     {
+        cardLeft = 0
+        
         super.init(controller:controller)
         
         guard
@@ -37,8 +39,9 @@ class VHome:ViewMain
     {
         let width:CGFloat = bounds.width
         let remainCard:CGFloat = width - VHomeCard.kWidth
-        let cardLeft:CGFloat = remainCard / 2.0
-        layoutCardLeft.constant = cardLeft
+        cardLeft = remainCard / 2.0
+        
+        print("cardLeft")
         
         super.layoutSubviews()
     }
@@ -57,12 +60,9 @@ class VHome:ViewMain
         
         let viewMenu:VHomeMenu = VHomeMenu(controller:controller)
         
-        let viewCard:VHomeCard = VHomeCard(controller:controller)
-        
         addSubview(viewGradient)
         addSubview(viewProjects)
         addSubview(viewMenu)
-        addSubview(viewCard)
         
         NSLayoutConstraint.topToTop(
             view:viewGradient,
@@ -93,8 +93,27 @@ class VHome:ViewMain
         NSLayoutConstraint.equalsHorizontal(
             view:viewProjects,
             toView:self)
+    }
+    
+    //MARK: private
+    
+    private func newCard() -> VHomeCard?
+    {
+        guard
+            
+            let controller:CHome = self.controller as? CHome
         
-        layoutCardTop = NSLayoutConstraint.topToTop(
+        else
+        {
+            return nil
+        }
+        
+        let viewCard:VHomeCard = VHomeCard(
+            controller:controller)
+        
+        addSubview(viewCard)
+        
+        viewCard.layoutTop = NSLayoutConstraint.topToTop(
             view:viewCard,
             toView:self,
             constant:kCardMaxTop)
@@ -104,9 +123,11 @@ class VHome:ViewMain
         NSLayoutConstraint.width(
             view:viewCard,
             constant:VHomeCard.kWidth)
-        layoutCardLeft = NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.leftToLeft(
             view:viewCard,
             toView:self)
+        
+        return viewCard
     }
     
     //MARK: public
@@ -114,5 +135,37 @@ class VHome:ViewMain
     func refresh()
     {
         viewProjects.refresh()
+    }
+    
+    func updateCard()
+    {
+        guard
+            
+            let viewCard:VHomeCard = newCard()
+        
+        else
+        {
+            return
+        }
+        
+        layoutIfNeeded()
+        
+        self.viewCard?.layoutTop.constant = kCardMaxTop
+        viewCard.layoutTop.constant = kCardMinTop
+        
+        UIView.animate(withDuration:kAnimationDuration,
+        animations:
+        { [weak self] in
+            
+            viewCard.alpha = 1
+            self?.viewCard?.alpha = 0
+            self?.layoutIfNeeded()
+            
+        })
+        { [weak self] (done:Bool) in
+            
+            self?.viewCard?.removeFromSuperview()
+            self?.viewCard = viewCard
+        }
     }
 }
