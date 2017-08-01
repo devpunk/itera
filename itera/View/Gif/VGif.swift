@@ -67,4 +67,23 @@ class VGif:UIView
         asyncNeedsDisplay()
         displayLink = factoryDisplayLink()
     }
+    
+    func pause(paused:Bool)
+    {
+        displayLink?.isPaused = paused
+    }
+    
+    func isPaused() -> Bool
+    {
+        guard
+        
+            let displayLink:CADisplayLink = self.displayLink
+        
+        else
+        {
+            return false
+        }
+        
+        return displayLink.isPaused
+    }
 }

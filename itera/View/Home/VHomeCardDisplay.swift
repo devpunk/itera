@@ -12,7 +12,6 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         item = controller.model.currentItem()
         
         super.init(controller:controller)
-        isUserInteractionEnabled = false
         layer.cornerRadius = kCornerRadius
         
         let imageView:UIImageView = UIImageView()
@@ -40,15 +39,34 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         let viewGif:VGif = VGif.withURL(url:path)
         self.viewGif = viewGif
         
+        let button:UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(
+            self,
+            action:#selector(actionButton(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(viewGif)
+        addSubview(button)
         
         NSLayoutConstraint.equals(
             view:viewGif,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:button,
             toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: selectors
+    
+    func actionButton(sender button:UIButton)
+    {
+        
     }
 }
