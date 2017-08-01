@@ -6,11 +6,11 @@ class VHomeCard:View<VHome, MHome, CHome>
     let kHeight:CGFloat = 320
     weak var layoutTop:NSLayoutConstraint!
     private weak var viewDisplay:VHomeCardDisplay!
-    private let kDisplayHeight:CGFloat = 236
+    private let kDisplayHeight:CGFloat = 256
     private let kContentMarginVertical:CGFloat = 12.5
     private let kContentMarginHorizontal:CGFloat = 9.2
-    private let kBottomHeight:CGFloat = 80
-    private let kMenuHeight:CGFloat = 60
+    private let kBottomHeight:CGFloat = 60
+    private let kMenuHeight:CGFloat = 50
     
     required init(controller:CHome)
     {

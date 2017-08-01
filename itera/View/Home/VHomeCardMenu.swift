@@ -6,7 +6,7 @@ class VHomeCardMenu:VCollection<
     CHome,
     VHomeCardMenuCell>
 {
-    private let kCellWidth:CGFloat = 60
+    private let kCellWidth:CGFloat = 50
     
     required init(controller:CHome)
     {
