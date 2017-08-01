@@ -19,7 +19,7 @@ class VHomeCardBottom:View<VHome, MHome, CHome>
         viewBase.clipsToBounds = true
         viewBase.backgroundColor = UIColor.white
         viewBase.layer.borderWidth = kBorderWidth
-        viewBase.layer.borderColor = UIColor.colourBackgroundGray.cgColor
+        viewBase.layer.borderColor = UIColor.colourBackgroundDark.cgColor
         
         addSubview(viewBase)
         

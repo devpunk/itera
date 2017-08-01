@@ -10,7 +10,6 @@ class VHomeCardMenu:VCollection<
     {
         super.init(controller:controller)
         
-        backgroundColor = UIColor.blue
     }
     
     required init?(coder:NSCoder)
