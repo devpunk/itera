@@ -12,6 +12,15 @@ class MHomeMenuFullScreen:MHomeMenuProtocol
     
     func selected(controller:CHome)
     {
+        guard
         
+            let item:MHomeItem = controller.model.currentItem()
+        
+        else
+        {
+            return
+        }
+        
+        controller.openFullScreen(item:item)
     }
 }
