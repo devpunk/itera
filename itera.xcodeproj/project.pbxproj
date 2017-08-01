@@ -20,6 +20,7 @@
 		DA042C8C1F2CA7CD00874EAE /* VEditRotateImageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C8B1F2CA7CD00874EAE /* VEditRotateImageLayout.swift */; };
 		DA042C8E1F2CAC1800874EAE /* VEditRotateControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */; };
 		DA042C921F2CC4D600874EAE /* MSaveRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA042C911F2CC4D600874EAE /* MSaveRotate.swift */; };
+		DA051E631F30B16900568F72 /* VHomeCardBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051E621F30B16900568F72 /* VHomeCardBottom.swift */; };
 		DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */; };
 		DA0FAA461F305D3F00CACF2F /* VHomeCardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */; };
 		DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27955B1F2AFC4100550ECA /* AppDelegate.swift */; };
@@ -213,6 +214,7 @@
 		DA042C8B1F2CA7CD00874EAE /* VEditRotateImageLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateImageLayout.swift; sourceTree = "<group>"; };
 		DA042C8D1F2CAC1800874EAE /* VEditRotateControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditRotateControls.swift; sourceTree = "<group>"; };
 		DA042C911F2CC4D600874EAE /* MSaveRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveRotate.swift; sourceTree = "<group>"; };
+		DA051E621F30B16900568F72 /* VHomeCardBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardBottom.swift; sourceTree = "<group>"; };
 		DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardDisplay.swift; sourceTree = "<group>"; };
 		DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeCardMenu.swift; sourceTree = "<group>"; };
 		DA27955B1F2AFC4100550ECA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -871,6 +873,7 @@
 				DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */,
 				DA632E611F2FE4DE00DF8F9A /* VHomeCard.swift */,
 				DA0FAA411F3055F300CACF2F /* VHomeCardDisplay.swift */,
+				DA051E621F30B16900568F72 /* VHomeCardBottom.swift */,
 				DA0FAA451F305D3F00CACF2F /* VHomeCardMenu.swift */,
 			);
 			path = Home;
@@ -1220,6 +1223,7 @@
 				DACE6BEE1F2B3CCF0016DEEB /* MSaveCreator.swift in Sources */,
 				DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */,
 				DA2796861F2AFC4200550ECA /* VEditCropImageTouch.swift in Sources */,
+				DA051E631F30B16900568F72 /* VHomeCardBottom.swift in Sources */,
 				DA27961A1F2AFC4100550ECA /* CEditCrop.swift in Sources */,
 				DA2796191F2AFC4100550ECA /* CEdit.swift in Sources */,
 				DA2796701F2AFC4200550ECA /* VPushBackground.swift in Sources */,
