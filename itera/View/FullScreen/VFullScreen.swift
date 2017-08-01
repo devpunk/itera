@@ -32,6 +32,7 @@ class VFullScreen:ViewMain
     {
         let viewDisplay:VFullScreenDisplay = VFullScreenDisplay(
             controller:controller)
+        self.viewDisplay = viewDisplay
         
         let viewMenu:VFullScreenMenu = VFullScreenMenu(
             controller:controller)

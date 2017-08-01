@@ -10,6 +10,7 @@ class VFullScreenDisplay:View<VFullScreen, MFullScreen, CFullScreen>
         
         let path:URL = controller.model.item.path
         let viewGif:VGif = VGif.withURL(url:path)
+        viewGif.contentMode = UIViewContentMode.scaleAspectFit
         self.viewGif = viewGif
         
         addSubview(viewGif)
