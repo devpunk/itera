@@ -21,4 +21,16 @@ class MHome:Model
         selected = 0
         delegate?.modelRefresh()
     }
+    
+    func currentItem() -> MHomeItem?
+    {
+        if selected < items.count
+        {
+            let item:MHomeItem = items[selected]
+            
+            return item
+        }
+        
+        return nil
+    }
 }
