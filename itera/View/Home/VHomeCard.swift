@@ -7,8 +7,8 @@ class VHomeCard:View<VHome, MHome, CHome>
     private weak var viewDisplay:VHomeCardDisplay!
     let kHeight:CGFloat = 320
     private let kDisplayHeight:CGFloat = 260
-    private let kDisplayTop:CGFloat = 12
-    private let kDisplayMarginHorizontal:CGFloat = 9
+    private let kDisplayTop:CGFloat = 12.5
+    private let kDisplayMarginHorizontal:CGFloat = 9.2
     
     required init(controller:CHome)
     {

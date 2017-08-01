@@ -4,7 +4,7 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
 {
     private weak var item:MHomeItem?
     private weak var imageView:UIImageView!
-    private let kCornerRadius:CGFloat = 5
+    private let kCornerRadius:CGFloat = 4
     
     required init(controller:CHome)
     {
