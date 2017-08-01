@@ -69,6 +69,7 @@ class VHomeProjects:VCollection<
                 animated:true,
                 scrollPosition:UICollectionViewScrollPosition())
             animateLayout(selected:indexPath)
+            updateCard()
         }
     }
     
@@ -191,6 +192,7 @@ class VHomeProjects:VCollection<
         trackScroll = false
         controller.model.selected = indexPath.item
         animateLayout(selected:indexPath)
+        updateCard()
     }
     
     //MARK: private
@@ -218,6 +220,8 @@ class VHomeProjects:VCollection<
                 animated:true,
                 scrollPosition:
                 UICollectionViewScrollPosition.centeredHorizontally)
+            
+            updateCard()
         }
     }
     
@@ -237,6 +241,20 @@ class VHomeProjects:VCollection<
                 at:UICollectionViewScrollPosition.centeredHorizontally,
                 animated:true)
         }
+    }
+    
+    private func updateCard()
+    {
+        guard
+        
+            let view:VHome = controller.view as? VHome
+        
+        else
+        {
+            return
+        }
+        
+        view.updateCard()
     }
     
     //MARK: public

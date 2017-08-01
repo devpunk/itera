@@ -4,18 +4,16 @@ class VHome:ViewMain
 {
     private(set) weak var viewProjects:VHomeProjects!
     private(set) weak var viewCard:VHomeCard?
-    private var cardLeft:CGFloat
+    private var cardLeftMargin:CGFloat?
     private let kProjectsHeight:CGFloat = 360
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
-    private let kCardMinTop:CGFloat = 50
-    private let kCardMaxTop:CGFloat = 150
+    private let kCardMinTop:CGFloat = 60
+    private let kCardMaxTop:CGFloat = 200
     private let kAnimationDuration:TimeInterval = 0.4
     
     required init(controller:UIViewController)
     {
-        cardLeft = 0
-        
         super.init(controller:controller)
         
         guard
@@ -33,17 +31,6 @@ class VHome:ViewMain
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func layoutSubviews()
-    {
-        let width:CGFloat = bounds.width
-        let remainCard:CGFloat = width - VHomeCard.kWidth
-        cardLeft = remainCard / 2.0
-        
-        print("cardLeft")
-        
-        super.layoutSubviews()
     }
     
     //MARK: private
@@ -108,6 +95,20 @@ class VHome:ViewMain
             return nil
         }
         
+        let cardLeft:CGFloat
+        
+        if let cardLeftMargin:CGFloat = self.cardLeftMargin
+        {
+            cardLeft = cardLeftMargin
+        }
+        else
+        {
+            let width:CGFloat = bounds.width
+            let remainCard:CGFloat = width - VHomeCard.kWidth
+            cardLeft = remainCard / 2.0
+            self.cardLeftMargin = cardLeft
+        }
+        
         let viewCard:VHomeCard = VHomeCard(
             controller:controller)
         
@@ -125,7 +126,8 @@ class VHome:ViewMain
             constant:VHomeCard.kWidth)
         NSLayoutConstraint.leftToLeft(
             view:viewCard,
-            toView:self)
+            toView:self,
+            constant:cardLeft)
         
         return viewCard
     }
