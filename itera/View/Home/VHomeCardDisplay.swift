@@ -67,6 +67,16 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
     
     func actionButton(sender button:UIButton)
     {
+        guard
         
+            let viewGif:VGif = self.viewGif
+        
+        else
+        {
+            return
+        }
+        
+        let isPaused:Bool = viewGif.isPaused()
+        viewGif.pause(paused:!isPaused)
     }
 }
