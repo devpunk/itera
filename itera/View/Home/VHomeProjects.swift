@@ -9,8 +9,8 @@ class VHomeProjects:VCollection<
     private var cellSizeSelected:CGSize?
     private var cellSize:CGSize?
     private var trackScroll:Bool
-    private let kCollectionTop:CGFloat = 20
-    private let kCollectionBottom:CGFloat = 20
+    private let kCollectionTop:CGFloat = 255
+    private let kCollectionBottom:CGFloat = 55
     private let kInterItem:CGFloat = 5
     private let kAnimationDuration:TimeInterval = 0.3
     
@@ -63,13 +63,7 @@ class VHomeProjects:VCollection<
                 return
             }
             
-            controller.model.selected = indexPath.item
-            collectionView.selectItem(
-                at:indexPath,
-                animated:true,
-                scrollPosition:UICollectionViewScrollPosition())
-            animateLayout(selected:indexPath)
-            updateCard()
+            makeSelection(index:indexPath)
         }
     }
     
@@ -190,9 +184,7 @@ class VHomeProjects:VCollection<
         didSelectItemAt indexPath:IndexPath)
     {
         trackScroll = false
-        controller.model.selected = indexPath.item
-        animateLayout(selected:indexPath)
-        updateCard()
+        makeSelection(index:indexPath)
     }
     
     //MARK: private
@@ -240,6 +232,22 @@ class VHomeProjects:VCollection<
                 at:selected,
                 at:UICollectionViewScrollPosition.centeredHorizontally,
                 animated:true)
+        }
+    }
+    
+    private func makeSelection(index:IndexPath)
+    {
+        let newSelected:Int = index.item
+        
+        if controller.model.selected != newSelected
+        {
+            controller.model.selected = index.item
+            collectionView.selectItem(
+                at:index,
+                animated:true,
+                scrollPosition:UICollectionViewScrollPosition())
+            animateLayout(selected:index)
+            updateCard()
         }
     }
     

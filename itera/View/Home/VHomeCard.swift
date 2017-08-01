@@ -2,9 +2,9 @@ import UIKit
 
 class VHomeCard:View<VHome, MHome, CHome>
 {
-    static let kWidth:CGFloat = 180
+    static let kWidth:CGFloat = 200
     weak var layoutTop:NSLayoutConstraint!
-    let kHeight:CGFloat = 250
+    let kHeight:CGFloat = 300
     private let kBaseMargin:CGFloat = 1
     
     required init(controller:CHome)

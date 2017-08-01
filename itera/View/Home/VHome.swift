@@ -8,9 +8,12 @@ class VHome:ViewMain
     private let kProjectsHeight:CGFloat = 360
     private let kGradientHeight:CGFloat = 250
     private let kMenuHeight:CGFloat = 120
-    private let kCardMinTop:CGFloat = 60
-    private let kCardMaxTop:CGFloat = 200
-    private let kAnimationDuration:TimeInterval = 0.4
+    private let kCardMinTop:CGFloat = 40
+    private let kCardMidMinTop:CGFloat = 70
+    private let kCardMaxTop:CGFloat = 180
+    private let kCardMidMaxTop:CGFloat = 100
+    private let kAnimationDuration:TimeInterval = 0.3
+    private let kAnimationFastDuration:TimeInterval = 0.15
     
     required init(controller:UIViewController)
     {
@@ -132,6 +135,41 @@ class VHome:ViewMain
         return viewCard
     }
     
+    private func animateCardChange(viewCard:VHomeCard)
+    {
+        UIView.animate(
+            withDuration:kAnimationDuration,
+       animations:
+        { [weak self] in
+            
+            viewCard.alpha = 1
+            self?.viewCard?.alpha = 0
+            self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+            
+            guard
+                
+                let strongSelf:VHome = self
+                
+            else
+            {
+                return
+            }
+            
+            strongSelf.viewCard?.removeFromSuperview()
+            strongSelf.viewCard = viewCard
+            viewCard.layoutTop.constant = strongSelf.kCardMidMinTop
+            
+            UIView.animate(
+                withDuration:strongSelf.kAnimationFastDuration)
+            { [weak self] in
+                
+                self?.layoutIfNeeded()
+            }
+        }
+    }
+    
     //MARK: public
     
     func refresh()
@@ -151,23 +189,9 @@ class VHome:ViewMain
         }
         
         layoutIfNeeded()
+        animateCardChange(viewCard:viewCard)
         
-        self.viewCard?.layoutTop.constant = kCardMaxTop
+        self.viewCard?.layoutTop.constant = kCardMidMaxTop
         viewCard.layoutTop.constant = kCardMinTop
-        
-        UIView.animate(withDuration:kAnimationDuration,
-        animations:
-        { [weak self] in
-            
-            viewCard.alpha = 1
-            self?.viewCard?.alpha = 0
-            self?.layoutIfNeeded()
-            
-        })
-        { [weak self] (done:Bool) in
-            
-            self?.viewCard?.removeFromSuperview()
-            self?.viewCard = viewCard
-        }
     }
 }
