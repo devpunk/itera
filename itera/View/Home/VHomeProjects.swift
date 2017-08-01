@@ -12,6 +12,7 @@ class VHomeProjects:VCollection<
     private var trackScroll:Bool
     private let kCollectionTop:CGFloat = 255
     private let kCollectionBottom:CGFloat = 55
+    private let kSubtractSelected:CGFloat = 16
     private let kInterItem:CGFloat = 5
     private let kAnimationDuration:TimeInterval = 0.3
     
@@ -81,7 +82,7 @@ class VHomeProjects:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
-            let width_selected:CGFloat = width - VHomeCard.kWidth
+            let width_selected:CGFloat = width - (VHomeCard.kWidth - kSubtractSelected)
             let horizontalMargin:CGFloat = width_selected / 2.0
             let edgeInsets:UIEdgeInsets = UIEdgeInsets(
                 top:kCollectionTop,
@@ -115,7 +116,7 @@ class VHomeProjects:VCollection<
                 let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
                 let usableHeight:CGFloat = height - verticalMargin
                 let cellSizeSelected:CGSize = CGSize(
-                    width:VHomeCard.kWidth,
+                    width:VHomeCard.kWidth - kSubtractSelected,
                     height:usableHeight)
                 self.cellSizeSelected = cellSizeSelected
                 

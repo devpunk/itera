@@ -13,7 +13,7 @@ class VHome:ViewMain
     private let kCardMaxTop:CGFloat = 180
     private let kCardMidMaxTop:CGFloat = 100
     private let kAnimationDuration:TimeInterval = 0.3
-    private let kAnimationFastDuration:TimeInterval = 0.15
+    private let kAnimationFastDuration:TimeInterval = 0.1
     
     required init(controller:UIViewController)
     {

@@ -2,29 +2,27 @@ import UIKit
 
 class VHomeCard:View<VHome, MHome, CHome>
 {
-    static let kWidth:CGFloat = 200
+    static let kWidth:CGFloat = 214
     weak var layoutTop:NSLayoutConstraint!
-    let kHeight:CGFloat = 300
-    private let kBaseMargin:CGFloat = 1
+    let kHeight:CGFloat = 320
     
     required init(controller:CHome)
     {
         super.init(controller:controller)
         alpha = 0
-        backgroundColor = UIColor.black
         
-        let viewBase:UIView = UIView()
-        viewBase.isUserInteractionEnabled = false
-        viewBase.translatesAutoresizingMaskIntoConstraints = false
-        viewBase.clipsToBounds = true
-        viewBase.backgroundColor = UIColor.white
+        let background:UIImageView = UIImageView()
+        background.isUserInteractionEnabled = false
+        background.translatesAutoresizingMaskIntoConstraints = false
+        background.clipsToBounds = true
+        background.contentMode = UIViewContentMode.center
+        background.image = #imageLiteral(resourceName: "assetGenericCard")
         
-        addSubview(viewBase)
+        addSubview(background)
         
         NSLayoutConstraint.equals(
-            view:viewBase,
-            toView:self,
-            margin:kBaseMargin)
+            view:background,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
