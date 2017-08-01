@@ -18,6 +18,8 @@ class VHomeCardBottom:View<VHome, MHome, CHome>
         viewBase.translatesAutoresizingMaskIntoConstraints = false
         viewBase.clipsToBounds = true
         viewBase.backgroundColor = UIColor.white
+        viewBase.layer.borderWidth = kBorderWidth
+        viewBase.layer.borderColor = UIColor.colourBackgroundGray.cgColor
         
         addSubview(viewBase)
         

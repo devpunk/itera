@@ -3,12 +3,13 @@ import UIKit
 class VHomeCard:View<VHome, MHome, CHome>
 {
     static let kWidth:CGFloat = 214
+    let kHeight:CGFloat = 320
     weak var layoutTop:NSLayoutConstraint!
     private weak var viewDisplay:VHomeCardDisplay!
-    let kHeight:CGFloat = 320
     private let kDisplayHeight:CGFloat = 260
-    private let kDisplayTop:CGFloat = 12.5
-    private let kDisplayMarginHorizontal:CGFloat = 9.2
+    private let kContentMarginVertical:CGFloat = 12.5
+    private let kContentMarginHorizontal:CGFloat = 9.2
+    private let kBottomHeight:CGFloat = 100
     
     required init(controller:CHome)
     {
@@ -26,8 +27,12 @@ class VHomeCard:View<VHome, MHome, CHome>
             controller:controller)
         self.viewDisplay = viewDisplay
         
+        let viewBottom:VHomeCardBottom = VHomeCardBottom(
+            controller:controller)
+        
         addSubview(background)
         addSubview(viewDisplay)
+        addSubview(viewBottom)
         
         NSLayoutConstraint.equals(
             view:background,
@@ -36,14 +41,26 @@ class VHomeCard:View<VHome, MHome, CHome>
         NSLayoutConstraint.topToTop(
             view:viewDisplay,
             toView:self,
-            constant:kDisplayTop)
+            constant:kContentMarginVertical)
         NSLayoutConstraint.height(
             view:viewDisplay,
             constant:kDisplayHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewDisplay,
             toView:self,
-            margin:kDisplayMarginHorizontal)
+            margin:kContentMarginHorizontal)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewBottom,
+            toView:self,
+            constant:-kContentMarginVertical)
+        NSLayoutConstraint.height(
+            view:viewBottom,
+            constant:kBottomHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewBottom,
+            toView:self,
+            margin:kContentMarginHorizontal)
     }
     
     required init?(coder:NSCoder)
