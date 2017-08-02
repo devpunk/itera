@@ -11,12 +11,19 @@ class VFullScreenMenu:VCollection<
     required init(controller:CFullScreen)
     {
         super.init(controller:controller)
+        collectionView.isScrollEnabled = false
+        collectionView.bounces = false
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+        }
         
         let blur:VBlur = VBlur.light()
         
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
-        addSubview(blur)
+        insertSubview(blur, belowSubview:collectionView)
         addSubview(border)
         
         NSLayoutConstraint.equals(
