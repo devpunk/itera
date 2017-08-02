@@ -27,7 +27,6 @@ class VGif:UIView
     
     deinit
     {
-        print("deinit gif")
         displayLink?.invalidate()
     }
     
