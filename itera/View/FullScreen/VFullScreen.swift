@@ -3,7 +3,7 @@ import UIKit
 class VFullScreen:ViewMain
 {
     private(set) weak var viewDisplay:VFullScreenDisplay!
-    private let kMenuHeight:CGFloat = 70
+    private let kMenuHeight:CGFloat = 60
     
     required init(controller:UIViewController)
     {
@@ -43,9 +43,9 @@ class VFullScreen:ViewMain
         NSLayoutConstraint.topToTop(
             view:viewDisplay,
             toView:self)
-        NSLayoutConstraint.bottomToTop(
+        NSLayoutConstraint.bottomToBottom(
             view:viewDisplay,
-            toView:viewMenu)
+            toView:self)
         NSLayoutConstraint.equalsHorizontal(
             view:viewDisplay,
             toView:self)
