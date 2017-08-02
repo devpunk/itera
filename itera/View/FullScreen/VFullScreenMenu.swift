@@ -7,8 +7,7 @@ class VFullScreenMenu:VCollection<
     VFullScreenMenuCell>
 {
     private var cellSize:CGSize?
-    private let kBorderHeight:CGFloat = 1
-    private let kCellWidth:CGFloat = 50
+    private let kCellWidth:CGFloat = 60
     
     required init(controller:CFullScreen)
     {
@@ -20,27 +19,6 @@ class VFullScreenMenu:VCollection<
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
         }
-        
-        let blur:VBlur = VBlur.light()
-        
-        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
-        
-        insertSubview(blur, belowSubview:collectionView)
-        addSubview(border)
-        
-        NSLayoutConstraint.equals(
-            view:blur,
-            toView:self)
-        
-        NSLayoutConstraint.topToTop(
-            view:border,
-            toView:self)
-        NSLayoutConstraint.height(
-            view:border,
-            constant:kBorderHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:border,
-            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -103,8 +81,20 @@ class VFullScreenMenu:VCollection<
     {
         let item:MFullScreenProtocol = modelAtIndex(index:indexPath)
         let cell:VFullScreenMenuCell = cellAtIndex(indexPath:indexPath)
+        cell.config(model:item)
         
         return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        super.collectionView(
+            collectionView,
+            didSelectItemAt:indexPath)
+        let item:MFullScreenProtocol = modelAtIndex(index:indexPath)
+        item.selected(controller:controller)
     }
     
     //MARK: private
