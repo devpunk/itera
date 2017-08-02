@@ -4,5 +4,5 @@ protocol MFullScreenProtocol
 {
     var icon:UIImage { get }
     
-    func selected(controller:CHome)
+    func selected(controller:CFullScreen)
 }
