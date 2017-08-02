@@ -12,9 +12,16 @@ class VFullScreenMenu:VCollection<
     {
         super.init(controller:controller)
         
-        let border:VBorder = VBorder(colour:UIColor.colourBackgroundDark)
+        let blur:VBlur = VBlur.light()
         
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
+        
+        addSubview(blur)
         addSubview(border)
+        
+        NSLayoutConstraint.equals(
+            view:blur,
+            toView:self)
         
         NSLayoutConstraint.topToTop(
             view:border,
