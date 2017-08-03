@@ -1,0 +1,6 @@
+framework module GifHero {
+  umbrella header "GifHero-umbrella.h"
+
+  export *
+  module * { export * }
+}

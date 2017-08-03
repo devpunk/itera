@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 0a8a7c30f152d4acad64645ca93c9589b2b91781
+PODS:
+  - GifHero (0.0.1)
+
+DEPENDENCIES:
+  - GifHero (from `/devel/iturbide/gifhero`)
+
+EXTERNAL SOURCES:
+  GifHero:
+    :path: /devel/iturbide/gifhero
+
+SPEC CHECKSUMS:
+  GifHero: 24cb319a55114314c20d15aa7e60de761e69c69b
+
+PODFILE CHECKSUM: af956c5b4a523eebd6dffd9481ebe15c8851669b
 
 COCOAPODS: 1.2.1

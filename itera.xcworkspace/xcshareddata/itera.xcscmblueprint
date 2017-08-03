@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0C3A1433B246E46AB348652EB9A9649BB02946A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0C3A1433B246E46AB348652EB9A9649BB02946A3" : 9223372036854775807,
+    "147980474C0172CAE7B680A7707CBDA3E8AFFAA9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "97B59641-8F1C-4940-B0BE-0D8BFAEF8D0B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0C3A1433B246E46AB348652EB9A9649BB02946A3" : "itera\/",
+    "147980474C0172CAE7B680A7707CBDA3E8AFFAA9" : "gifhero\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "itera",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "itera.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/devpunk\/itera.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C3A1433B246E46AB348652EB9A9649BB02946A3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iturb\/gifhero.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "147980474C0172CAE7B680A7707CBDA3E8AFFAA9"
+    }
+  ]
+}

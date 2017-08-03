@@ -8,5 +8,3 @@ end
 target 'itera' do
   podlist
 end
-
-
