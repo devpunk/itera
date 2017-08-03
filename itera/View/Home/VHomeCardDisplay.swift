@@ -1,8 +1,9 @@
 import UIKit
+import GifHero
 
 class VHomeCardDisplay:View<VHome, MHome, CHome>
 {
-    private(set) weak var viewGif:VGif?
+    private(set) weak var viewGif:GifView?
     private weak var item:MHomeItem?
     private weak var imageView:UIImageView!
     private let kCornerRadius:CGFloat = 4
@@ -36,7 +37,9 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
             return
         }
         
-        let viewGif:VGif = VGif.withURL(url:path)
+        let viewGif:GifView = GifView()
+        viewGif.url = path
+        viewGif.animating = true
         self.viewGif = viewGif
         
         let button:UIButton = UIButton()
@@ -69,21 +72,21 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
     {
         guard
         
-            let viewGif:VGif = self.viewGif
+            let viewGif:GifView = self.viewGif
         
         else
         {
             return
         }
         
-        let isPaused:Bool = viewGif.isPaused()
-        viewGif.pause(paused:!isPaused)
+        let animating:Bool = viewGif.animating
+        viewGif.animating = !animating
     }
     
     //MARK: public
     
     func forcePause()
     {
-        viewGif?.pause(paused:true)
+        viewGif?.animating = false
     }
 }
