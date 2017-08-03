@@ -1,7 +1,8 @@
 import UIKit
 import GifHero
 
-class VFullScreenDisplay:View<VFullScreen, MFullScreen, CFullScreen>
+class VFullScreenDisplay:
+    View<VFullScreen, MFullScreen, CFullScreen>
 {
     private weak var viewGif:GifView!
     
@@ -14,7 +15,7 @@ class VFullScreenDisplay:View<VFullScreen, MFullScreen, CFullScreen>
         let viewGif:GifView = GifView()
         viewGif.contentMode = UIViewContentMode.scaleAspectFit
         viewGif.url = path
-        viewGif.startAnimation()
+        viewGif.animating = true
         self.viewGif = viewGif
         
         addSubview(viewGif)
