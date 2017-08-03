@@ -7,7 +7,7 @@ extension MHome
     {
         guard
             
-            let source:CGImageSource = VGif.factorySource(url:path),
+            let source:CGImageSource = CGImageSource.factorySource(url:path),
             let image:UIImage = loadImage(source:source)
             
         else
@@ -26,12 +26,11 @@ extension MHome
         
         if count > 0
         {
-            let options:CFDictionary = VGif.frameOptions()
+            let options:CFDictionary = CGImageSource.optionsNoCache()
             
             guard
             
-                let cgImage:CGImage = VGif.frameImage(
-                    source:source,
+                let cgImage:CGImage = source.frameImageAt(
                     index:0,
                     options:options),
                 let scaledImage:CGImage = scaleImage(
@@ -54,28 +53,11 @@ extension MHome
     {
         let size:CGFloat = VHomeProjectsCell.kImageSize
         let canvasSize:CGSize = CGSize(width:size, height:size)
-        let targetRect:CGRect = CGRect(
-            x:0,
-            y:0,
-            width:size,
-            height:size)
         let contentMode:UIViewContentMode = UIViewContentMode.scaleAspectFill
         
-        let scaledRect:CGRect = VGif.scaleImageRect(
-            targetRect:targetRect,
-            image:cgImage,
+        let scaledImage:CGImage? = cgImage.resizeToFit(
+            targetSize:canvasSize,
             contentMode:contentMode)
-        
-        guard
-        
-            let scaledImage:CGImage = cgImage.resize(
-                canvasSize:canvasSize,
-                imageRect:scaledRect)
-        
-        else
-        {
-            return nil
-        }
         
         return scaledImage
     }
