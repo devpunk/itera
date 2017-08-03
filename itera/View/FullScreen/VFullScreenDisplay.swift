@@ -1,16 +1,20 @@
 import UIKit
+import GifHero
 
 class VFullScreenDisplay:View<VFullScreen, MFullScreen, CFullScreen>
 {
-    private weak var viewGif:VGif!
+    private weak var viewGif:GifView!
     
     required init(controller:CFullScreen)
     {
         super.init(controller:controller)
         
         let path:URL = controller.model.item.path
-        let viewGif:VGif = VGif.withURL(url:path)
+        
+        let viewGif:GifView = GifView()
         viewGif.contentMode = UIViewContentMode.scaleAspectFit
+        viewGif.url = path
+        viewGif.startAnimation()
         self.viewGif = viewGif
         
         addSubview(viewGif)
