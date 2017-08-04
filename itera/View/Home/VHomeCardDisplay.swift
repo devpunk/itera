@@ -7,6 +7,8 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
     private weak var item:MHomeItem?
     private weak var imageView:UIImageView!
     private let kCornerRadius:CGFloat = 4
+    private let kAlphaSelected:CGFloat = 0.2
+    private let kAlphaNotSelected:CGFloat = 1
     
     required init(controller:CHome)
     {
@@ -46,8 +48,16 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(
             self,
-            action:#selector(actionButton(sender:)),
+            action:#selector(selectorUpInside(sender:)),
             for:UIControlEvents.touchUpInside)
+        button.addTarget(
+            self,
+            action:#selector(selectorUpOutside(sender:)),
+            for:UIControlEvents.touchUpOutside)
+        button.addTarget(
+            self,
+            action:#selector(selectorDown(sender:)),
+            for:UIControlEvents.touchDown)
         
         addSubview(viewGif)
         addSubview(button)
@@ -68,7 +78,7 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
     
     //MARK: selectors
     
-    func actionButton(sender button:UIButton)
+    func selectorUpInside(sender button:UIButton)
     {
         guard
         
@@ -81,6 +91,17 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         
         let animating:Bool = viewGif.animating
         viewGif.animating = !animating
+        viewGif.alpha = kAlphaNotSelected
+    }
+    
+    func selectorUpOutside(sender button:UIButton)
+    {
+        viewGif?.alpha = kAlphaNotSelected
+    }
+    
+    func selectorDown(sender button:UIButton)
+    {
+        viewGif?.alpha = kAlphaSelected
     }
     
     //MARK: public
