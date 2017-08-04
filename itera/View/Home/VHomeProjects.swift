@@ -7,7 +7,6 @@ class VHomeProjects:VCollection<
     VHomeProjectsCell>
 {
     private var edgeInsets:UIEdgeInsets?
-    private var cellSizeSelected:CGSize?
     private var cellSize:CGSize?
     private var trackScroll:Bool
     private let kCollectionTop:CGFloat = 255
@@ -101,50 +100,24 @@ class VHomeProjects:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let item:Int = indexPath.item
-        
-        if item == controller.model.selected
-        {
-            guard
-                
-                let cellSizeSelected:CGSize = self.cellSizeSelected
+        guard
             
-            else
-            {
-                let height:CGFloat = collectionView.bounds.height
-                let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
-                let usableHeight:CGFloat = height - verticalMargin
-                let cellSizeSelected:CGSize = CGSize(
-                    width:VHomeCard.kWidth - kSubtractSelected,
-                    height:usableHeight)
-                self.cellSizeSelected = cellSizeSelected
-                
-                return cellSizeSelected
-            }
+            let cellSize:CGSize = self.cellSize
             
-            return cellSizeSelected
-        }
         else
         {
-            guard
-                
-                let cellSize:CGSize = self.cellSize
-                
-            else
-            {
-                let height:CGFloat = collectionView.bounds.height
-                let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
-                let usableHeight:CGFloat = height - verticalMargin
-                let cellSize:CGSize = CGSize(
-                    width:VHomeProjectsCell.kImageSize,
-                    height:usableHeight)
-                self.cellSize = cellSize
-                
-                return cellSize
-            }
+            let height:CGFloat = collectionView.bounds.height
+            let verticalMargin:CGFloat = kCollectionTop + kCollectionBottom
+            let usableHeight:CGFloat = height - verticalMargin
+            let cellSize:CGSize = CGSize(
+                width:VHomeProjectsCell.kImageSize,
+                height:usableHeight)
+            self.cellSize = cellSize
             
             return cellSize
         }
+        
+        return cellSize
     }
     
     override func collectionView(
