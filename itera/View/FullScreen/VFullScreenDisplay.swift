@@ -4,7 +4,7 @@ import GifHero
 class VFullScreenDisplay:
     View<VFullScreen, MFullScreen, CFullScreen>
 {
-    private weak var viewGif:GifView!
+    private weak var viewGif:GifView?
     
     required init(controller:CFullScreen)
     {
@@ -29,5 +29,12 @@ class VFullScreenDisplay:
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: public
+    
+    func releaseGif()
+    {
+        viewGif?.removeFromSuperview()
     }
 }

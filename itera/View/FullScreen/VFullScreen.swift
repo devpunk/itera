@@ -3,6 +3,7 @@ import UIKit
 class VFullScreen:ViewMain
 {
     private(set) weak var viewDisplay:VFullScreenDisplay!
+    private(set) weak var viewMenu:VFullScreenMenu!
     private let kMenuHeight:CGFloat = 60
     
     required init(controller:UIViewController)
@@ -37,6 +38,7 @@ class VFullScreen:ViewMain
         
         let viewMenu:VFullScreenMenu = VFullScreenMenu(
             controller:controller)
+        self.viewMenu = viewMenu
         
         addSubview(viewDisplay)
         addSubview(viewMenu)
@@ -60,5 +62,13 @@ class VFullScreen:ViewMain
         NSLayoutConstraint.equalsHorizontal(
             view:viewMenu,
             toView:self)
+    }
+    
+    //MARK: public
+    
+    func prepareForDelete()
+    {
+        viewDisplay.releaseGif()
+        viewMenu.isUserInteractionEnabled = false
     }
 }

@@ -25,11 +25,27 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
     
     private func confirmDelete()
     {
+        prepareForDelete()
+        
         model.item.delete
         { [weak self] in
             
             self?.deleteDone()
         }
+    }
+    
+    private func prepareForDelete()
+    {
+        guard
+        
+            let view:VFullScreen = self.view as? VFullScreen
+        
+        else
+        {
+            return
+        }
+        
+        view.prepareForDelete()
     }
     
     private func deleteDone()
