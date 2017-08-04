@@ -6,10 +6,12 @@ extension MFullScreen
     {
         let itemShare:MFullScreenShare = MFullScreenShare()
         let itemExitFullScreen:MFullScreenExitFullScreen = MFullScreenExitFullScreen()
+        let itemDelete:MFullScreenDelete = MFullScreenDelete()
         
         let items:[MFullScreenProtocol] = [
             itemShare,
-            itemExitFullScreen]
+            itemExitFullScreen,
+            itemDelete]
         
         return items
     }
