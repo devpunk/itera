@@ -176,6 +176,7 @@
 		DA39F3501F2D856F00AF9256 /* MSaveDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F34F1F2D856F00AF9256 /* MSaveDirectory.swift */; };
 		DA39F3521F2D874700AF9256 /* VHomeProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3511F2D874700AF9256 /* VHomeProjects.swift */; };
 		DA39F3541F2D876700AF9256 /* VHomeProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */; };
+		DA3E02231F35286B0012B10E /* VHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E02221F35286B0012B10E /* VHomeFactory.swift */; };
 		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */; };
 		DA5490301F310337003E6472 /* MHomeMenuDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */; };
@@ -386,6 +387,7 @@
 		DA39F34F1F2D856F00AF9256 /* MSaveDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSaveDirectory.swift; sourceTree = "<group>"; };
 		DA39F3511F2D874700AF9256 /* VHomeProjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeProjects.swift; sourceTree = "<group>"; };
 		DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeProjectsCell.swift; sourceTree = "<group>"; };
+		DA3E02221F35286B0012B10E /* VHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFactory.swift; sourceTree = "<group>"; };
 		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuFullScreen.swift; sourceTree = "<group>"; };
 		DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuDelete.swift; sourceTree = "<group>"; };
@@ -920,6 +922,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2795F91F2AFC4100550ECA /* VHome.swift */,
+				DA3E02221F35286B0012B10E /* VHomeFactory.swift */,
 				DA2795FA1F2AFC4100550ECA /* VHomeMenu.swift */,
 				DA2795FB1F2AFC4100550ECA /* VHomeMenuNew.swift */,
 				DA39F3511F2D874700AF9256 /* VHomeProjects.swift */,
@@ -1228,6 +1231,7 @@
 				DA2796741F2AFC4200550ECA /* VToast.swift in Sources */,
 				DACE6BEA1F2B26FC0016DEEB /* VSaveProgressThumb.swift in Sources */,
 				DA27962D1F2AFC4100550ECA /* MEditSequenceCrop.swift in Sources */,
+				DA3E02231F35286B0012B10E /* VHomeFactory.swift in Sources */,
 				DA68B7BC1F2C06DB00F4B819 /* VEditScaleImage.swift in Sources */,
 				DA2796371F2AFC4200550ECA /* MPerkThumbnailProtocol.swift in Sources */,
 				DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */,
