@@ -53,4 +53,9 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
         
         present(activity, animated:true, completion:nil)
     }
+    
+    func delete()
+    {
+        
+    }
 }

@@ -1,17 +1,17 @@
 import UIKit
 
-class MFullScreenShare:MFullScreenProtocol
+class MFullScreenDelete:MFullScreenProtocol
 {
     var icon:UIImage
     {
         get
         {
-            return #imageLiteral(resourceName: "assetGenericShare")
+            return #imageLiteral(resourceName: "assetGenericDelete")
         }
     }
     
     func selected(controller:CFullScreen)
     {
-        controller.share()
+        controller.delete()
     }
 }

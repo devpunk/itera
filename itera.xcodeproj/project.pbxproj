@@ -203,6 +203,7 @@
 		DA68B7C41F2C13D400F4B819 /* VEditScaleImageScaled.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7C31F2C13D400F4B819 /* VEditScaleImageScaled.swift */; };
 		DA68B7C61F2C143500F4B819 /* VEditScaleImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7C51F2C143500F4B819 /* VEditScaleImageFactory.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
+		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
 		DACE6BE41F2B21C60016DEEB /* VSaveBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */; };
 		DACE6BE61F2B26220016DEEB /* VSaveProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */; };
@@ -413,6 +414,7 @@
 		DA68B7C51F2C143500F4B819 /* VEditScaleImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScaleImageFactory.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
+		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
 		DACE6BE11F2B1B990016DEEB /* CSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSave.swift; sourceTree = "<group>"; };
 		DACE6BE31F2B21C60016DEEB /* VSaveBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveBottom.swift; sourceTree = "<group>"; };
 		DACE6BE51F2B26220016DEEB /* VSaveProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSaveProgress.swift; sourceTree = "<group>"; };
@@ -1001,10 +1003,11 @@
 			isa = PBXGroup;
 			children = (
 				DA5490351F311C33003E6472 /* MFullScreen.swift */,
+				DA5490441F315C6D003E6472 /* MFullScreenFactory.swift */,
 				DA5490401F314F98003E6472 /* MFullScreenProtocol.swift */,
 				DA5490421F315140003E6472 /* MFullScreenExitFullScreen.swift */,
 				DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */,
-				DA5490441F315C6D003E6472 /* MFullScreenFactory.swift */,
+				DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */,
 			);
 			path = FullScreen;
 			sourceTree = "<group>";
@@ -1362,6 +1365,7 @@
 				DA54903B1F3124E4003E6472 /* VFullScreenMenu.swift in Sources */,
 				DA042C7D1F2C92D000874EAE /* VEditRotate.swift in Sources */,
 				DA2796861F2AFC4200550ECA /* VEditCropImageTouch.swift in Sources */,
+				DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */,
 				DA051E631F30B16900568F72 /* VHomeCardBottom.swift in Sources */,
 				DA27961A1F2AFC4100550ECA /* CEditCrop.swift in Sources */,
 				DA2796191F2AFC4100550ECA /* CEdit.swift in Sources */,
