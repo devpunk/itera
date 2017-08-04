@@ -17,7 +17,8 @@ class VHomeProjects:VCollection<
     required init(controller:CHome)
     {
         super.init(controller:controller)
-        collectionView.alwaysBounceHorizontal = true
+        isUserInteractionEnabled = false
+        collectionView.isUserInteractionEnabled = false
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
@@ -104,39 +105,6 @@ class VHomeProjects:VCollection<
         return cell
     }
     
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldSelectItemAt indexPath:IndexPath) -> Bool
-    {
-        if indexPath.item == controller.model.selected
-        {
-            return false
-        }
-        
-        return true
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        if indexPath.item == controller.model.selected
-        {
-            return false
-        }
-        
-        return true
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        didSelectItemAt indexPath:IndexPath)
-    {
-        controller.model.selected = indexPath.item
-        animateLayout(selected:indexPath)
-        updateCard()
-    }
-    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MHomeItem
@@ -163,8 +131,6 @@ class VHomeProjects:VCollection<
                 scrollPosition:
                 UICollectionViewScrollPosition.centeredHorizontally)
         }
-        
-        updateCard()
     }
     
     private func animateLayout(selected:IndexPath)
@@ -188,20 +154,6 @@ class VHomeProjects:VCollection<
             at:index,
             at:UICollectionViewScrollPosition.centeredHorizontally,
             animated:true)
-    }
-    
-    private func updateCard()
-    {
-        guard
-        
-            let view:VHome = controller.view as? VHome
-        
-        else
-        {
-            return
-        }
-        
-        view.updateCard()
     }
     
     //MARK: public
