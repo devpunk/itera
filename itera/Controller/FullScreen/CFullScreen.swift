@@ -25,7 +25,20 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
     
     private func confirmDelete()
     {
-        
+        model.item.delete
+        { [weak self] in
+            
+            self?.deleteDone()
+        }
+    }
+    
+    private func deleteDone()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.back()
+        }
     }
     
     //MARK: public

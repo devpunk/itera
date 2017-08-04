@@ -14,4 +14,33 @@ class MHomeItem
         self.image = image
         selected = false
     }
+    
+    //MARK: private
+    
+    private func dispatchDelete(completion:@escaping(() -> ()))
+    {
+        do
+        {
+            try FileManager.default.removeItem(at:path)
+        }
+        catch
+        {
+        }
+        
+        DManager.sharedInstance?.delete(data:project)
+        {
+            completion()
+        }
+    }
+    
+    //MARK: public
+    
+    func delete(completion:@escaping(() -> ()))
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.dispatchDelete(completion:completion)
+        }
+    }
 }
