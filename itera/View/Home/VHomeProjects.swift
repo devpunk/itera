@@ -225,9 +225,9 @@ class VHomeProjects:VCollection<
                 animated:true,
                 scrollPosition:
                 UICollectionViewScrollPosition.centeredHorizontally)
-            
-            updateCard()
         }
+        
+        updateCard()
     }
     
     private func animateLayout(selected:IndexPath)

@@ -29,7 +29,10 @@ class MHomeItem
         
         DManager.sharedInstance?.delete(data:project)
         {
-            completion()
+            DManager.sharedInstance?.save
+            {
+                completion()
+            }
         }
     }
     
