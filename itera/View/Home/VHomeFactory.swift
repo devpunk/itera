@@ -23,9 +23,13 @@ extension VHome
         
         let viewMenu:VHomeMenu = VHomeMenu(controller:controller)
         
+        let viewSwipper:VHomeSwipper = VHomeSwipper(
+            controller:controller)
+        
         addSubview(viewGradient)
         addSubview(viewProjects)
         addSubview(viewMenu)
+        addSubview(viewSwipper)
         
         NSLayoutConstraint.topToTop(
             view:viewGradient,
@@ -55,6 +59,16 @@ extension VHome
             constant:kProjectsHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewProjects,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewSwipper,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewSwipper,
+            constant:kProjectsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewSwipper,
             toView:self)
     }
     
