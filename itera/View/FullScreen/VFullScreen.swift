@@ -3,7 +3,7 @@ import UIKit
 class VFullScreen:ViewMain
 {
     private(set) weak var viewDisplay:VFullScreenDisplay!
-    private let kMenuHeight:CGFloat = 70
+    private let kMenuHeight:CGFloat = 60
     
     required init(controller:UIViewController)
     {

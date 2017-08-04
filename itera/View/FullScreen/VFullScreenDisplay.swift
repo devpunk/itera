@@ -9,7 +9,7 @@ class VFullScreenDisplay:
     required init(controller:CFullScreen)
     {
         super.init(controller:controller)
-        backgroundColor = UIColor.colourBackgroundGray
+        backgroundColor = UIColor.black
         
         let path:URL = controller.model.item.path
         

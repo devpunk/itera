@@ -21,7 +21,7 @@ class VFullScreenMenu:VCollection<
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
         }
         
-        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         insertSubview(border, belowSubview:collectionView)
 
         NSLayoutConstraint.topToTop(
