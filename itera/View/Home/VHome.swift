@@ -36,5 +36,6 @@ class VHome:ViewMain
     func refresh()
     {
         viewProjects.refresh()
+        updateCard()
     }
 }

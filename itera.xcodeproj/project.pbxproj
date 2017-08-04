@@ -178,7 +178,6 @@
 		DA39F3541F2D876700AF9256 /* VHomeProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */; };
 		DA3E02231F35286B0012B10E /* VHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E02221F35286B0012B10E /* VHomeFactory.swift */; };
 		DA3E02251F352A4D0012B10E /* VHomeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E02241F352A4D0012B10E /* VHomeAnimations.swift */; };
-		DA3E02271F352B0A0012B10E /* VHomeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E02261F352B0A0012B10E /* VHomeGesture.swift */; };
 		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */; };
 		DA5490301F310337003E6472 /* MHomeMenuDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */; };
@@ -391,7 +390,6 @@
 		DA39F3531F2D876700AF9256 /* VHomeProjectsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeProjectsCell.swift; sourceTree = "<group>"; };
 		DA3E02221F35286B0012B10E /* VHomeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFactory.swift; sourceTree = "<group>"; };
 		DA3E02241F352A4D0012B10E /* VHomeAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeAnimations.swift; sourceTree = "<group>"; };
-		DA3E02261F352B0A0012B10E /* VHomeGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeGesture.swift; sourceTree = "<group>"; };
 		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuFullScreen.swift; sourceTree = "<group>"; };
 		DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuDelete.swift; sourceTree = "<group>"; };
@@ -928,7 +926,6 @@
 				DA2795F91F2AFC4100550ECA /* VHome.swift */,
 				DA3E02221F35286B0012B10E /* VHomeFactory.swift */,
 				DA3E02241F352A4D0012B10E /* VHomeAnimations.swift */,
-				DA3E02261F352B0A0012B10E /* VHomeGesture.swift */,
 				DA2795FA1F2AFC4100550ECA /* VHomeMenu.swift */,
 				DA2795FB1F2AFC4100550ECA /* VHomeMenuNew.swift */,
 				DA39F3511F2D874700AF9256 /* VHomeProjects.swift */,
@@ -1366,7 +1363,6 @@
 				DA68B7BA1F2C057E00F4B819 /* VEditScaleOkay.swift in Sources */,
 				DA27961B1F2AFC4100550ECA /* CEditDuration.swift in Sources */,
 				DA0FAA421F3055F300CACF2F /* VHomeCardDisplay.swift in Sources */,
-				DA3E02271F352B0A0012B10E /* VHomeGesture.swift in Sources */,
 				DA27966C1F2AFC4200550ECA /* VBorder.swift in Sources */,
 				DA27963B1F2AFC4200550ECA /* MSessionPerks.swift in Sources */,
 				DA68B7B61F2BFFC600F4B819 /* MEditScale.swift in Sources */,
