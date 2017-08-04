@@ -12,6 +12,15 @@ class MHomeMenuShare:MHomeMenuProtocol
     
     func selected(controller:CHome)
     {
-
+        guard
+            
+            let item:MHomeItem = controller.model.currentItem()
+            
+        else
+        {
+            return
+        }
+        
+        controller.share(item:item)
     }
 }

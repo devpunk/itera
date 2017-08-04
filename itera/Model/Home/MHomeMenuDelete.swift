@@ -12,6 +12,15 @@ class MHomeMenuDelete:MHomeMenuProtocol
     
     func selected(controller:CHome)
     {
+        guard
+            
+            let item:MHomeItem = controller.model.currentItem()
+            
+        else
+        {
+            return
+        }
         
+        controller.delete(item:item)
     }
 }

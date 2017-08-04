@@ -5,3 +5,6 @@
 "CFullScreen_alertDeleteTitle"="Delete GIF?";
 "CFullScreen_alertDeleteCancel"="Cancel";
 "CFullScreen_alertDeleteDelete"="Delete";
+"CHome_alertDeleteTitle"="Delete GIF?";
+"CHome_alertDeleteCancel"="Cancel";
+"CHome_alertDeleteDelete"="Delete";

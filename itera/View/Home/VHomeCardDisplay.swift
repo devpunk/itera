@@ -89,4 +89,9 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
     {
         viewGif?.animating = false
     }
+    
+    func prepareForDelete()
+    {
+        viewGif?.removeFromSuperview()
+    }
 }
