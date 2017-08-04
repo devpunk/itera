@@ -32,6 +32,8 @@ extension ControllerParent
             return
         }
         
+        currentController.removeFromParentViewController()
+        
         addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
         currentController.beginAppearanceTransition(false, animated:true)
@@ -43,7 +45,6 @@ extension ControllerParent
         {
             controller.endAppearanceTransition()
             currentController.endAppearanceTransition()
-            currentController.removeFromParentViewController()
         }
     }
     
@@ -207,6 +208,7 @@ extension ControllerParent
         {
             let currentController:UIViewController = childViewControllers[controllers - 1]
             let previousController:UIViewController = childViewControllers[controllers - 2]
+            currentController.removeFromParentViewController()
             
             guard
                 
@@ -228,7 +230,6 @@ extension ControllerParent
             {
                 previousController.endAppearanceTransition()
                 currentController.endAppearanceTransition()
-                currentController.removeFromParentViewController()
                 
                 completion?()
             }
