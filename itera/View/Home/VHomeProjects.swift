@@ -22,7 +22,6 @@ class VHomeProjects:VCollection<
         
         super.init(controller:controller)
         collectionView.alwaysBounceHorizontal = true
-        collectionView.isPagingEnabled = true
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
