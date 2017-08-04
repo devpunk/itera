@@ -135,8 +135,26 @@ class VHome:ViewMain
         return viewCard
     }
     
-    private func animateCardChange(viewCard:VHomeCard)
+    private func displayNewCard()
     {
+        guard
+            
+            let viewCard:VHomeCard = newCard()
+            
+        else
+        {
+            return
+        }
+        
+        layoutIfNeeded()
+        animateCardChangeFirst(viewCard:viewCard)
+    }
+    
+    private func animateCardChangeFirst(viewCard:VHomeCard)
+    {
+        self.viewCard?.layoutTop.constant = kCardMidMaxTop
+        viewCard.layoutTop.constant = kCardMinTop
+        
         UIView.animate(
             withDuration:kAnimationDuration,
        animations:
@@ -148,25 +166,39 @@ class VHome:ViewMain
         })
         { [weak self] (done:Bool) in
             
-            guard
-                
-                let strongSelf:VHome = self
-                
-            else
-            {
-                return
-            }
+            self?.animateCardChangeSecond(viewCard:viewCard)
+        }
+    }
+    
+    private func animateCardChangeSecond(viewCard:VHomeCard)
+    {
+        self.viewCard?.removeFromSuperview()
+        self.viewCard = viewCard
+        viewCard.layoutTop.constant = kCardMidMinTop
+        
+        UIView.animate(
+            withDuration:kAnimationFastDuration)
+        { [weak self] in
             
-            strongSelf.viewCard?.removeFromSuperview()
-            strongSelf.viewCard = viewCard
-            viewCard.layoutTop.constant = strongSelf.kCardMidMinTop
+            self?.layoutIfNeeded()
+        }
+    }
+    
+    private func animateCardDisappear()
+    {
+        self.viewCard?.layoutTop.constant = kCardMidMaxTop
+        
+        UIView.animate(
+            withDuration:kAnimationDuration,
+            animations:
+        { [weak self] in
             
-            UIView.animate(
-                withDuration:strongSelf.kAnimationFastDuration)
-            { [weak self] in
-                
-                self?.layoutIfNeeded()
-            }
+            self?.viewCard?.alpha = 0
+            self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+            
+            self?.viewCard?.removeFromSuperview()
         }
     }
     
@@ -185,18 +217,21 @@ class VHome:ViewMain
     func updateCard()
     {
         guard
-            
-            let viewCard:VHomeCard = newCard()
+        
+            let controller:CHome = self.controller as? CHome
         
         else
         {
             return
         }
         
-        layoutIfNeeded()
-        animateCardChange(viewCard:viewCard)
-        
-        self.viewCard?.layoutTop.constant = kCardMidMaxTop
-        viewCard.layoutTop.constant = kCardMinTop
+        if let _:MHomeItem = controller.model.currentItem()
+        {
+            displayNewCard()
+        }
+        else
+        {
+            animateCardDisappear()
+        }
     }
 }
