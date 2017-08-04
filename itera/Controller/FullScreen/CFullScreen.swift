@@ -21,6 +21,13 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
         }
     }
     
+    //MARK: private
+    
+    private func confirmDelete()
+    {
+        
+    }
+    
     //MARK: public
     
     func back()
@@ -56,6 +63,34 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
     
     func delete()
     {
+        let alert:UIAlertController = UIAlertController(
+            title:String.localizedController(key:"CFullScreen_alertDeleteTitle"),
+            message:nil,
+            preferredStyle:UIAlertControllerStyle.actionSheet)
         
+        let actionCancel:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CFullScreen_alertDeleteCancel"),
+            style:
+            UIAlertActionStyle.cancel)
+        
+        let actionDelete:UIAlertAction = UIAlertAction(
+            title:String.localizedController(key:"CFullScreen_alertDeleteDelete"),
+            style:UIAlertActionStyle.destructive)
+        { [weak self] (action:UIAlertAction) in
+            
+            self?.confirmDelete()
+        }
+        
+        alert.addAction(actionDelete)
+        alert.addAction(actionCancel)
+        
+        if let popover:UIPopoverPresentationController = alert.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.up
+        }
+        
+        present(alert, animated:true, completion:nil)
     }
 }
