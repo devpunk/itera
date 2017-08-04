@@ -1,16 +1,21 @@
 PODS:
-  - GifHero (0.0.1)
+  - GifHero (1.0.0)
 
 DEPENDENCIES:
-  - GifHero (from `/devel/iturbide/gifhero`)
+  - GifHero (from `https://github.com/iturb/gifhero.git`)
 
 EXTERNAL SOURCES:
   GifHero:
-    :path: /devel/iturbide/gifhero
+    :git: https://github.com/iturb/gifhero.git
+
+CHECKOUT OPTIONS:
+  GifHero:
+    :commit: 0eee615956ff2b5c8052eb18d6623503ebbb41f8
+    :git: https://github.com/iturb/gifhero.git
 
 SPEC CHECKSUMS:
-  GifHero: 24cb319a55114314c20d15aa7e60de761e69c69b
+  GifHero: da22e0ba69e5df885e49411b2970f83727da0098
 
-PODFILE CHECKSUM: af956c5b4a523eebd6dffd9481ebe15c8851669b
+PODFILE CHECKSUM: b55143a8f59744c0ca09da6af6720b7a69f38b07
 
 COCOAPODS: 1.2.1

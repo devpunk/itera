@@ -7,31 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04441892F26506F64C23C45574FF9BE2 /* GifViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB21C07947B10FAFB812DD8ED281C2 /* GifViewStrategy.swift */; };
 		0A895412CD7580AADA7CF0A92EC1E053 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1DFC31195D49CC1F5577CDC810302983 /* GifModelResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D6D448FC6FAB8EDE93DA7FB5CEC63 /* GifModelResize.swift */; };
-		1E1499B77F3BBFF65A9861F2D75C33CD /* GifHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D679FA0845E77DDB6439F91F0914FD5 /* GifHero-dummy.m */; };
-		1F69BD5800BCBABAC2B9BA21F0264096 /* CGImageSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E13E58D11A0E2E48E94240A5E4F926 /* CGImageSourceExtension.swift */; };
-		4DEBC7E6F2117862FDFAD0B3A7187116 /* GifStrategyLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6129E2CFD6FDCFF4B90FCC95698C767 /* GifStrategyLoad.swift */; };
+		1A0A2C71015861358F65D454154C8E99 /* GifViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */; };
+		26BBB4A36847D2902C30FE045DDC0AC2 /* GifViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */; };
+		26E80F00BAF3AB4582CAECABA2C47C42 /* GifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */; };
+		2B644999CA9D06267AE49DD0EBB57C36 /* GifViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */; };
+		424FCF7AD47F2A1D5549FCAFF583D9FD /* GifModelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */; };
+		42EAE89545420BFD906428B3A11C333D /* GifHero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */; };
+		4CF8927FC9EFABD3B68F3EC43A86A325 /* GifModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */; };
 		5B18E799485DDE8063B60521A6914B42 /* Pods-itera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E732801A1B4E238711D9504C63ECE3 /* Pods-itera-dummy.m */; };
-		6CDA6F9E23B5D6A34E77D70A68E5E389 /* GifModelLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73863EAA52929681D887F35704694C5 /* GifModelLoaderFactory.swift */; };
-		74D044D53C782732A1A22ED9110D00AB /* GifViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C705A2BEE6FD8142B196EFE0A9569 /* GifViewAnimation.swift */; };
-		9147585784F60265C31803CF91A4B23A /* GifStrategyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914CB18130768AA5AD7B5BF712F85BFF /* GifStrategyPause.swift */; };
-		B9E0652966F553CC1C03BBA4719B73B5 /* GifStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F20915B0675C08B99FDD6C1322487 /* GifStrategyStand.swift */; };
-		BACC60B1034B16BEFAC7EB029F5AE44C /* GifModelLoaderResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF9CE0D9BE2CC7D473BDFDFCDEE6B7 /* GifModelLoaderResizer.swift */; };
-		C03E961C21B4A363B60E0271D7DF0AC2 /* GifHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7F3AB4441E8BCFA6FEB8E9479FA018B /* GifHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C281FE5EDB38B0317B1918207C2A4DF7 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA47141FDE07682D23039280EA621C /* CGImageExtension.swift */; };
-		C35852A841F318572D08CAAB05DD8136 /* GifViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39736C971A2C1ECA7092E91E7AC2E0BF /* GifViewUpdater.swift */; };
-		C7596F6179980832E92F45C6BCED7A26 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1670E4D6A1A9659D89ACF4D80934DE89 /* GifView.swift */; };
-		D4A8D9352DCB78599AEA71B6DBDABF8D /* GifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9839F38613C6804EC5D0423752252D /* GifStrategy.swift */; };
-		D52112BD5839DCAE0619B382EAE87A72 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C8F09EFF91D5839C172ABA3EB9BD5 /* CGSizeExtension.swift */; };
-		D82DD64794651440F0F28E284AFFF7DC /* GifModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6203081EEDB60CF70C73686BFAD0C03D /* GifModelLoader.swift */; };
+		72013A770578D4BB7CC22A7EFD7B2653 /* GifModelLoaderResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */; };
+		7627A5AD852A2A479588B1D578050A33 /* GifStrategyLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */; };
+		8ADF065E3585E9A3798F4F7990FCBC59 /* GifStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */; };
+		9ADCAC754D477525CEF5F92B3CFC8169 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */; };
+		A10A4FE6F35DB13C86EB1C0813263BB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A17FF501631B8CEA2C63CEA96913A3C6 /* GifModelResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */; };
+		B62316F3F91FDEF99EABA0BA35AB63CB /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */; };
+		D0A6383A65A1091A20B597940C8E104C /* GifStrategyLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */; };
+		D0AB8DB869CAC5C915D7DBAB6EBF7596 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */; };
+		D32AC928F83D023EFF92A88BE86967B3 /* GifHero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8294D55DD473E600E258546EDB596D6 /* GifViewOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */; };
 		D8A5E8438C24117FE6FDFD864F75C0B5 /* Pods-itera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DA18CBF5C3FB78ED09A5B5EC0DC55A /* Pods-itera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF5A235F2F601009268781112A2110A1 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F19220A4F77EFB46D6B7B18B80B76B8 /* GifModel.swift */; };
-		EA414557314623860FF439D82A4EB86D /* GifStrategyAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA721D2CC2E270C4E1924CC5EA8C64B6 /* GifStrategyAnimate.swift */; };
-		F12D1BB959FB390765FCBF0352FD040D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F6824DB66C63521B0FCEA0437360E373 /* GifViewOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638AEE0BA5D3E3696C1F7FD12A638AB2 /* GifViewOverrides.swift */; };
-		F9336B0EC2C03CA906049CD7868F15F2 /* GifModelFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7686DFC3D453A90218EF8C5B0EA0DE /* GifModelFrame.swift */; };
+		EB093E49D02E9ECF137F2D0217AE7195 /* GifModelLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */; };
+		F35191A88BD2D2431C63960FA7B7415D /* CGImageSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */; };
+		F819A2193B15E436B9162CC6CBB54440 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,54 +38,61 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D83E772D6B81C22FAF29653C4E66C151;
+			remoteGlobalIDString = F44F5C7AC1FA7BEA4BCA0613EF000697;
 			remoteInfo = GifHero;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageExtension.swift; path = gifhero/Source/Extensions/CGImageExtension.swift; sourceTree = "<group>"; };
+		0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoader.swift; path = gifhero/Source/Model/GifModelLoader.swift; sourceTree = "<group>"; };
+		0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategy.swift; path = gifhero/Source/Strategy/GifStrategy.swift; sourceTree = "<group>"; };
+		0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelFrame.swift; path = gifhero/Source/Model/GifModelFrame.swift; sourceTree = "<group>"; };
 		14A7BFFABE14600D43D690B17298FFA1 /* Pods_itera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_itera.framework; path = "Pods-itera.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1670E4D6A1A9659D89ACF4D80934DE89 /* GifView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
-		1877BF0958CFCD1B28D786C0346B31DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = gifhero/Source/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
+		1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyStand.swift; path = gifhero/Source/Strategy/GifStrategyStand.swift; sourceTree = "<group>"; };
 		2068142552B7023F3F00BD325A07DE18 /* GifHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GifHero.framework; path = GifHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DA18CBF5C3FB78ED09A5B5EC0DC55A /* Pods-itera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-itera-umbrella.h"; sourceTree = "<group>"; };
-		2BFF9CE0D9BE2CC7D473BDFDFCDEE6B7 /* GifModelLoaderResizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModelLoaderResizer.swift; sourceTree = "<group>"; };
-		2F8C705A2BEE6FD8142B196EFE0A9569 /* GifViewAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifViewAnimation.swift; sourceTree = "<group>"; };
-		39736C971A2C1ECA7092E91E7AC2E0BF /* GifViewUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifViewUpdater.swift; sourceTree = "<group>"; };
-		3B8DF614E8D1C76213373497BDC8287D /* GifHero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GifHero.xcconfig; sourceTree = "<group>"; };
-		3D679FA0845E77DDB6439F91F0914FD5 /* GifHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GifHero-dummy.m"; sourceTree = "<group>"; };
-		4F19220A4F77EFB46D6B7B18B80B76B8 /* GifModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
-		56E13E58D11A0E2E48E94240A5E4F926 /* CGImageSourceExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGImageSourceExtension.swift; sourceTree = "<group>"; };
-		5F7686DFC3D453A90218EF8C5B0EA0DE /* GifModelFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModelFrame.swift; sourceTree = "<group>"; };
+		25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoad.swift; path = gifhero/Source/Strategy/GifStrategyLoad.swift; sourceTree = "<group>"; };
+		2F4A3C3FA17486EBC3A627BEBB498224 /* GifHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GifHero.modulemap; sourceTree = "<group>"; };
+		5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModel.swift; path = gifhero/Source/Model/GifModel.swift; sourceTree = "<group>"; };
 		601760167E253295C84B6BA94A6126A9 /* Pods-itera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-itera-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6203081EEDB60CF70C73686BFAD0C03D /* GifModelLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModelLoader.swift; sourceTree = "<group>"; };
-		638AEE0BA5D3E3696C1F7FD12A638AB2 /* GifViewOverrides.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifViewOverrides.swift; sourceTree = "<group>"; };
+		612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageSourceExtension.swift; path = gifhero/Source/Extensions/CGImageSourceExtension.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		68B7AAC4B3C4EA5B8F0AFD787CC93436 /* Pods-itera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-itera-acknowledgements.plist"; sourceTree = "<group>"; };
-		7A9839F38613C6804EC5D0423752252D /* GifStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifStrategy.swift; sourceTree = "<group>"; };
-		7C8FDAC9268556FB6CC2DC95024BA15C /* GifHero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GifHero.modulemap; sourceTree = "<group>"; };
-		80EB21C07947B10FAFB812DD8ED281C2 /* GifViewStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifViewStrategy.swift; sourceTree = "<group>"; };
-		829D6D448FC6FAB8EDE93DA7FB5CEC63 /* GifModelResize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModelResize.swift; sourceTree = "<group>"; };
-		8C0C8F09EFF91D5839C172ABA3EB9BD5 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
-		914CB18130768AA5AD7B5BF712F85BFF /* GifStrategyPause.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifStrategyPause.swift; sourceTree = "<group>"; };
+		9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifStrategyLoaded.swift; path = gifhero/Source/Strategy/GifStrategyLoaded.swift; sourceTree = "<group>"; };
 		92858038F66041FD39FA03E4AA6AC01A /* Pods-itera-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-itera-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		973C2EC8D0101A7894909572FEA243FB /* Pods-itera-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-itera-resources.sh"; sourceTree = "<group>"; };
 		9958C9A4208E63D01107ACA811DEF64F /* Pods-itera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-itera.debug.xcconfig"; sourceTree = "<group>"; };
+		99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GifHero-dummy.m"; sourceTree = "<group>"; };
+		A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewStrategy.swift; path = gifhero/Source/View/GifViewStrategy.swift; sourceTree = "<group>"; };
+		A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GifHero.xcconfig; sourceTree = "<group>"; };
 		A6B3B836B8BB950C0FE673E30C30A5D8 /* Pods-itera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-itera.modulemap"; sourceTree = "<group>"; };
-		AA721D2CC2E270C4E1924CC5EA8C64B6 /* GifStrategyAnimate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifStrategyAnimate.swift; sourceTree = "<group>"; };
-		AD5F20915B0675C08B99FDD6C1322487 /* GifStrategyStand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifStrategyStand.swift; sourceTree = "<group>"; };
-		B1D873D5A667206D90F969661219F20B /* GifHero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-prefix.pch"; sourceTree = "<group>"; };
-		C6129E2CFD6FDCFF4B90FCC95698C767 /* GifStrategyLoad.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifStrategyLoad.swift; sourceTree = "<group>"; };
-		CDAA47141FDE07682D23039280EA621C /* CGImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
-		D73863EAA52929681D887F35704694C5 /* GifModelLoaderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GifModelLoaderFactory.swift; sourceTree = "<group>"; };
+		AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-umbrella.h"; sourceTree = "<group>"; };
+		B2C3D710517CAB0675427AE8829AE548 /* GifHero-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-prefix.pch"; sourceTree = "<group>"; };
+		C4B43E12B89337F50E48AB3F47260C08 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifView.swift; path = gifhero/Source/View/GifView.swift; sourceTree = "<group>"; };
 		D94A27DEE8A3DE6D40D256ADB118271C /* Pods-itera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-itera.release.xcconfig"; sourceTree = "<group>"; };
+		DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderResizer.swift; path = gifhero/Source/Model/GifModelLoaderResizer.swift; sourceTree = "<group>"; };
 		E1E732801A1B4E238711D9504C63ECE3 /* Pods-itera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-itera-dummy.m"; sourceTree = "<group>"; };
+		E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelResize.swift; path = gifhero/Source/Model/GifModelResize.swift; sourceTree = "<group>"; };
+		E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifModelLoaderFactory.swift; path = gifhero/Source/Model/GifModelLoaderFactory.swift; sourceTree = "<group>"; };
 		ECED4F20FB15F738E61DED2F085FE216 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7F3AB4441E8BCFA6FEB8E9479FA018B /* GifHero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifHero-umbrella.h"; sourceTree = "<group>"; };
+		F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewFactory.swift; path = gifhero/Source/View/GifViewFactory.swift; sourceTree = "<group>"; };
+		F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewUpdater.swift; path = gifhero/Source/View/GifViewUpdater.swift; sourceTree = "<group>"; };
+		F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GifViewOverrides.swift; path = gifhero/Source/View/GifViewOverrides.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D8E4C2CB7232CF3DD9B785AF05167D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10A4FE6F35DB13C86EB1C0813263BB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3E3F3732CB5EF97224EF60668761AFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,65 +101,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E25F45C8F2E26859A5D8AB3C18646648 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F12D1BB959FB390765FCBF0352FD040D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25E4A1C7662E16168A2EAD707132FF44 /* Extensions */ = {
+		11EAFC4EA0E8DBEE25781D3AAF0065F2 /* GifHero */ = {
 			isa = PBXGroup;
 			children = (
-				CDAA47141FDE07682D23039280EA621C /* CGImageExtension.swift */,
-				56E13E58D11A0E2E48E94240A5E4F926 /* CGImageSourceExtension.swift */,
-				8C0C8F09EFF91D5839C172ABA3EB9BD5 /* CGSizeExtension.swift */,
+				044E7F7402EBF05D4FC3871510D49849 /* CGImageExtension.swift */,
+				612026DE7C96BF469891A0A30E065704 /* CGImageSourceExtension.swift */,
+				1A8DCE7781730D753919D26B7F9DD131 /* CGSizeExtension.swift */,
+				5C64889972EE1D155BEF7195FBD5537B /* GifModel.swift */,
+				0AF4EA95D8CAF127B8DF433C0EFBF070 /* GifModelFrame.swift */,
+				0A682C78673875A9DF3E28C2216EC981 /* GifModelLoader.swift */,
+				E627630DE5512CB5D0E448B16B5342E4 /* GifModelLoaderFactory.swift */,
+				DB06F702FC03EFB5F8C3DD8FFCE7C8AB /* GifModelLoaderResizer.swift */,
+				E59D5CBD3F20576FF4E73F08F8205284 /* GifModelResize.swift */,
+				0AE6F27F832B778541F47BCA3AB6F196 /* GifStrategy.swift */,
+				25560F0399D56DEC6084A16E81297733 /* GifStrategyLoad.swift */,
+				9238C08D22B37F39DB34BF556AF6BE5C /* GifStrategyLoaded.swift */,
+				1D1677614D0DB5114367C9C47DD88B8A /* GifStrategyStand.swift */,
+				D5E6BDF663AD87D8DA72F8A187548B69 /* GifView.swift */,
+				F68BAE1C2BC70E31824793DC15D3A757 /* GifViewFactory.swift */,
+				F9C11117814698559138B34DDADB8BB2 /* GifViewOverrides.swift */,
+				A2844B1CD6C3D0289627116A4146163C /* GifViewStrategy.swift */,
+				F8D26AB20C3305098E5F61CF7C98F2A4 /* GifViewUpdater.swift */,
+				A60DBDA7D2DE52A70693465E434E3A9E /* Support Files */,
 			);
-			name = Extensions;
-			path = Extensions;
+			name = GifHero;
+			path = GifHero;
 			sourceTree = "<group>";
 		};
-		28FD8C8527AA4E997D562DB72CAE5FC3 /* Model */ = {
+		70886AF241D1CEA642CE4BF4F1034A4F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F19220A4F77EFB46D6B7B18B80B76B8 /* GifModel.swift */,
-				5F7686DFC3D453A90218EF8C5B0EA0DE /* GifModelFrame.swift */,
-				6203081EEDB60CF70C73686BFAD0C03D /* GifModelLoader.swift */,
-				D73863EAA52929681D887F35704694C5 /* GifModelLoaderFactory.swift */,
-				2BFF9CE0D9BE2CC7D473BDFDFCDEE6B7 /* GifModelLoaderResizer.swift */,
-				829D6D448FC6FAB8EDE93DA7FB5CEC63 /* GifModelResize.swift */,
+				11EAFC4EA0E8DBEE25781D3AAF0065F2 /* GifHero */,
 			);
-			name = Model;
-			path = Model;
-			sourceTree = "<group>";
-		};
-		65A64CAA2577BD32D9EDF52DA2616545 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				99102CD3877DE08C9801B7D923A3C5D8 /* GifHero */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		776CD5EDFBFB94750D23186A81D9E1C2 /* gifhero */ = {
-			isa = PBXGroup;
-			children = (
-				F661E089EF59D06E9879993D63E89383 /* Source */,
-			);
-			name = gifhero;
-			path = gifhero;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				65A64CAA2577BD32D9EDF52DA2616545 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				70886AF241D1CEA642CE4BF4F1034A4F /* Pods */,
 				D41469F9BB936CFAFDA47E06D28D44AA /* Products */,
 				E4EF87500BE397ECC00A076CF49090D1 /* Targets Support Files */,
 			);
@@ -177,15 +168,19 @@
 			path = "Target Support Files/Pods-itera";
 			sourceTree = "<group>";
 		};
-		99102CD3877DE08C9801B7D923A3C5D8 /* GifHero */ = {
+		A60DBDA7D2DE52A70693465E434E3A9E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				776CD5EDFBFB94750D23186A81D9E1C2 /* gifhero */,
-				CD5A2B08054B5AAD599BCCB946825471 /* Support Files */,
+				2F4A3C3FA17486EBC3A627BEBB498224 /* GifHero.modulemap */,
+				A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */,
+				99FA76F81347A3E5F3A0AE9584084F3C /* GifHero-dummy.m */,
+				B2C3D710517CAB0675427AE8829AE548 /* GifHero-prefix.pch */,
+				AF3B600C096613C953045B0659A26F06 /* GifHero-umbrella.h */,
+				C4B43E12B89337F50E48AB3F47260C08 /* Info.plist */,
 			);
-			name = GifHero;
-			path = /devel/iturbide/gifhero;
-			sourceTree = "<absolute>";
+			name = "Support Files";
+			path = "../Target Support Files/GifHero";
+			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
@@ -193,33 +188,6 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CD5A2B08054B5AAD599BCCB946825471 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C8FDAC9268556FB6CC2DC95024BA15C /* GifHero.modulemap */,
-				3B8DF614E8D1C76213373497BDC8287D /* GifHero.xcconfig */,
-				3D679FA0845E77DDB6439F91F0914FD5 /* GifHero-dummy.m */,
-				B1D873D5A667206D90F969661219F20B /* GifHero-prefix.pch */,
-				F7F3AB4441E8BCFA6FEB8E9479FA018B /* GifHero-umbrella.h */,
-				1877BF0958CFCD1B28D786C0346B31DE /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../itera/Pods/Target Support Files/GifHero";
-			sourceTree = "<group>";
-		};
-		CDA4081ACF9DF132A3E2F2BEAC66D26F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1670E4D6A1A9659D89ACF4D80934DE89 /* GifView.swift */,
-				2F8C705A2BEE6FD8142B196EFE0A9569 /* GifViewAnimation.swift */,
-				638AEE0BA5D3E3696C1F7FD12A638AB2 /* GifViewOverrides.swift */,
-				80EB21C07947B10FAFB812DD8ED281C2 /* GifViewStrategy.swift */,
-				39736C971A2C1ECA7092E91E7AC2E0BF /* GifViewUpdater.swift */,
-			);
-			name = View;
-			path = View;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -247,47 +215,22 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E768D1A217A4CD99B22CA7C8BDD18602 /* Strategy */ = {
-			isa = PBXGroup;
-			children = (
-				7A9839F38613C6804EC5D0423752252D /* GifStrategy.swift */,
-				AA721D2CC2E270C4E1924CC5EA8C64B6 /* GifStrategyAnimate.swift */,
-				C6129E2CFD6FDCFF4B90FCC95698C767 /* GifStrategyLoad.swift */,
-				914CB18130768AA5AD7B5BF712F85BFF /* GifStrategyPause.swift */,
-				AD5F20915B0675C08B99FDD6C1322487 /* GifStrategyStand.swift */,
-			);
-			name = Strategy;
-			path = Strategy;
-			sourceTree = "<group>";
-		};
-		F661E089EF59D06E9879993D63E89383 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				25E4A1C7662E16168A2EAD707132FF44 /* Extensions */,
-				28FD8C8527AA4E997D562DB72CAE5FC3 /* Model */,
-				E768D1A217A4CD99B22CA7C8BDD18602 /* Strategy */,
-				CDA4081ACF9DF132A3E2F2BEAC66D26F /* View */,
-			);
-			name = Source;
-			path = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3E6CC4DF51604EA3127330FDFF8D2A28 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C03E961C21B4A363B60E0271D7DF0AC2 /* GifHero-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3FCFFF58356078D5F452473CC6C5FF12 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D8A5E8438C24117FE6FDFD864F75C0B5 /* Pods-itera-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43A283D116E00C131B8DB096E5F8B2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32AC928F83D023EFF92A88BE86967B3 /* GifHero-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,13 +255,13 @@
 			productReference = 14A7BFFABE14600D43D690B17298FFA1 /* Pods_itera.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D83E772D6B81C22FAF29653C4E66C151 /* GifHero */ = {
+		F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 737611CBD978F450E73E4C329A1E3577 /* Build configuration list for PBXNativeTarget "GifHero" */;
+			buildConfigurationList = F7FFB956445DA085B0758E1B8FA7A14B /* Build configuration list for PBXNativeTarget "GifHero" */;
 			buildPhases = (
-				67C9732E223E01F0448E7F8CBFC4A761 /* Sources */,
-				E25F45C8F2E26859A5D8AB3C18646648 /* Frameworks */,
-				3E6CC4DF51604EA3127330FDFF8D2A28 /* Headers */,
+				47C8301152AEA43761A2472D27E9F5F4 /* Sources */,
+				8D8E4C2CB7232CF3DD9B785AF05167D8 /* Frameworks */,
+				E43A283D116E00C131B8DB096E5F8B2A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -350,37 +293,36 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D83E772D6B81C22FAF29653C4E66C151 /* GifHero */,
+				F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */,
 				704C58C2F194A75B934F211BEE8AEEE8 /* Pods-itera */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		67C9732E223E01F0448E7F8CBFC4A761 /* Sources */ = {
+		47C8301152AEA43761A2472D27E9F5F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C281FE5EDB38B0317B1918207C2A4DF7 /* CGImageExtension.swift in Sources */,
-				1F69BD5800BCBABAC2B9BA21F0264096 /* CGImageSourceExtension.swift in Sources */,
-				D52112BD5839DCAE0619B382EAE87A72 /* CGSizeExtension.swift in Sources */,
-				1E1499B77F3BBFF65A9861F2D75C33CD /* GifHero-dummy.m in Sources */,
-				DF5A235F2F601009268781112A2110A1 /* GifModel.swift in Sources */,
-				F9336B0EC2C03CA906049CD7868F15F2 /* GifModelFrame.swift in Sources */,
-				D82DD64794651440F0F28E284AFFF7DC /* GifModelLoader.swift in Sources */,
-				6CDA6F9E23B5D6A34E77D70A68E5E389 /* GifModelLoaderFactory.swift in Sources */,
-				BACC60B1034B16BEFAC7EB029F5AE44C /* GifModelLoaderResizer.swift in Sources */,
-				1DFC31195D49CC1F5577CDC810302983 /* GifModelResize.swift in Sources */,
-				D4A8D9352DCB78599AEA71B6DBDABF8D /* GifStrategy.swift in Sources */,
-				EA414557314623860FF439D82A4EB86D /* GifStrategyAnimate.swift in Sources */,
-				4DEBC7E6F2117862FDFAD0B3A7187116 /* GifStrategyLoad.swift in Sources */,
-				9147585784F60265C31803CF91A4B23A /* GifStrategyPause.swift in Sources */,
-				B9E0652966F553CC1C03BBA4719B73B5 /* GifStrategyStand.swift in Sources */,
-				C7596F6179980832E92F45C6BCED7A26 /* GifView.swift in Sources */,
-				74D044D53C782732A1A22ED9110D00AB /* GifViewAnimation.swift in Sources */,
-				F6824DB66C63521B0FCEA0437360E373 /* GifViewOverrides.swift in Sources */,
-				04441892F26506F64C23C45574FF9BE2 /* GifViewStrategy.swift in Sources */,
-				C35852A841F318572D08CAAB05DD8136 /* GifViewUpdater.swift in Sources */,
+				9ADCAC754D477525CEF5F92B3CFC8169 /* CGImageExtension.swift in Sources */,
+				F35191A88BD2D2431C63960FA7B7415D /* CGImageSourceExtension.swift in Sources */,
+				F819A2193B15E436B9162CC6CBB54440 /* CGSizeExtension.swift in Sources */,
+				42EAE89545420BFD906428B3A11C333D /* GifHero-dummy.m in Sources */,
+				D0AB8DB869CAC5C915D7DBAB6EBF7596 /* GifModel.swift in Sources */,
+				424FCF7AD47F2A1D5549FCAFF583D9FD /* GifModelFrame.swift in Sources */,
+				4CF8927FC9EFABD3B68F3EC43A86A325 /* GifModelLoader.swift in Sources */,
+				EB093E49D02E9ECF137F2D0217AE7195 /* GifModelLoaderFactory.swift in Sources */,
+				72013A770578D4BB7CC22A7EFD7B2653 /* GifModelLoaderResizer.swift in Sources */,
+				A17FF501631B8CEA2C63CEA96913A3C6 /* GifModelResize.swift in Sources */,
+				8ADF065E3585E9A3798F4F7990FCBC59 /* GifStrategy.swift in Sources */,
+				D0A6383A65A1091A20B597940C8E104C /* GifStrategyLoad.swift in Sources */,
+				7627A5AD852A2A479588B1D578050A33 /* GifStrategyLoaded.swift in Sources */,
+				26E80F00BAF3AB4582CAECABA2C47C42 /* GifStrategyStand.swift in Sources */,
+				B62316F3F91FDEF99EABA0BA35AB63CB /* GifView.swift in Sources */,
+				1A0A2C71015861358F65D454154C8E99 /* GifViewFactory.swift in Sources */,
+				D8294D55DD473E600E258546EDB596D6 /* GifViewOverrides.swift in Sources */,
+				2B644999CA9D06267AE49DD0EBB57C36 /* GifViewStrategy.swift in Sources */,
+				26BBB4A36847D2902C30FE045DDC0AC2 /* GifViewUpdater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,47 +340,12 @@
 		D97AF9A47921AC47F2658E25D38916D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GifHero;
-			target = D83E772D6B81C22FAF29653C4E66C151 /* GifHero */;
+			target = F44F5C7AC1FA7BEA4BCA0613EF000697 /* GifHero */;
 			targetProxy = 777885DB38A2EB86DAC7655F8C560640 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2AABAC17466A951E12AFA6F4D199F758 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B8DF614E8D1C76213373497BDC8287D /* GifHero.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GifHero/GifHero-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GifHero/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GifHero/GifHero.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GifHero;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		40A62B7818B46E468F323266A33D3507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D94A27DEE8A3DE6D40D256ADB118271C /* Pods-itera.release.xcconfig */;
@@ -476,6 +383,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		46B346892D038CE0A98D417646583245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GifHero/GifHero-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GifHero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GifHero/GifHero.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GifHero;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -569,9 +511,9 @@
 			};
 			name = Release;
 		};
-		EC9A4EC8C41CCE43177C476F5CD60BD5 /* Release */ = {
+		DA0757CDFF90821940B15828A05F8237 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B8DF614E8D1C76213373497BDC8287D /* GifHero.xcconfig */;
+			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -654,20 +596,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		737611CBD978F450E73E4C329A1E3577 /* Build configuration list for PBXNativeTarget "GifHero" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2AABAC17466A951E12AFA6F4D199F758 /* Debug */,
-				EC9A4EC8C41CCE43177C476F5CD60BD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7A3CA82A129DE157D8A0E6D84BC09115 /* Build configuration list for PBXNativeTarget "Pods-itera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9A2A27759D4941482ADD302A80DB1C0 /* Debug */,
 				40A62B7818B46E468F323266A33D3507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7FFB956445DA085B0758E1B8FA7A14B /* Build configuration list for PBXNativeTarget "GifHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B346892D038CE0A98D417646583245 /* Debug */,
+				DA0757CDFF90821940B15828A05F8237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

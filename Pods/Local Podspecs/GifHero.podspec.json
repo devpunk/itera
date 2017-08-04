@@ -1,6 +1,6 @@
 {
   "name": "GifHero",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "summary": "GIF support",
   "description": "GIF images with animation on iOS.\nPerformance and memory usage and energy\noptimised and completely transparent to use.",
   "homepage": "https://github.com/iturb/gifhero",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/iturb/gifhero.git",
-    "tag": "v0.0.1"
+    "tag": "v1.0.0"
   },
   "source_files": "gifhero/Source/**/*.swift"
 }
