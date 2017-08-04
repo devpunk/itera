@@ -8,7 +8,6 @@ class VHomeProjects:VCollection<
 {
     private var edgeInsets:UIEdgeInsets?
     private var cellSize:CGSize?
-    private var trackScroll:Bool
     private let kCollectionTop:CGFloat = 255
     private let kCollectionBottom:CGFloat = 55
     private let kSubtractSelected:CGFloat = 16
@@ -17,8 +16,6 @@ class VHomeProjects:VCollection<
     
     required init(controller:CHome)
     {
-        trackScroll = true
-        
         super.init(controller:controller)
         collectionView.alwaysBounceHorizontal = true
         
@@ -33,39 +30,6 @@ class VHomeProjects:VCollection<
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func scrollViewWillBeginDragging(
-        _ scrollView:UIScrollView)
-    {
-        trackScroll = true
-    }
-    
-    override func scrollViewDidEndScrollingAnimation(
-        _ scrollView:UIScrollView)
-    {
-        trackScroll = true
-    }
-    
-    override func scrollViewDidScroll(
-        _ scrollView:UIScrollView)
-    {
-        if trackScroll
-        {
-            let midX:CGFloat = collectionView.bounds.midX
-            let point:CGPoint = CGPoint(x:midX, y:kCollectionTop)
-            
-            guard
-                
-                let indexPath:IndexPath = collectionView.indexPathForItem(at:point)
-                
-            else
-            {
-                return
-            }
-            
-            makeSelection(index:indexPath)
-        }
     }
     
     override func collectionView(
@@ -168,8 +132,9 @@ class VHomeProjects:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        trackScroll = false
-        makeScroll(index:indexPath)
+        controller.model.selected = indexPath.item
+        animateLayout(selected:indexPath)
+        updateCard()
     }
     
     //MARK: private
@@ -215,29 +180,6 @@ class VHomeProjects:VCollection<
         
             self?.centerSelected(index:selected)
         }
-    }
-    
-    private func makeSelection(index:IndexPath)
-    {
-        let newSelected:Int = index.item
-        
-        if controller.model.selected != newSelected
-        {
-            controller.model.selected = index.item
-            collectionView.selectItem(
-                at:index,
-                animated:false,
-                scrollPosition:UICollectionViewScrollPosition())
-            animateLayout(selected:index)
-            updateCard()
-        }
-    }
-    
-    private func makeScroll(index:IndexPath)
-    {
-        controller.model.selected = index.item
-        animateLayout(selected:index)
-        updateCard()
     }
     
     private func centerSelected(index:IndexPath)
