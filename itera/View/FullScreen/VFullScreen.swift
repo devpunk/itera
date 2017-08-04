@@ -3,12 +3,12 @@ import UIKit
 class VFullScreen:ViewMain
 {
     private(set) weak var viewDisplay:VFullScreenDisplay!
-    private let kMenuHeight:CGFloat = 80
+    private let kMenuHeight:CGFloat = 70
     
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
-        backgroundColor = UIColor.colourBackgroundGray
+        backgroundColor = UIColor.white
         
         guard
         
@@ -41,10 +41,12 @@ class VFullScreen:ViewMain
         addSubview(viewDisplay)
         addSubview(viewMenu)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:viewDisplay,
-            toView:self,
-            margin:kMenuHeight)
+            toView:self)
+        NSLayoutConstraint.bottomToTop(
+            view:viewDisplay,
+            toView:viewMenu)
         NSLayoutConstraint.equalsHorizontal(
             view:viewDisplay,
             toView:self)

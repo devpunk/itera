@@ -7,6 +7,7 @@ class VFullScreenMenu:VCollection<
     VFullScreenMenuCell>
 {
     private var cellSize:CGSize?
+    private let kBorderHeight:CGFloat = 1
     private let kCellWidth:CGFloat = 60
     
     required init(controller:CFullScreen)
@@ -19,6 +20,19 @@ class VFullScreenMenu:VCollection<
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
         }
+        
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
+        insertSubview(border, belowSubview:collectionView)
+
+        NSLayoutConstraint.topToTop(
+            view:border,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:border,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:border,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
