@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class CFullScreen:Controller<VFullScreen, MFullScreen>
 {
@@ -35,5 +35,22 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
         }
         
         parent.dismissAnimateOver(completion:nil)
+    }
+    
+    func share()
+    {
+        let url:URL = model.item.path
+        let activity:UIActivityViewController = UIActivityViewController(
+            activityItems:[url],
+            applicationActivities:nil)
+        
+        if let popover:UIPopoverPresentationController = activity.popoverPresentationController
+        {
+            popover.sourceView = view
+            popover.sourceRect = CGRect.zero
+            popover.permittedArrowDirections = UIPopoverArrowDirection.any
+        }
+        
+        present(activity, animated:true, completion:nil)
     }
 }
