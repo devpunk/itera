@@ -384,7 +384,7 @@
 			};
 			name = Release;
 		};
-		46B346892D038CE0A98D417646583245 /* Debug */ = {
+		552336507A27AB3D5BF5E1F08D934577 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
 			buildSettings = {
@@ -410,7 +410,7 @@
 				PRODUCT_NAME = GifHero;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,7 +419,7 @@
 			};
 			name = Debug;
 		};
-		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -463,6 +463,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -511,7 +512,7 @@
 			};
 			name = Release;
 		};
-		DA0757CDFF90821940B15828A05F8237 /* Release */ = {
+		CAA7D8F04FE5FC7D919CF6838517FB6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A54E9198C2C7C9C98B3D099CBABB3A21 /* GifHero.xcconfig */;
 			buildSettings = {
@@ -537,6 +538,7 @@
 				PRODUCT_NAME = GifHero;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -590,7 +592,7 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				97803B46811A9BDB5E70FA1303AFBFFE /* Debug */,
 				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -608,8 +610,8 @@
 		F7FFB956445DA085B0758E1B8FA7A14B /* Build configuration list for PBXNativeTarget "GifHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46B346892D038CE0A98D417646583245 /* Debug */,
-				DA0757CDFF90821940B15828A05F8237 /* Release */,
+				552336507A27AB3D5BF5E1F08D934577 /* Debug */,
+				CAA7D8F04FE5FC7D919CF6838517FB6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

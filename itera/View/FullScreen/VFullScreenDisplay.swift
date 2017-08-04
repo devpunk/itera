@@ -17,7 +17,7 @@ class VFullScreenDisplay:
         viewGif.url = path
         viewGif.animating = true
         self.viewGif = viewGif
-        
+
         addSubview(viewGif)
         
         NSLayoutConstraint.equals(
