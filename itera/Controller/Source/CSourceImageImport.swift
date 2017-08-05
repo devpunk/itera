@@ -8,7 +8,7 @@ class CSourceImageImport:Controller<VSourceImageImport, MSourceImageImport>
     init(items:[MSourceImageItem])
     {
         super.init()
-        model.config(item:item, framesPerSecond:framesPerSecond)
+        model.config(items:items)
     }
     
     required init?(coder:NSCoder)
@@ -25,15 +25,13 @@ class CSourceImageImport:Controller<VSourceImageImport, MSourceImageImport>
     {
         super.viewDidLoad()
         
-        model.importVideo(controller:self)
+        model.importImages(controller:self)
     }
     
     override func didReceiveMemoryWarning()
     {
-        model.cancelImport()
-        
         let message:String = String.localizedController(
-            key:"CSourceVideoImport_memoryWarning")
+            key:"CSourceImageImport_memoryWarning")
         VAlert.messageFail(message:message)
         
         cancel()
@@ -41,18 +39,20 @@ class CSourceImageImport:Controller<VSourceImageImport, MSourceImageImport>
     
     //MARK: private
     
-    private func asyncUpdateProgress(percent:CGFloat)
+    private func asyncUpdateProgress(percent:CGFloat, image:UIImage?)
     {
         guard
             
-            let view:VSourceVideoImport = self.view as? VSourceVideoImport
+            let view:VSourceImageImport = self.view as? VSourceImageImport
             
         else
         {
             return
         }
         
-        view.viewProgress.updateProgress(percent:percent)
+        view.viewProgress.updateProgress(
+            percent:percent,
+            image:image)
     }
     
     private func popAll()
@@ -116,12 +116,12 @@ class CSourceImageImport:Controller<VSourceImageImport, MSourceImageImport>
         }
     }
     
-    func updateProgress(percent:CGFloat)
+    func updateProgress(percent:CGFloat, image:UIImage?)
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateProgress(percent:percent)
+            self?.asyncUpdateProgress(percent:percent, image:image)
         }
     }
 }

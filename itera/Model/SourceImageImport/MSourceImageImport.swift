@@ -1,72 +1,70 @@
-import Foundation
+import UIKit
 
 class MSourceImageImport:Model, MSourceImageImportFactoryDelegate
 {
-    private(set) var items:[MSourceImageItem]
+    private(set) var items:[MSourceImageItem]?
     private weak var controller:CSourceImageImport?
     private var factory:MSourceImageImportFactory?
     
-    required init()
-    {
-        framesPerSecond = 0
-        super.init()
-    }
-    
     //MARK: private
     
-    private func asyncImportVideo()
+    private func asyncImportImages()
     {
-        factory = MSourceVideoImportFactory(
-            item:item,
-            framesPerSecond:framesPerSecond,
+        guard
+            
+            let items:[MSourceImageItem] = self.items
+        
+        else
+        {
+            return
+        }
+        
+        factory = MSourceImageImportFactory(
+            items:items,
             delegate:self)
+        
+        self.items = nil
     }
     
     //MARK: internal
     
-    func config(item:MSourceVideoItem, framesPerSecond:Int)
+    func config(items:[MSourceImageItem])
     {
-        self.item = item
-        self.framesPerSecond = framesPerSecond
+        self.items = items
     }
     
-    func importVideo(controller:CSourceVideoImport)
+    func importImages(controller:CSourceImageImport)
     {
         self.controller = controller
         
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-            { [weak self] in
-                
-                self?.asyncImportVideo()
+        { [weak self] in
+            
+            self?.asyncImportImages()
         }
-    }
-    
-    func cancelImport()
-    {
-        factory?.cancelAll()
     }
     
     //MARK: factory delegate
     
     func importSequenceReady(sequence:MEditSequence)
     {
-        controller?.videoImported(sequence:sequence)
+        controller?.imagesImported(sequence:sequence)
     }
     
     func importError()
     {
-        let error:String = String.localizedModel(key:"MSourceVideoImport_error")
+        let error:String = String.localizedModel(key:"MSourceImageImport_error")
         VAlert.messageFail(message:error)
         
         DispatchQueue.main.async
-            { [weak self] in
-                
-                self?.controller?.cancel()
+        { [weak self] in
+            
+            self?.controller?.cancel()
         }
     }
     
-    func importProgress(percent:CGFloat)
+    func importProgress(percent:CGFloat, image:UIImage?)
     {
-        controller?.updateProgress(percent:percent)
+        controller?.updateProgress(percent:percent, image:image)
     }
 }

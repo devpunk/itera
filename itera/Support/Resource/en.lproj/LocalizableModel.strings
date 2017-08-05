@@ -8,4 +8,5 @@
 "MSourceVideoTimeItemWidth_title"="Width";
 "MSourceVideoTimeItemHeight_title"="Height";
 "MSourceVideoImport_error"="Error importing video";
+"MSourceImageImport_error"="Error importing images";
 "MSave_errorMessage"="There was an error, please try again";

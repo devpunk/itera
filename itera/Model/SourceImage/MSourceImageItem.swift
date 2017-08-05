@@ -63,6 +63,27 @@ class MSourceImageItem
         }
     }
     
+    func requestData(completion:@escaping((Data?) -> ()))
+    {
+        if let requestId:PHImageRequestID = requestId
+        {
+            cachingManager?.cancelImageRequest(requestId)
+        }
+        
+        requestId = cachingManager?.requestImageData(
+            for:asset,
+            options:requestOptions)
+        { [weak self] (
+            data:Data?,
+            string:String?,
+            orientation:UIImageOrientation,
+            info:[AnyHashable:Any]?) in
+            
+            self?.requestId = nil
+            completion(data)
+        }
+    }
+    
     func selected(selectedIndex:Int)
     {
         self.selectedIndex = "\(selectedIndex)"

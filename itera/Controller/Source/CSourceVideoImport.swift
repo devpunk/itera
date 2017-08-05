@@ -36,7 +36,7 @@ class CSourceVideoImport:Controller<VSourceVideoImport, MSourceVideoImport>
         model.cancelImport()
         
         let message:String = String.localizedController(
-            key:"CSourceImageImport_memoryWarning")
+            key:"CSourceVideoImport_memoryWarning")
         VAlert.messageFail(message:message)
         
         cancel()
@@ -44,18 +44,18 @@ class CSourceVideoImport:Controller<VSourceVideoImport, MSourceVideoImport>
     
     //MARK: private
     
-    private func asyncUpdateProgress(percent:CGFloat, image:CGImage)
+    private func asyncUpdateProgress(percent:CGFloat)
     {
         guard
             
-            let view:VSourceImageImport = self.view as? VSourceImageImport
+            let view:VSourceVideoImport = self.view as? VSourceVideoImport
             
         else
         {
             return
         }
         
-        view.viewProgress.updateProgress(percent:percent, image:image)
+        view.viewProgress.updateProgress(percent:percent)
     }
     
     private func popAll()
@@ -111,7 +111,7 @@ class CSourceVideoImport:Controller<VSourceVideoImport, MSourceVideoImport>
         parent.dismissAnimateOver(completion:nil)
     }
     
-    func imagesImported(sequence:MEditSequence)
+    func videoImported(sequence:MEditSequence)
     {        
         DispatchQueue.main.async
         { [weak self] in
@@ -120,12 +120,12 @@ class CSourceVideoImport:Controller<VSourceVideoImport, MSourceVideoImport>
         }
     }
     
-    func updateProgress(percent:CGFloat, image:CGImage)
+    func updateProgress(percent:CGFloat)
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateProgress(percent:percent, image:image)
+            self?.asyncUpdateProgress(percent:percent)
         }
     }
 }

@@ -38,11 +38,19 @@ class VSourceImageImportProgress:
     
     //MARK: internal
     
-    func updateProgress(percent:CGFloat, image:CGImage)
+    func updateProgress(percent:CGFloat, image:UIImage?)
     {
-        let image:UIImage = UIImage(cgImage:image)
-        
         viewBar.update(percent:percent)
+        
+        guard
+            
+            let image:UIImage = image
+        
+        else
+        {
+            return
+        }
+        
         viewThumb.imageView.image = image
     }
 }
