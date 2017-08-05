@@ -7,7 +7,7 @@ class MSourceVideoItem
     var image:UIImage?
     let asset:PHAsset
     private weak var cachingManager:PHCachingImageManager?
-    private var requestOptions:PHImageRequestOptions?
+    private weak var requestOptions:PHImageRequestOptions?
     private var requestId:PHImageRequestID?
     private let previewSize:CGSize
     
