@@ -26,7 +26,8 @@ class MSourceVideo:Model
     
     private func libraryError()
     {
-        let message:String = String.localizedModel(key:"MSourceVideo_libraryError")
+        let message:String = String.localizedModel(
+            key:"MSourceVideo_libraryError")
         VAlert.messageFail(message:message)
     }
     
@@ -82,13 +83,5 @@ class MSourceVideo:Model
         }
         
         loadVideos(fetchResults:fetchResults)
-    }
-    
-    func requestAsset(item:MSourceVideoItem)
-    {
-//        cachingManager?.requestAVAsset(
-//            forVideo:item.asset,
-//            options: <#T##PHVideoRequestOptions?#>,
-//            resultHandler: <#T##(AVAsset?, AVAudioMix?, [AnyHashable : Any]?) -> Void#>)
     }
 }
