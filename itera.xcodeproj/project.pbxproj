@@ -214,6 +214,7 @@
 		DA8F6F221F35A3C500D22FA7 /* MSourceImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F211F35A3C500D22FA7 /* MSourceImageFactory.swift */; };
 		DA8F6F251F35EED600D22FA7 /* VSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */; };
 		DA8F6F281F35F45D00D22FA7 /* MSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */; };
+		DA8F6F2A1F35F4D600D22FA7 /* CSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F291F35F4D600D22FA7 /* CSourceImageImport.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
 		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
@@ -436,6 +437,7 @@
 		DA8F6F211F35A3C500D22FA7 /* MSourceImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageFactory.swift; sourceTree = "<group>"; };
 		DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImport.swift; sourceTree = "<group>"; };
 		DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImport.swift; sourceTree = "<group>"; };
+		DA8F6F291F35F4D600D22FA7 /* CSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSourceImageImport.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
 		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
@@ -581,6 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2795681F2AFC4100550ECA /* CSourceImage.swift */,
+				DA8F6F291F35F4D600D22FA7 /* CSourceImageImport.swift */,
 				DA2795691F2AFC4100550ECA /* CSourceVideo.swift */,
 				DA27956A1F2AFC4100550ECA /* CSourceVideoImport.swift */,
 				DA27956B1F2AFC4100550ECA /* CSourceVideoTime.swift */,
@@ -1305,6 +1308,7 @@
 				DA5490331F311B47003E6472 /* VFullScreen.swift in Sources */,
 				DA27961F1F2AFC4100550ECA /* CSourceVideo.swift in Sources */,
 				DA0FAA461F305D3F00CACF2F /* VHomeCardMenu.swift in Sources */,
+				DA8F6F2A1F35F4D600D22FA7 /* CSourceImageImport.swift in Sources */,
 				DA2796761F2AFC4200550ECA /* VEditActions.swift in Sources */,
 				DA2796991F2AFC4200550ECA /* VSourceVideoImport.swift in Sources */,
 				DA5490391F311CC7003E6472 /* CFullScreen.swift in Sources */,
