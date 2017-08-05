@@ -4,6 +4,7 @@ import Photos
 class MSourceImageItem
 {
     var image:UIImage?
+    var selectedIndex:Int?
     let asset:PHAsset
     private weak var cachingManager:PHCachingImageManager?
     private weak var requestOptions:PHImageRequestOptions?
