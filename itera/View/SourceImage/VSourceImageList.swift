@@ -105,10 +105,20 @@ class VSourceImageList:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        controller.model.selectedCount += 1
         let item:MSourceImageItem = modelAtIndex(index:indexPath)
+        controller.model.selectedCount += 1
         item.selected(
             selectedIndex:controller.model.selectedCount)
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didDeselectItemAt indexPath:IndexPath)
+    {
+        let item:MSourceImageItem = modelAtIndex(index:indexPath)
+        item.deselect()
+        
+        controller.model.updateSelected()
     }
     
     //MARK: private

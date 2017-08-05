@@ -69,6 +69,20 @@ class MSourceImage:Model
         delegate?.modelRefresh()
     }
     
+    private func dispatchUpdateSelected()
+    {
+        let selected:[MSourceImageItem] = factorySelectedIndexesOrdered()
+        selectedCount = selected.count
+        
+        for indexSelected:Int in 0 ..< selectedCount
+        {
+            let itemIndex:Int = indexSelected + 1
+            
+            let item:MSourceImageItem = selected[indexSelected]
+            item.updateSelected(selectedIndex:itemIndex)
+        }
+    }
+    
     //MARK: internal
     
     func loadImages()
@@ -85,5 +99,14 @@ class MSourceImage:Model
         }
         
         loadImages(fetchResults:fetchResults)
+    }
+    
+    func updateSelected()
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.dispatchUpdateSelected()
+        }
     }
 }

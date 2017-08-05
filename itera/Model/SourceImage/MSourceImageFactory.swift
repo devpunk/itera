@@ -43,6 +43,33 @@ extension MSourceImage
         return options
     }
     
+    func factorySelectedIndexesOrdered() -> [MSourceImageItem]
+    {
+        var selected:[MSourceImageItem] = []
+        
+        for item:MSourceImageItem in items
+        {
+            guard
+            
+                let _:TimeInterval = item.selectedTimestamp
+            
+            else
+            {
+                continue
+            }
+            
+            selected.append(item)
+        }
+        
+        selected.sort
+        { (itemA:MSourceImageItem, itemB:MSourceImageItem) -> Bool in
+            
+            return itemA.selectedTimestamp! < itemB.selectedTimestamp!
+        }
+        
+        return selected
+    }
+    
     //MARK: private
     
     private class func factoryCameraRoll() -> PHAssetCollection?

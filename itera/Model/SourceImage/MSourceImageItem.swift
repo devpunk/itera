@@ -70,4 +70,21 @@ class MSourceImageItem
         
         viewCell?.refresh()
     }
+    
+    func updateSelected(selectedIndex:Int)
+    {
+        self.selectedIndex = "\(selectedIndex)"
+        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.viewCell?.refresh()
+        }
+    }
+    
+    func deselect()
+    {
+        selectedIndex = nil
+        selectedTimestamp = nil
+    }
 }
