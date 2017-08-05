@@ -7,13 +7,11 @@ class VHomePages:View<VHome, MHome, CHome>
     required init(controller:CHome)
     {
         super.init(controller:controller)
+        isUserInteractionEnabled = false
         
         let viewControl:UIPageControl = UIPageControl()
+        viewControl.isUserInteractionEnabled = false
         viewControl.translatesAutoresizingMaskIntoConstraints = false
-        viewControl.addTarget(
-            self,
-            action:#selector(selectorValueChanged(sender:)),
-            for:UIControlEvents.valueChanged)
         self.viewControl = viewControl
         
         addSubview(viewControl)
@@ -26,24 +24,6 @@ class VHomePages:View<VHome, MHome, CHome>
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    //MARK: selectors
-    
-    func selectorValueChanged(sender viewControl:UIPageControl)
-    {
-        controller.model.selected = viewControl.currentPage
-        
-        guard
-        
-            let view:VHome = controller.view as? VHome
-        
-        else
-        {
-            return
-        }
-        
-        view.upateSelection()
     }
     
     //MARK: public

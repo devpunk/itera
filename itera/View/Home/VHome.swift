@@ -9,7 +9,7 @@ class VHome:ViewMain
     let kProjectsHeight:CGFloat = 360
     let kGradientHeight:CGFloat = 250
     let kMenuHeight:CGFloat = 120
-    let kPagesHeight:CGFloat = 80
+    let kPagesHeight:CGFloat = 90
     let kCardMinTop:CGFloat = 40
     let kCardMidMinTop:CGFloat = 80
     let kCardMaxTop:CGFloat = 180

@@ -32,8 +32,8 @@ extension VHome
         
         addSubview(viewGradient)
         addSubview(viewProjects)
-        addSubview(viewSwiper)
         addSubview(viewPages)
+        addSubview(viewSwiper)
         addSubview(viewMenu)
         
         NSLayoutConstraint.topToTop(
