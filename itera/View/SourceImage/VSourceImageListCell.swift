@@ -133,11 +133,7 @@ class VSourceImageListCell:UICollectionViewCell
         }
         
         imageView.image = model.image
-        
-        if let selectedIndex:Int = model.selectedIndex
-        {
-            labelIndex.text = "\(selectedIndex)"
-        }
+        labelIndex.text = model.selectedIndex
     }
     
     func config(model:MSourceImageItem)

@@ -5,7 +5,7 @@ class MSourceImageItem
 {
     weak var viewCell:VSourceImageListCell?
     var image:UIImage?
-    var selectedIndex:Int?
+    var selectedIndex:String?
     var selectedTimestamp:TimeInterval?
     let asset:PHAsset
     private weak var cachingManager:PHCachingImageManager?
@@ -65,7 +65,7 @@ class MSourceImageItem
     
     func selected(selectedIndex:Int)
     {
-        self.selectedIndex = selectedIndex
+        self.selectedIndex = "\(selectedIndex)"
         selectedTimestamp = Date().timeIntervalSince1970
         
         viewCell?.refresh()
