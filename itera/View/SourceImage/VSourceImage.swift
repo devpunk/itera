@@ -4,6 +4,7 @@ class VSourceImage:ViewMain
 {
     static let kBarHeight:CGFloat = 64
     
+    private weak var viewList:VSourceImageList!
     private weak var spinner:VSpinner!
     private let kPanBack:Bool = true
     
@@ -50,7 +51,7 @@ class VSourceImage:ViewMain
         
         let viewBar:VSourceImageBar = VSourceImageBar(controller:controller)
         
-        let viewList:VSourceVideoList = VSourceVideoList(controller:controller)
+        let viewList:VSourceImageList = VSourceImageList(controller:controller)
         self.viewList = viewList
         
         addSubview(spinner)
