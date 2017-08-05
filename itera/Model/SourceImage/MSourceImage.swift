@@ -3,6 +3,7 @@ import Photos
 
 class MSourceImage:Model
 {
+    var selectedCount:Int
     private(set) var items:[MSourceImageItem]
     private var cachingManager:PHCachingImageManager?
     private var requestOptions:PHImageRequestOptions?
@@ -12,6 +13,7 @@ class MSourceImage:Model
     required init()
     {
         items = []
+        selectedCount = 0
         previewSize = CGSize(width:kPreviewSize, height:kPreviewSize)
         
         super.init()

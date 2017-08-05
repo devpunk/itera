@@ -82,9 +82,33 @@ class VSourceImageList:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
+        shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        guard
+        
+            let cell:UICollectionViewCell = collectionView.cellForItem(at:indexPath)
+        
+        else
+        {
+            return false
+        }
+        
+        if cell.isSelected
+        {
+            return false
+        }
+        
+        return true
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        
+        controller.model.selectedCount += 1
+        let item:MSourceImageItem = modelAtIndex(index:indexPath)
+        item.selected(
+            selectedIndex:controller.model.selectedCount)
     }
     
     //MARK: private

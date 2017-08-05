@@ -75,11 +75,6 @@ class VSourceImageListCell:UICollectionViewCell
     
     //MARK: private
     
-    private func refresh()
-    {
-        imageView.image = model?.image
-    }
-    
     private func hover()
     {
         if isSelected || isHighlighted
@@ -96,18 +91,20 @@ class VSourceImageListCell:UICollectionViewCell
     
     //MARK: internal
     
+    func refresh()
+    {
+        imageView.image = model?.image
+    }
+    
     func config(model:MSourceImageItem)
     {
         self.model = model
+        model.viewCell = self
         refresh()
         
         if model.image == nil
         {
-            model.requestImage
-            { [weak self] in
-                
-                self?.refresh()
-            }
+            model.requestImage()
         }
         
         hover()

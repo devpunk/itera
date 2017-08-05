@@ -3,9 +3,10 @@ import Photos
 
 class MSourceImageItem
 {
+    weak var viewCell:VSourceImageListCell?
     var image:UIImage?
     var selectedIndex:Int?
-    var selectedTimestamp:Int?
+    var selectedTimestamp:TimeInterval?
     let asset:PHAsset
     private weak var cachingManager:PHCachingImageManager?
     private weak var requestOptions:PHImageRequestOptions?
@@ -40,7 +41,7 @@ class MSourceImageItem
     
     //MARK: internal
     
-    func requestImage(completion:@escaping(() -> ()))
+    func requestImage()
     {
         if let requestId:PHImageRequestID = requestId
         {
@@ -58,8 +59,15 @@ class MSourceImageItem
             
             self?.image = image
             self?.requestId = nil
-            
-            completion()
+            self?.viewCell?.refresh()
         }
+    }
+    
+    func selected(selectedIndex:Int)
+    {
+        self.selectedIndex = selectedIndex
+        selectedTimestamp = Date().timeIntervalSince1970
+        
+        viewCell?.refresh()
     }
 }
