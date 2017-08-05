@@ -1,9 +1,8 @@
-//
-//  MSourceImageImportFactoryDelegate.swift
-//  itera
-//
-//  Created by zero on 8/5/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+protocol MSourceImageImportFactoryDelegate:class
+{
+    func importSequenceReady(sequence:MEditSequence)
+    func importError()
+    func importProgress(percent:CGFloat, image:CGImage)
+}
