@@ -7,8 +7,8 @@ class VSourceImageBar:
     private let kBackWidth:CGFloat = 60
     private let kBackEdgeRight:CGFloat = 20
     private let kBorderHeight:CGFloat = 1
-    private let kNextRight:CGFloat = -10
-    private let kNextWidth:CGFloat = 100
+    private let kNextRight:CGFloat = -16
+    private let kNextWidth:CGFloat = 120
     
     required init(controller:CSourceImage)
     {
@@ -33,7 +33,7 @@ class VSourceImageBar:
         labelNext.translatesAutoresizingMaskIntoConstraints = false
         labelNext.backgroundColor = UIColor.clear
         labelNext.textAlignment = NSTextAlignment.right
-        labelNext.font = UIFont.bold(size:15)
+        labelNext.font = UIFont.bold(size:14)
         labelNext.textColor = UIColor.black
         labelNext.text = String.localizedView(
             key:"VSourceImageBar_labelNext")
@@ -52,7 +52,14 @@ class VSourceImageBar:
             right:kBackEdgeRight)
         buttonBack.addTarget(
             self,
-            action:#selector(actionBack(sender:)),
+            action:#selector(selectorBack(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
+        let buttonNext:UIButton = UIButton()
+        buttonNext.translatesAutoresizingMaskIntoConstraints = false
+        buttonNext.addTarget(
+            self,
+            action:#selector(selectorNext(sender:)),
             for:UIControlEvents.touchUpInside)
         
         addSubview(border)
@@ -109,6 +116,16 @@ class VSourceImageBar:
         NSLayoutConstraint.width(
             view:labelNext,
             constant:kNextWidth)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:buttonNext,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:buttonNext,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonNext,
+            constant:kNextWidth)
     }
     
     required init?(coder:NSCoder)
@@ -118,8 +135,13 @@ class VSourceImageBar:
     
     //MARK: selectors
     
-    func actionBack(sender button:UIButton)
+    func selectorBack(sender button:UIButton)
     {
         controller.back()
+    }
+    
+    func selectorNext(sender button:UIButton)
+    {
+        controller.next()
     }
 }

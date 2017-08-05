@@ -42,4 +42,9 @@ class CSourceImage:Controller<VSourceImage, MSourceImage>
         
         parent.pop(horizontal:ControllerParent.Horizontal.right)
     }
+    
+    func next()
+    {
+        
+    }
 }
