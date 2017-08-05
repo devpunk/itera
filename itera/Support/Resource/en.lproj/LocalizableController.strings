@@ -1,4 +1,5 @@
 "CSourceVideoImport_memoryWarning"="Memory insufficient\nTry a lower frame rate";
+"CSourceImageImport_memoryWarning"="Memory insufficient\nTry fewer images";
 "CEdit_alertDeleteTitle"="Delete project?";
 "CEdit_alertDeleteCancel"="Cancel";
 "CEdit_alertDeleteDelete"="Delete";
