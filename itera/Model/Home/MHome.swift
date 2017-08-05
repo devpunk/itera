@@ -35,4 +35,20 @@ class MHome:Model
         
         return nil
     }
+    
+    func moveLeft()
+    {
+        if selected < items.count - 1
+        {
+            selected += 1
+        }
+    }
+    
+    func moveRight()
+    {
+        if selected > 0
+        {
+            selected -= 1
+        }
+    }
 }
