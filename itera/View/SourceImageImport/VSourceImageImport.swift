@@ -2,7 +2,7 @@ import UIKit
 
 class VSourceImageImport:ViewMain
 {
-    private(set) weak var viewProgress:VSourceVideoImportProgress!
+    private(set) weak var viewProgress:VSourceImageImportProgress!
     private let kBottomHeight:CGFloat = 200
     private let kProgressTop:CGFloat = 160
     private let kProgressHeight:CGFloat = 200
@@ -14,9 +14,9 @@ class VSourceImageImport:ViewMain
         
         guard
             
-            let controller:CSourceVideoImport = controller as? CSourceVideoImport
+            let controller:CSourceImageImport = controller as? CSourceImageImport
             
-            else
+        else
         {
             return
         }
@@ -31,16 +31,16 @@ class VSourceImageImport:ViewMain
     
     //MARK: private
     
-    private func factoryViews(controller:CSourceVideoImport)
+    private func factoryViews(controller:CSourceImageImport)
     {
         let viewGradient:VGradient = VGradient.vertical(
             colourTop:UIColor.colourGradientLight,
             colourBottom:UIColor.colourGradientDark)
         
-        let viewBottom:VSourceVideoImportBottom = VSourceVideoImportBottom(
+        let viewBottom:VSourceImageImportBottom = VSourceImageImportBottom(
             controller:controller)
         
-        let viewProgress:VSourceVideoImportProgress = VSourceVideoImportProgress(
+        let viewProgress:VSourceImageImportProgress = VSourceImageImportProgress(
             controller:controller)
         self.viewProgress = viewProgress
         
