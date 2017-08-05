@@ -215,6 +215,9 @@
 		DA8F6F251F35EED600D22FA7 /* VSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */; };
 		DA8F6F281F35F45D00D22FA7 /* MSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */; };
 		DA8F6F2A1F35F4D600D22FA7 /* CSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F291F35F4D600D22FA7 /* CSourceImageImport.swift */; };
+		DA8F6F2C1F3602B700D22FA7 /* MSourceImageImportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2B1F3602B700D22FA7 /* MSourceImageImportFactory.swift */; };
+		DA8F6F2E1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2D1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift */; };
+		DA8F6F301F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2F1F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
 		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
@@ -438,6 +441,9 @@
 		DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImport.swift; sourceTree = "<group>"; };
 		DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImport.swift; sourceTree = "<group>"; };
 		DA8F6F291F35F4D600D22FA7 /* CSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSourceImageImport.swift; sourceTree = "<group>"; };
+		DA8F6F2B1F3602B700D22FA7 /* MSourceImageImportFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactory.swift; sourceTree = "<group>"; };
+		DA8F6F2D1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactoryDelegate.swift; sourceTree = "<group>"; };
+		DA8F6F2F1F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactorySequence.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
 		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
@@ -1095,6 +1101,9 @@
 			isa = PBXGroup;
 			children = (
 				DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */,
+				DA8F6F2B1F3602B700D22FA7 /* MSourceImageImportFactory.swift */,
+				DA8F6F2D1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift */,
+				DA8F6F2F1F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift */,
 			);
 			path = SourceImageImport;
 			sourceTree = "<group>";
@@ -1318,6 +1327,7 @@
 				DA27963A1F2AFC4200550ECA /* MSession.swift in Sources */,
 				DA042C8E1F2CAC1800874EAE /* VEditRotateControls.swift in Sources */,
 				DA2796961F2AFC4200550ECA /* VSourceVideoBar.swift in Sources */,
+				DA8F6F2E1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift in Sources */,
 				DA27968D1F2AFC4200550ECA /* VEditDurationSeconds.swift in Sources */,
 				DA2796801F2AFC4200550ECA /* VEditCropImageCornerTopLeft.swift in Sources */,
 				DA042C781F2C80BB00874EAE /* VEditScaleButton.swift in Sources */,
@@ -1355,6 +1365,7 @@
 				DA68B7B81F2C018300F4B819 /* CEditScale.swift in Sources */,
 				DA27965A1F2AFC4200550ECA /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2796941F2AFC4200550ECA /* VSourceImage.swift in Sources */,
+				DA8F6F301F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift in Sources */,
 				DA5490361F311C33003E6472 /* MFullScreen.swift in Sources */,
 				DA27961E1F2AFC4100550ECA /* CSourceImage.swift in Sources */,
 				DA2796151F2AFC4100550ECA /* AppDelegate.swift in Sources */,
@@ -1404,6 +1415,7 @@
 				DA27962C1F2AFC4100550ECA /* MEditSequence.swift in Sources */,
 				DA8F6F201F35A28C00D22FA7 /* MSourceImageAuth.swift in Sources */,
 				DA2796921F2AFC4200550ECA /* VNewSource.swift in Sources */,
+				DA8F6F2C1F3602B700D22FA7 /* MSourceImageImportFactory.swift in Sources */,
 				DA2796771F2AFC4200550ECA /* VEditActionsCell.swift in Sources */,
 				DA27964F1F2AFC4200550ECA /* MSourceVideoTimeItemWidth.swift in Sources */,
 				DA2796971F2AFC4200550ECA /* VSourceVideoList.swift in Sources */,
