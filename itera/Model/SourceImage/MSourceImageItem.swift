@@ -5,6 +5,7 @@ class MSourceImageItem
 {
     var image:UIImage?
     var selectedIndex:Int?
+    var selectedTimestamp:Int?
     let asset:PHAsset
     private weak var cachingManager:PHCachingImageManager?
     private weak var requestOptions:PHImageRequestOptions?
