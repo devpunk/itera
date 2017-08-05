@@ -213,6 +213,7 @@
 		DA8F6F201F35A28C00D22FA7 /* MSourceImageAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F1F1F35A28C00D22FA7 /* MSourceImageAuth.swift */; };
 		DA8F6F221F35A3C500D22FA7 /* MSourceImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F211F35A3C500D22FA7 /* MSourceImageFactory.swift */; };
 		DA8F6F251F35EED600D22FA7 /* VSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */; };
+		DA8F6F281F35F45D00D22FA7 /* MSourceImageImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
 		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
@@ -434,6 +435,7 @@
 		DA8F6F1F1F35A28C00D22FA7 /* MSourceImageAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageAuth.swift; sourceTree = "<group>"; };
 		DA8F6F211F35A3C500D22FA7 /* MSourceImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageFactory.swift; sourceTree = "<group>"; };
 		DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImport.swift; sourceTree = "<group>"; };
+		DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImport.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
 		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				DA2795851F2AFC4100550ECA /* Main */,
 				DA2795911F2AFC4100550ECA /* New */,
 				DA2795941F2AFC4100550ECA /* Source */,
+				DA8F6F261F35F44700D22FA7 /* SourceImageImport */,
 				DA2795981F2AFC4100550ECA /* SourceImage */,
 				DA27959A1F2AFC4100550ECA /* SourceVideo */,
 				DA27959F1F2AFC4100550ECA /* SourceVideoImport */,
@@ -1085,6 +1088,14 @@
 			path = SourceImageImport;
 			sourceTree = "<group>";
 		};
+		DA8F6F261F35F44700D22FA7 /* SourceImageImport */ = {
+			isa = PBXGroup;
+			children = (
+				DA8F6F271F35F45D00D22FA7 /* MSourceImageImport.swift */,
+			);
+			path = SourceImageImport;
+			sourceTree = "<group>";
+		};
 		DABEF8571F2AFA35007CE464 = {
 			isa = PBXGroup;
 			children = (
@@ -1271,6 +1282,7 @@
 				DA27962D1F2AFC4100550ECA /* MEditSequenceCrop.swift in Sources */,
 				DA3E02231F35286B0012B10E /* VHomeFactory.swift in Sources */,
 				DA68B7BC1F2C06DB00F4B819 /* VEditScaleImage.swift in Sources */,
+				DA8F6F281F35F45D00D22FA7 /* MSourceImageImport.swift in Sources */,
 				DA2796371F2AFC4200550ECA /* MPerkThumbnailProtocol.swift in Sources */,
 				DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */,
 				DA042C841F2C99D400874EAE /* VEditRotateOkay.swift in Sources */,
