@@ -20,7 +20,21 @@ class MHome:Model
     func itemsLoaded(items:[MHomeItem])
     {
         self.items = items
-        selected = 0
+        
+        let count:Int = items.count
+        
+        if count == 0
+        {
+            selected = 0
+        }
+        else
+        {
+            if selected >= count
+            {
+                selected = count - 1
+            }
+        }
+        
         delegate?.modelRefresh()
     }
     
