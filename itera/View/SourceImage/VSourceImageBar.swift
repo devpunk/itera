@@ -7,6 +7,8 @@ class VSourceImageBar:
     private let kBackWidth:CGFloat = 60
     private let kBackEdgeRight:CGFloat = 20
     private let kBorderHeight:CGFloat = 1
+    private let kNextRight:CGFloat = -10
+    private let kNextWidth:CGFloat = 100
     
     required init(controller:CSourceImage)
     {
@@ -23,7 +25,18 @@ class VSourceImageBar:
         labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.font = UIFont.regular(size:16)
         labelTitle.textColor = UIColor.black
-        labelTitle.text = String.localizedView(key:"VSourceImageBar_labelTitle")
+        labelTitle.text = String.localizedView(
+            key:"VSourceImageBar_labelTitle")
+        
+        let labelNext:UILabel = UILabel()
+        labelNext.isUserInteractionEnabled = false
+        labelNext.translatesAutoresizingMaskIntoConstraints = false
+        labelNext.backgroundColor = UIColor.clear
+        labelNext.textAlignment = NSTextAlignment.right
+        labelNext.font = UIFont.bold(size:15)
+        labelNext.textColor = UIColor.black
+        labelNext.text = String.localizedView(
+            key:"VSourceImageBar_labelNext")
         
         let buttonBack:UIButton = UIButton()
         buttonBack.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +57,7 @@ class VSourceImageBar:
         
         addSubview(border)
         addSubview(labelTitle)
+        addSubview(labelNext)
         addSubview(buttonBack)
         
         NSLayoutConstraint.bottomToBottom(
@@ -80,6 +94,21 @@ class VSourceImageBar:
         NSLayoutConstraint.width(
             view:buttonBack,
             constant:kBackWidth)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelNext,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:labelNext,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:labelNext,
+            toView:self,
+            constant:kNextRight)
+        NSLayoutConstraint.width(
+            view:labelNext,
+            constant:kNextWidth)
     }
     
     required init?(coder:NSCoder)
