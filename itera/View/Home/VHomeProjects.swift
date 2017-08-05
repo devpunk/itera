@@ -114,25 +114,6 @@ class VHomeProjects:VCollection<
         return item
     }
     
-    private func selectCurrent()
-    {
-        let selected:Int = controller.model.selected
-        let count:Int = controller.model.items.count
-        
-        if selected < count
-        {
-            let index:IndexPath = IndexPath(
-                item:selected,
-                section:0)
-            
-            collectionView.selectItem(
-                at:index,
-                animated:true,
-                scrollPosition:
-                UICollectionViewScrollPosition.centeredHorizontally)
-        }
-    }
-    
     private func animateLayout(selected:IndexPath)
     {
         UIView.animate(
@@ -162,5 +143,24 @@ class VHomeProjects:VCollection<
     {
         collectionView.reloadData()
         selectCurrent()
+    }
+    
+    func selectCurrent()
+    {
+        let selected:Int = controller.model.selected
+        let count:Int = controller.model.items.count
+        
+        if selected < count
+        {
+            let index:IndexPath = IndexPath(
+                item:selected,
+                section:0)
+            
+            collectionView.selectItem(
+                at:index,
+                animated:true,
+                scrollPosition:
+                UICollectionViewScrollPosition.centeredHorizontally)
+        }
     }
 }
