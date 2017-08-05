@@ -1,6 +1,6 @@
 import UIKit
 
-class VHomeSwipper:View<VHome, MHome, CHome>
+class VHomeSwiper:View<VHome, MHome, CHome>
 {
     private var centerX:CGFloat
     
@@ -28,9 +28,9 @@ class VHomeSwipper:View<VHome, MHome, CHome>
         with event:UIEvent?)
     {
         guard
-        
+            
             let touch:UITouch = touches.first
-        
+            
         else
         {
             return
@@ -65,9 +65,9 @@ class VHomeSwipper:View<VHome, MHome, CHome>
     private func updateSelection()
     {
         guard
-        
+            
             let view:VHome = controller.view as? VHome
-        
+            
         else
         {
             return
