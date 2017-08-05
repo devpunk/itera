@@ -13,7 +13,8 @@ class VHomePages:View<VHome, MHome, CHome>
         viewControl.addTarget(
             self,
             action:#selector(selectorValueChanged(sender:)),
-            for:UIControlEvents.touchUpInside)
+            for:UIControlEvents.valueChanged)
+        self.viewControl = viewControl
         
         addSubview(viewControl)
         
