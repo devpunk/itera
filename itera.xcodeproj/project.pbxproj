@@ -218,6 +218,10 @@
 		DA8F6F2C1F3602B700D22FA7 /* MSourceImageImportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2B1F3602B700D22FA7 /* MSourceImageImportFactory.swift */; };
 		DA8F6F2E1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2D1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift */; };
 		DA8F6F301F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F2F1F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift */; };
+		DA8F6F321F3607D100D22FA7 /* VSourceImageImportBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F311F3607D100D22FA7 /* VSourceImageImportBottom.swift */; };
+		DA8F6F341F3607E200D22FA7 /* VSourceImageImportProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F331F3607E200D22FA7 /* VSourceImageImportProgress.swift */; };
+		DA8F6F361F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F351F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift */; };
+		DA8F6F381F3607F600D22FA7 /* VSourceImageImportProgressThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F371F3607F600D22FA7 /* VSourceImageImportProgressThumb.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
 		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
@@ -444,6 +448,10 @@
 		DA8F6F2B1F3602B700D22FA7 /* MSourceImageImportFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactory.swift; sourceTree = "<group>"; };
 		DA8F6F2D1F3602C000D22FA7 /* MSourceImageImportFactoryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactoryDelegate.swift; sourceTree = "<group>"; };
 		DA8F6F2F1F3602C900D22FA7 /* MSourceImageImportFactorySequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSourceImageImportFactorySequence.swift; sourceTree = "<group>"; };
+		DA8F6F311F3607D100D22FA7 /* VSourceImageImportBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImportBottom.swift; sourceTree = "<group>"; };
+		DA8F6F331F3607E200D22FA7 /* VSourceImageImportProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImportProgress.swift; sourceTree = "<group>"; };
+		DA8F6F351F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImportProgressBar.swift; sourceTree = "<group>"; };
+		DA8F6F371F3607F600D22FA7 /* VSourceImageImportProgressThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageImportProgressThumb.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
 		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
@@ -1093,6 +1101,10 @@
 			isa = PBXGroup;
 			children = (
 				DA8F6F241F35EED600D22FA7 /* VSourceImageImport.swift */,
+				DA8F6F311F3607D100D22FA7 /* VSourceImageImportBottom.swift */,
+				DA8F6F331F3607E200D22FA7 /* VSourceImageImportProgress.swift */,
+				DA8F6F351F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift */,
+				DA8F6F371F3607F600D22FA7 /* VSourceImageImportProgressThumb.swift */,
 			);
 			path = SourceImageImport;
 			sourceTree = "<group>";
@@ -1281,6 +1293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA27962B1F2AFC4100550ECA /* MEditFactory.swift in Sources */,
+				DA8F6F361F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift in Sources */,
 				DA2796451F2AFC4200550ECA /* MSourceVideoFactory.swift in Sources */,
 				DA27961D1F2AFC4100550ECA /* CNew.swift in Sources */,
 				DA2796321F2AFC4100550ECA /* MEditDurationFactory.swift in Sources */,
@@ -1339,6 +1352,7 @@
 				DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */,
 				DA5490431F315140003E6472 /* MFullScreenExitFullScreen.swift in Sources */,
 				DA682D031F2B57A500EA4E35 /* MSaveCrop.swift in Sources */,
+				DA8F6F321F3607D100D22FA7 /* VSourceImageImportBottom.swift in Sources */,
 				DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */,
 				DA2796691F2AFC4200550ECA /* ViewProtocol.swift in Sources */,
 				DA2796751F2AFC4200550ECA /* VEdit.swift in Sources */,
@@ -1375,6 +1389,7 @@
 				DA2796461F2AFC4200550ECA /* MSourceVideoItem.swift in Sources */,
 				DA2796A31F2AFC4200550ECA /* VSourceVideoTimeNext.swift in Sources */,
 				DA27969F1F2AFC4200550ECA /* VSourceVideoTimeBar.swift in Sources */,
+				DA8F6F341F3607E200D22FA7 /* VSourceImageImportProgress.swift in Sources */,
 				DA2796421F2AFC4200550ECA /* MSourceImage.swift in Sources */,
 				DA27963F1F2AFC4200550ECA /* MSourceItemImage.swift in Sources */,
 				DA27969C1F2AFC4200550ECA /* VSourceVideoImportProgressBar.swift in Sources */,
@@ -1387,6 +1402,7 @@
 				DA2796591F2AFC4200550ECA /* ExtensionNotification.swift in Sources */,
 				DA68B7C21F2C13A100F4B819 /* VEditScaleImageOriginal.swift in Sources */,
 				DA2796201F2AFC4100550ECA /* CSourceVideoImport.swift in Sources */,
+				DA8F6F381F3607F600D22FA7 /* VSourceImageImportProgressThumb.swift in Sources */,
 				DA39F34A1F2D7E5200AF9256 /* DProjectExtension.swift in Sources */,
 				DA2796651F2AFC4200550ECA /* View.swift in Sources */,
 				DA2796231F2AFC4100550ECA /* Model.swift in Sources */,
