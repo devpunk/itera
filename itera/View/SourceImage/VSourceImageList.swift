@@ -19,7 +19,7 @@ class VSourceImageList:VCollection<
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            let topMargin:CGFloat = VSourceVideo.kBarHeight + kCollectionMargin
+            let topMargin:CGFloat = VSourceImage.kBarHeight + kCollectionMargin
             
             flow.minimumLineSpacing = kCollectionMargin
             flow.minimumInteritemSpacing = kCollectionMargin
@@ -78,6 +78,13 @@ class VSourceImageList:VCollection<
         cell.config(model:item)
         
         return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        
     }
     
     //MARK: private
