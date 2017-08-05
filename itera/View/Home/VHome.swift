@@ -38,4 +38,10 @@ class VHome:ViewMain
         viewProjects.refresh()
         updateCard()
     }
+    
+    func upateSelection()
+    {
+        viewProjects.centerCurrent()
+        updateCard()
+    }
 }

@@ -10,7 +10,6 @@ class VHomeProjects:VCollection<
     private var cellSize:CGSize?
     private let kCollectionTop:CGFloat = 255
     private let kCollectionBottom:CGFloat = 55
-    private let kSubtractSelected:CGFloat = 16
     private let kInterItem:CGFloat = 5
     private let kAnimationDuration:TimeInterval = 0.3
     
@@ -45,7 +44,7 @@ class VHomeProjects:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
-            let width_selected:CGFloat = width - (VHomeCard.kWidth - kSubtractSelected)
+            let width_selected:CGFloat = width - VHomeProjectsCell.kImageSize
             let horizontalMargin:CGFloat = width_selected / 2.0
             let edgeInsets:UIEdgeInsets = UIEdgeInsets(
                 top:kCollectionTop,
@@ -114,38 +113,15 @@ class VHomeProjects:VCollection<
         return item
     }
     
-    private func animateLayout(selected:IndexPath)
-    {
-        UIView.animate(
-            withDuration:0,
-            animations:
-        { [weak self] in
-            
-            self?.collectionView.collectionViewLayout.invalidateLayout()
-        })
-        { [weak self] (done:Bool) in
-        
-            self?.centerSelected(index:selected)
-        }
-    }
-    
-    private func centerSelected(index:IndexPath)
-    {
-        collectionView.scrollToItem(
-            at:index,
-            at:UICollectionViewScrollPosition.centeredHorizontally,
-            animated:true)
-    }
-    
     //MARK: internal
     
     func refresh()
     {
         collectionView.reloadData()
-        selectCurrent()
+        centerCurrent()
     }
     
-    func selectCurrent()
+    func centerCurrent()
     {
         let selected:Int = controller.model.selected
         let count:Int = controller.model.items.count
@@ -156,11 +132,10 @@ class VHomeProjects:VCollection<
                 item:selected,
                 section:0)
             
-            collectionView.selectItem(
+            collectionView.scrollToItem(
                 at:index,
-                animated:true,
-                scrollPosition:
-                UICollectionViewScrollPosition.centeredHorizontally)
+                at:UICollectionViewScrollPosition.centeredHorizontally,
+                animated:true)
         }
     }
 }

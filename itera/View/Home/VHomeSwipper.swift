@@ -39,14 +39,41 @@ class VHomeSwipper:View<VHome, MHome, CHome>
         
         let location:CGPoint = touch.location(in:self)
         let locationX:CGFloat = location.x
+        touchedAt(locationX:locationX)
+    }
+    
+    //MARK: private
+    
+    private func touchedAt(locationX:CGFloat)
+    {
+        let update:Bool
         
         if locationX >= centerX
         {
-            print("move right")
+            update = controller.model.moveRight()
         }
         else
         {
-            print("move left")
+            update = controller.model.moveLeft()
         }
+        
+        if update
+        {
+            updateSelection()
+        }
+    }
+    
+    private func updateSelection()
+    {
+        guard
+        
+            let view:VHome = controller.view as? VHome
+        
+        else
+        {
+            return
+        }
+        
+        view.upateSelection()
     }
 }
