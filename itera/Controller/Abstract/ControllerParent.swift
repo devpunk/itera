@@ -91,7 +91,7 @@ class ControllerParent:UIViewController
         UIViewController.attemptRotationToDeviceOrientation()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func landscapeOrientation()
     {

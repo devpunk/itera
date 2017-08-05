@@ -54,7 +54,7 @@ class MSave:Model
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(sequence:MEditSequence)
     {

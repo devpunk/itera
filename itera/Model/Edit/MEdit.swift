@@ -12,7 +12,7 @@ class MEdit:Model
         super.init()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(sequence:MEditSequence)
     {

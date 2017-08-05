@@ -57,7 +57,7 @@ class CFullScreen:Controller<VFullScreen, MFullScreen>
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func back()
     {

@@ -64,7 +64,7 @@ class VFullScreen:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func prepareForDelete()
     {

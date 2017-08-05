@@ -137,7 +137,7 @@ class VHomeProjects:VCollection<
             animated:true)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func refresh()
     {

@@ -95,7 +95,7 @@ class CSourceVideoImport:Controller<VSourceVideoImport, MSourceVideoImport>
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func cancel()
     {

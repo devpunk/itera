@@ -126,7 +126,7 @@ class VNew:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func viewWillAppear()
     {

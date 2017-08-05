@@ -163,7 +163,7 @@ class VEditDurationMinutes:VCollection<
         view.viewDisplay.update()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func selectCurrent()
     {

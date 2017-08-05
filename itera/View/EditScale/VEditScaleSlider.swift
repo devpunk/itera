@@ -203,7 +203,7 @@ class VEditScaleSlider:View<VEditScale, MEditScale, CEditScale>
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func half()
     {

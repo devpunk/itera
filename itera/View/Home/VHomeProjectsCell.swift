@@ -40,7 +40,7 @@ class VHomeProjectsCell:UICollectionViewCell
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MHomeItem)
     {

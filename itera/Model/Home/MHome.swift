@@ -15,7 +15,7 @@ class MHome:Model
         super.init()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func itemsLoaded(items:[MHomeItem])
     {

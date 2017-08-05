@@ -14,7 +14,7 @@ class MEditCrop:Model
         super.init()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(edit:MEdit)
     {

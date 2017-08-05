@@ -61,7 +61,7 @@ class VFullScreenMenuCell:UICollectionViewCell
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MFullScreenProtocol)
     {

@@ -29,7 +29,7 @@ class CEditRotate:Controller<VEditRotate, MEditRotate>
         view.viewDidAppear()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func okay()
     {

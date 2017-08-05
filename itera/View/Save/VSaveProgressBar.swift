@@ -87,7 +87,7 @@ class VSaveProgressBar:View<VSave, MSave, CSave>
         context.drawPath(using:CGPathDrawingMode.stroke)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func update(percent:CGFloat)
     {

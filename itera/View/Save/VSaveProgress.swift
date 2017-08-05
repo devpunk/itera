@@ -33,7 +33,7 @@ class VSaveProgress:View<VSave, MSave, CSave>
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func updateProgress(percent:CGFloat)
     {

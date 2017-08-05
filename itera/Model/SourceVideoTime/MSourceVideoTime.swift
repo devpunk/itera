@@ -15,7 +15,7 @@ class MSourceVideoTime:Model
         super.init()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(item:MSourceVideoItem)
     {

@@ -61,7 +61,7 @@ class VSourceVideoTimeBarInfoCell:UICollectionViewCell
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MSourceVideoTimeItemProtocol)
     {

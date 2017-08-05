@@ -42,7 +42,7 @@ class VCollection
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     final func registerCell(cell:Q.Type)
     {

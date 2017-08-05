@@ -29,7 +29,7 @@ class CEditDuration:Controller<VEditDuration, MEditDuration>
         view.viewDidAppear()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func okay()
     {

@@ -34,7 +34,7 @@ class VSourceVideoImportProgress:
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func updateProgress(percent:CGFloat)
     {

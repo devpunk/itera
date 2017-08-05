@@ -36,7 +36,7 @@ class MHomeItem
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func delete(completion:@escaping(() -> ()))
     {

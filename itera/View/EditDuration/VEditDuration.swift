@@ -183,7 +183,7 @@ class VEditDuration:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func viewDidAppear()
     {

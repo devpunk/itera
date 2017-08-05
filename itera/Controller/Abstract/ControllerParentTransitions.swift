@@ -48,7 +48,7 @@ extension ControllerParent
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func slideTo(horizontal:Horizontal, controller:UIViewController)
     {

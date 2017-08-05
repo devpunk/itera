@@ -94,7 +94,7 @@ class VEditRotate:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func viewDidAppear()
     {

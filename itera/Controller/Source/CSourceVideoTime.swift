@@ -18,7 +18,7 @@ class CSourceVideoTime:Controller<VSourceVideoTime, MSourceVideoTime>
         return UIStatusBarStyle.lightContent
     }
     
-    //MARK: public
+    //MARK: internal
     
     func close()
     {

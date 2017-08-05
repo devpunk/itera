@@ -52,7 +52,7 @@ class VEditCropImageCorner:UIView
         context.drawPath(using:CGPathDrawingMode.stroke)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func drawWithContext(
         context:CGContext,

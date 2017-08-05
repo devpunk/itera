@@ -104,7 +104,7 @@ class VHomeCardDisplay:View<VHome, MHome, CHome>
         viewGif?.alpha = kAlphaSelected
     }
     
-    //MARK: public
+    //MARK: internal
     
     func forcePause()
     {

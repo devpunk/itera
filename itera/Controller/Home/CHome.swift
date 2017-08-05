@@ -83,7 +83,7 @@ class CHome:Controller<VHome, MHome>
         view.viewCard?.viewDisplay.prepareForDelete()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func openNew()
     {

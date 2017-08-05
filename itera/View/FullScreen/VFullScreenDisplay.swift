@@ -31,7 +31,7 @@ class VFullScreenDisplay:
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func releaseGif()
     {

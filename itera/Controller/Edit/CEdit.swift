@@ -36,7 +36,7 @@ class CEdit:Controller<VEdit, MEdit>
         parent.pop(horizontal:ControllerParent.Horizontal.right)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func save()
     {

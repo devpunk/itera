@@ -11,7 +11,7 @@ class MFullScreen:Model
         super.init()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(item:MHomeItem)
     {

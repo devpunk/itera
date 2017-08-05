@@ -186,7 +186,7 @@ class VEditScale:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func viewDidAppear()
     {

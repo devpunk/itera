@@ -61,7 +61,7 @@ class VEditActionsCell:UICollectionViewCell
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MEditActionProtocol)
     {

@@ -29,7 +29,7 @@ class CEditScale:Controller<VEditScale, MEditScale>
         view.viewDidAppear()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func okay()
     {

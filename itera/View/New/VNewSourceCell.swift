@@ -135,7 +135,7 @@ class VNewSourceCell:UICollectionViewCell
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MSourceProtocol)
     {

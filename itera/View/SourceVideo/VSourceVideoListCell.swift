@@ -67,7 +67,7 @@ class VSourceVideoListCell:UICollectionViewCell
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MSourceVideoItem)
     {

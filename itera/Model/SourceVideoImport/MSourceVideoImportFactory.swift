@@ -180,7 +180,7 @@ class MSourceVideoImportFactory
         delegate?.importSequenceReady(sequence:sequence)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func cancelAll()
     {

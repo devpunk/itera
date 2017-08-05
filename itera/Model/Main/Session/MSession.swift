@@ -9,7 +9,7 @@ class MSession
     {
     }
     
-    //MARK: public
+    //MARK: internal
     
     func loadSession()
     {

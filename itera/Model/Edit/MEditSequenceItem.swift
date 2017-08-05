@@ -9,7 +9,7 @@ class MEditSequenceItem
         self.image = image
     }
     
-    //MARK: public
+    //MARK: internal
     
     func update(image:CGImage)
     {

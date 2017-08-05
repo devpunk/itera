@@ -166,7 +166,7 @@ class VSlider:UIView, UIGestureRecognizerDelegate
         slidingFinished?()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func changeSlider(percentUsed:CGFloat)
     {

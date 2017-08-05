@@ -66,7 +66,7 @@ class MSourceVideo:Model
         delegate?.modelRefresh()
     }
     
-    //MARK: public
+    //MARK: internal
 
     func loadVideos()
     {

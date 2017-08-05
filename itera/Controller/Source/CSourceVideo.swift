@@ -28,7 +28,7 @@ class CSourceVideo:Controller<VSourceVideo, MSourceVideo>
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func back()
     {

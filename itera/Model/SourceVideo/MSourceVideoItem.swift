@@ -37,7 +37,7 @@ class MSourceVideoItem
         cachingManager?.cancelImageRequest(requestId)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func requestImage(completion:@escaping(() -> ()))
     {

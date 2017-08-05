@@ -20,7 +20,7 @@ class CNew:Controller<VNew, MNew>
         view.viewWillAppear()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func cancel()
     {

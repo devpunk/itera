@@ -54,7 +54,7 @@ class DManager
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
     }
     
-    //MARK: public
+    //MARK: internal
     
     func save(completion:(() -> ())? = nil)
     {

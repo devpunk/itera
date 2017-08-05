@@ -77,7 +77,7 @@ class VSourceVideo:ViewMain
             toView:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func refresh()
     {

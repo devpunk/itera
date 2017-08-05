@@ -66,7 +66,7 @@ class MEditDuration:Model
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(edit:MEdit)
     {

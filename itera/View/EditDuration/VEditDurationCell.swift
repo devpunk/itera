@@ -99,7 +99,7 @@ class VEditDurationCell:UICollectionViewCell
         }
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(model:MEditDurationItem)
     {

@@ -26,7 +26,7 @@ class VHome:ViewMain
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func viewWillDisappear()
     {

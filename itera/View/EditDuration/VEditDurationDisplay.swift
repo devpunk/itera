@@ -31,7 +31,7 @@ class VEditDurationDisplay:
         return nil
     }
     
-    //MARK: public
+    //MARK: internal
     
     func update()
     {

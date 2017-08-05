@@ -23,7 +23,7 @@ class MSourceVideoImport:Model, MSourceVideoImportFactoryDelegate
             delegate:self)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func config(item:MSourceVideoItem, framesPerSecond:Int)
     {

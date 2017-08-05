@@ -55,7 +55,7 @@ class CSave:Controller<VSave, MSave>
         view.viewProgress.updateProgress(percent:percent)
     }
     
-    //MARK: public
+    //MARK: internal
     
     func close()
     {

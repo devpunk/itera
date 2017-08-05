@@ -39,7 +39,7 @@ class CEditCrop:Controller<VEditCrop, MEditCrop>
         view.viewDidAppear()
     }
     
-    //MARK: public
+    //MARK: internal
     
     func okay()
     {
