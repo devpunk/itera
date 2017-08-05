@@ -1,7 +1,7 @@
 import Foundation
 import Photos
 
-extension MSourceVideo
+extension MSourceImage
 {
     func checkAuth()
     {
@@ -49,7 +49,7 @@ extension MSourceVideo
     private func authDenied()
     {
         let message:String = String.localizedModel(
-            key:"MSourceVideo_authDenied")
+            key:"MSourceImage_authDenied")
         VAlert.messageFail(message:message)
     }
     
@@ -58,7 +58,7 @@ extension MSourceVideo
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.loadVideos()
+            self?.loadImages()
         }
     }
 }
