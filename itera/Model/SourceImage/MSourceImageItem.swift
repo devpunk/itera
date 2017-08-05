@@ -1,86 +1,63 @@
 import UIKit
+import Photos
 
 class MSourceImageItem
 {
-    private(set) var items:[MSourceVideoItem]
-    private var cachingManager:PHCachingImageManager?
-    private var requestOptions:PHImageRequestOptions?
+    var image:UIImage?
+    let asset:PHAsset
+    private weak var cachingManager:PHCachingImageManager?
+    private weak var requestOptions:PHImageRequestOptions?
+    private var requestId:PHImageRequestID?
     private let previewSize:CGSize
-    private let kPreviewSize:CGFloat = 300
     
-    required init()
+    init(
+        asset:PHAsset,
+        cachingManager:PHCachingImageManager,
+        requestOptions:PHImageRequestOptions?,
+        previewSize:CGSize)
     {
-        items = []
-        previewSize = CGSize(width:kPreviewSize, height:kPreviewSize)
-        
-        super.init()
+        self.asset = asset
+        self.cachingManager = cachingManager
+        self.requestOptions = requestOptions
+        self.previewSize = previewSize
     }
     
     deinit
     {
-        cachingManager?.stopCachingImagesForAllAssets()
-    }
-    
-    //MARK: private
-    
-    private func libraryError()
-    {
-        let message:String = String.localizedModel(
-            key:"MSourceVideo_libraryError")
-        VAlert.messageFail(message:message)
-    }
-    
-    private func loadVideos(fetchResults:PHFetchResult<PHAsset>)
-    {
-        requestOptions = MSourceVideo.factoryRequestOptions()
-        let cachingManager:PHCachingImageManager = PHCachingImageManager()
-        self.cachingManager = cachingManager
-        
-        let countResults:Int = fetchResults.count
-        var assets:[PHAsset] = []
-        
-        for indexResult:Int in 0 ..< countResults
-        {
-            let asset:PHAsset = fetchResults[indexResult]
-            let item:MSourceVideoItem = MSourceVideoItem(
-                asset:asset,
-                cachingManager:cachingManager,
-                requestOptions:requestOptions,
-                previewSize:previewSize)
+        guard
             
-            items.append(item)
-            assets.append(asset)
+            let requestId:PHImageRequestID = requestId
+            
+        else
+        {
+            return
         }
         
-        cacheAssets(assets:assets)
-    }
-    
-    private func cacheAssets(assets:[PHAsset])
-    {
-        cachingManager?.startCachingImages(
-            for:assets,
-            targetSize:previewSize,
-            contentMode:PHImageContentMode.aspectFill,
-            options:requestOptions)
-        
-        delegate?.modelRefresh()
+        cachingManager?.cancelImageRequest(requestId)
     }
     
     //MARK: internal
     
-    func loadVideos()
+    func requestImage(completion:@escaping(() -> ()))
     {
-        guard
-            
-            let fetchResults:PHFetchResult<PHAsset> = MSourceVideo.factoryFetch()
-            
-            else
+        if let requestId:PHImageRequestID = requestId
         {
-            libraryError()
-            
-            return
+            cachingManager?.cancelImageRequest(requestId)
         }
         
-        loadVideos(fetchResults:fetchResults)
+        requestId = cachingManager?.requestImage(
+            for:asset,
+            targetSize:previewSize,
+            contentMode:PHImageContentMode.aspectFill,
+            options:requestOptions)
+        { [weak self] (
+            image:UIImage?,
+            info:[AnyHashable:Any]?) in
+            
+            self?.image = image
+            self?.requestId = nil
+            
+            completion()
+        }
     }
 }

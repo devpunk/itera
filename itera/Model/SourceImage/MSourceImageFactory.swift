@@ -64,7 +64,7 @@ extension MSourceImage
             ascending:false)
         let predicateImages:NSPredicate = NSPredicate(
             format:kMediaType,
-            PHAssetMediaType.video.rawValue)
+            PHAssetMediaType.image.rawValue)
         fetchOptions.sortDescriptors = [sortNewest]
         fetchOptions.predicate = predicateImages
         

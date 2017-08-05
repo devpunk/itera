@@ -77,9 +77,9 @@ class VSourceImageListCell:UICollectionViewCell
         if model.image == nil
         {
             model.requestImage
-                { [weak self] in
-                    
-                    self?.refresh()
+            { [weak self] in
+                
+                self?.refresh()
             }
         }
         
