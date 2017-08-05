@@ -76,4 +76,12 @@ class VSourceImage:ViewMain
             view:viewBar,
             toView:self)
     }
+    
+    //MARK: internal
+    
+    func refresh()
+    {
+        spinner.stopAnimating()
+//        viewList.collectionView.reloadData()
+    }
 }
