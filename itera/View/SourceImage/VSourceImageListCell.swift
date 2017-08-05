@@ -2,7 +2,7 @@ import UIKit
 
 class VSourceImageListCell:UICollectionViewCell
 {
-    private weak var model:MSourceVideoItem?
+    private weak var model:MSourceImageItem?
     private weak var imageView:UIImageView!
     private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
@@ -69,7 +69,7 @@ class VSourceImageListCell:UICollectionViewCell
     
     //MARK: internal
     
-    func config(model:MSourceVideoItem)
+    func config(model:MSourceImageItem)
     {
         self.model = model
         refresh()

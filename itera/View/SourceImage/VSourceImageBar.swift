@@ -41,7 +41,6 @@ class VSourceImageBar:
             self,
             action:#selector(actionBack(sender:)),
             for:UIControlEvents.touchUpInside)
-        buttonBack.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControlState#>)
         
         addSubview(border)
         addSubview(labelTitle)

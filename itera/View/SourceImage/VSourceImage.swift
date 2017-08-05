@@ -82,6 +82,6 @@ class VSourceImage:ViewMain
     func refresh()
     {
         spinner.stopAnimating()
-//        viewList.collectionView.reloadData()
+        viewList.collectionView.reloadData()
     }
 }
