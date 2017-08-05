@@ -17,7 +17,6 @@ class VHomeSwipper:View<VHome, MHome, CHome>
     
     override func layoutSubviews()
     {
-        print("layout")
         let width:CGFloat = bounds.width
         centerX = width / 2.0
         

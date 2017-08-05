@@ -28,8 +28,8 @@ extension VHome
         
         addSubview(viewGradient)
         addSubview(viewProjects)
-        addSubview(viewMenu)
         addSubview(viewSwipper)
+        addSubview(viewMenu)
         
         NSLayoutConstraint.topToTop(
             view:viewGradient,
@@ -61,13 +61,7 @@ extension VHome
             view:viewProjects,
             toView:self)
         
-        NSLayoutConstraint.topToTop(
-            view:viewSwipper,
-            toView:self)
-        NSLayoutConstraint.height(
-            view:viewSwipper,
-            constant:kProjectsHeight)
-        NSLayoutConstraint.equalsHorizontal(
+        NSLayoutConstraint.equals(
             view:viewSwipper,
             toView:self)
     }
