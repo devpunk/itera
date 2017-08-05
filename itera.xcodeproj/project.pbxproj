@@ -207,6 +207,8 @@
 		DA68B7C61F2C143500F4B819 /* VEditScaleImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68B7C51F2C143500F4B819 /* VEditScaleImageFactory.swift */; };
 		DA8F6F161F35789B00D22FA7 /* VHomePages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F151F35789B00D22FA7 /* VHomePages.swift */; };
 		DA8F6F181F35874500D22FA7 /* VSourceImageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F171F35874500D22FA7 /* VSourceImageBar.swift */; };
+		DA8F6F1A1F359A3D00D22FA7 /* VSourceImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F191F359A3D00D22FA7 /* VSourceImageList.swift */; };
+		DA8F6F1C1F359A4D00D22FA7 /* VSourceImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F6F1B1F359A4D00D22FA7 /* VSourceImageListCell.swift */; };
 		DAC175031F346CF40005A7B5 /* MFullScreenShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */; };
 		DAC175051F3471F80005A7B5 /* MFullScreenDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */; };
 		DACE6BE21F2B1B990016DEEB /* CSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACE6BE11F2B1B990016DEEB /* CSave.swift */; };
@@ -422,6 +424,8 @@
 		DA68B7C51F2C143500F4B819 /* VEditScaleImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEditScaleImageFactory.swift; sourceTree = "<group>"; };
 		DA8F6F151F35789B00D22FA7 /* VHomePages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomePages.swift; sourceTree = "<group>"; };
 		DA8F6F171F35874500D22FA7 /* VSourceImageBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageBar.swift; sourceTree = "<group>"; };
+		DA8F6F191F359A3D00D22FA7 /* VSourceImageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageList.swift; sourceTree = "<group>"; };
+		DA8F6F1B1F359A4D00D22FA7 /* VSourceImageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSourceImageListCell.swift; sourceTree = "<group>"; };
 		DABEF8601F2AFA35007CE464 /* itera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC175021F346CF40005A7B5 /* MFullScreenShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenShare.swift; sourceTree = "<group>"; };
 		DAC175041F3471F80005A7B5 /* MFullScreenDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFullScreenDelete.swift; sourceTree = "<group>"; };
@@ -962,6 +966,8 @@
 			children = (
 				DA2796011F2AFC4100550ECA /* VSourceImage.swift */,
 				DA8F6F171F35874500D22FA7 /* VSourceImageBar.swift */,
+				DA8F6F191F359A3D00D22FA7 /* VSourceImageList.swift */,
+				DA8F6F1B1F359A4D00D22FA7 /* VSourceImageListCell.swift */,
 			);
 			path = SourceImage;
 			sourceTree = "<group>";
@@ -1305,6 +1311,7 @@
 				DA3E02251F352A4D0012B10E /* VHomeAnimations.swift in Sources */,
 				DA2796871F2AFC4200550ECA /* VEditCropOkay.swift in Sources */,
 				DA39F34E1F2D82A800AF9256 /* MHomeLoader.swift in Sources */,
+				DA8F6F1A1F359A3D00D22FA7 /* VSourceImageList.swift in Sources */,
 				DA2796571F2AFC4200550ECA /* ExtensionDictionary.swift in Sources */,
 				DA27962F1F2AFC4100550ECA /* MEditCrop.swift in Sources */,
 				DA2796211F2AFC4100550ECA /* CSourceVideoTime.swift in Sources */,
@@ -1413,6 +1420,7 @@
 				DA2796471F2AFC4200550ECA /* MSourceVideoImport.swift in Sources */,
 				DA27964D1F2AFC4200550ECA /* MSourceVideoTimeItemHeight.swift in Sources */,
 				DA2796351F2AFC4100550ECA /* MPerkDomainProtocol.swift in Sources */,
+				DA8F6F1C1F359A4D00D22FA7 /* VSourceImageListCell.swift in Sources */,
 				DA27963D1F2AFC4200550ECA /* MNew.swift in Sources */,
 				DA2796161F2AFC4100550ECA /* Controller.swift in Sources */,
 				DA27964C1F2AFC4200550ECA /* MSourceVideoTimeItemDuration.swift in Sources */,
