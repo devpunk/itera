@@ -66,6 +66,7 @@ class VSourceImageBar:
         addSubview(labelTitle)
         addSubview(labelNext)
         addSubview(buttonBack)
+        addSubview(buttonNext)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,

@@ -5,8 +5,8 @@ class VAlert:UIView
     private static let kHeight:CGFloat = 80
     private weak var layoutTop:NSLayoutConstraint!
     private weak var timer:Timer?
-    private let kAnimationDuration:TimeInterval = 0.35
-    private let kTimeOut:TimeInterval = 5
+    private let kAnimationDuration:TimeInterval = 0.25
+    private let kTimeOut:TimeInterval = 3.5
     private let kFontSize:CGFloat = 16
     private let kLabelTop:CGFloat = 20
     private let kLabelMargin:CGFloat = 9
@@ -58,7 +58,7 @@ class VAlert:UIView
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.bold(size:kFontSize)
+        label.font = UIFont.medium(size:kFontSize)
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
