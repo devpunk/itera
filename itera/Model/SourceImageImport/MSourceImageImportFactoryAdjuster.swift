@@ -12,6 +12,11 @@ extension MSourceImageImportFactory
         }
     }
     
+    func adjustImage(image:CGImage)
+    {
+        
+    }
+    
     //MARK: private
     
     private func dispatchFactoryMaxSize()
