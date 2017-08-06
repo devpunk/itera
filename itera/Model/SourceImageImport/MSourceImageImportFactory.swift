@@ -77,7 +77,17 @@ class MSourceImageImportFactory
         images.append(cgImage)
     }
     
-    private func recursiveCheck()
+    private func createSequence()
+    {
+        let sequence:MEditSequence = MSourceImageImportFactory.factorySequence(
+            images:images)
+        
+        delegate?.importSequenceReady(sequence:sequence)
+    }
+    
+    //MARK: internal
+    
+    func recursiveCheck()
     {
         itemIndex += 1
         
@@ -97,13 +107,5 @@ class MSourceImageImportFactory
                 image:image)
             delayRecursiveImport()
         }
-    }
-    
-    private func createSequence()
-    {
-        let sequence:MEditSequence = MSourceImageImportFactory.factorySequence(
-            images:images)
-        
-        delegate?.importSequenceReady(sequence:sequence)
     }
 }
