@@ -3,8 +3,8 @@ import Photos
 
 class MSourceImageImportFactory
 {
-    var maxImageSize:CGSize
     var images:[CGImage]
+    var maxImageSize:CGSize
     private(set) var items:[MSourceImageItem]
     private weak var delegate:MSourceImageImportFactoryDelegate?
     private var itemIndex:Int
@@ -70,7 +70,7 @@ class MSourceImageImportFactory
             return
         }
         
-        images.append(cgImage)
+        adjustImage(image:cgImage)
     }
     
     private func createSequence()

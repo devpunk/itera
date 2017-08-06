@@ -56,4 +56,21 @@ extension MSourceImageImportFactory
             self?.recursiveCheck()
         }
     }
+    
+    private func resizeToMax(image:CGImage) -> CGImage?
+    {
+        guard
+        
+            let resizedImage:CGImage = image.resizeToFit(
+                targetSize:maxImageSize,
+                contentMode:
+                UIViewContentMode.scaleAspectFill)
+        
+        else
+        {
+            return nil
+        }
+        
+        return resizedImage
+    }
 }
