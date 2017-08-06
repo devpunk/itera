@@ -3,6 +3,7 @@ import Photos
 
 class MSourceImageImportFactory
 {
+    var maxImageSize:CGSize
     private weak var delegate:MSourceImageImportFactoryDelegate?
     private var items:[MSourceImageItem]
     private var images:[CGImage]
@@ -20,6 +21,7 @@ class MSourceImageImportFactory
         images = []
         totalItems = items.count
         itemIndex = kInitialItemIndex
+        maxImageSize = CGSize.zero
         
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
