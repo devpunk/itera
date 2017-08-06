@@ -26,7 +26,7 @@ class MSourceImageImportFactory
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.recursiveCheck()
+            self?.factoryMaxSize()
         }
     }
     
