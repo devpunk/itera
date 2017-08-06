@@ -4,8 +4,8 @@ import Photos
 class MSourceImageImportFactory
 {
     var maxImageSize:CGSize
+    private(set) var items:[MSourceImageItem]
     private weak var delegate:MSourceImageImportFactoryDelegate?
-    private var items:[MSourceImageItem]
     private var images:[CGImage]
     private var itemIndex:Int
     private var totalItems:Int
@@ -23,11 +23,7 @@ class MSourceImageImportFactory
         itemIndex = kInitialItemIndex
         maxImageSize = CGSize.zero
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.factoryMaxSize()
-        }
+        factoryMaxSize()
     }
     
     private func delayRecursiveImport()
