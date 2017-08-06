@@ -4,9 +4,9 @@ import Photos
 class MSourceImageImportFactory
 {
     var maxImageSize:CGSize
+    var images:[CGImage]
     private(set) var items:[MSourceImageItem]
     private weak var delegate:MSourceImageImportFactoryDelegate?
-    private var images:[CGImage]
     private var itemIndex:Int
     private var totalItems:Int
     private let kDelay:TimeInterval = 0.25
