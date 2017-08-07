@@ -9,10 +9,13 @@
     <entity name="DPerkPurchase" representedClassName="DPerkPurchase" parentEntity="DPerk" syncable="YES" codeGenerationType="class">
         <attribute name="purchased" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="DProject" representedClassName="DProject" syncable="YES" codeGenerationType="class">
+    <entity name="DProject" representedClassName="DProject" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DProjectTutorial" representedClassName="DProjectTutorial" parentEntity="DProject" syncable="YES" codeGenerationType="class"/>
+    <entity name="DProjectUser" representedClassName="DProjectUser" parentEntity="DProject" syncable="YES" codeGenerationType="class">
         <attribute name="created" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
         <attribute name="review" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
@@ -23,7 +26,9 @@
         <element name="DPerk" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="DPerkFree" positionX="-54" positionY="-9" width="128" height="45"/>
         <element name="DPerkPurchase" positionX="-36" positionY="9" width="128" height="60"/>
+        <element name="DProject" positionX="0" positionY="45" width="128" height="60"/>
         <element name="DSettings" positionX="-18" positionY="27" width="128" height="90"/>
-        <element name="DProject" positionX="0" positionY="45" width="128" height="90"/>
+        <element name="DProjectUser" positionX="-27" positionY="36" width="128" height="75"/>
+        <element name="DProjectTutorial" positionX="-18" positionY="45" width="128" height="45"/>
     </elements>
 </model>
