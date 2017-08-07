@@ -12,33 +12,7 @@ extension MHome
         }
     }
     
-    //MARK: private
-    
-    private func asyncLoad()
-    {
-        DManager.sharedInstance?.fetch(entity:DProject.self)
-        { [weak self] (data:[NSManagedObject]?) in
-        
-            guard
-            
-                var projects:[DProject] = data as? [DProject]
-            
-            else
-            {
-                return
-            }
-            
-            projects.sort
-            { (projectA:DProject, projectB:DProject) in
-                
-                return projectA.created < projectB.created
-            }
-            
-            self?.projectsLoaded(projects:projects)
-        }
-    }
-    
-    private func projectsLoaded(projects:[DProject])
+    func projectsLoaded(projects:[DProjectUser])
     {
         let shouldUpdate:Bool = shouldUpdateProjects(
             projects:projects)
@@ -46,6 +20,32 @@ extension MHome
         if shouldUpdate
         {
             updateProjects(projects:projects)
+        }
+    }
+    
+    //MARK: private
+    
+    private func asyncLoad()
+    {
+        DManager.sharedInstance?.fetch(entity:DProjectUser.self)
+        { [weak self] (data:[NSManagedObject]?) in
+        
+            guard
+            
+                var projects:[DProjectUser] = data as? [DProjectUser]
+            
+            else
+            {
+                return
+            }
+            
+            projects.sort
+            { (projectA:DProjectUser, projectB:DProjectUser) in
+                
+                return projectA.created < projectB.created
+            }
+            
+            self?.projectsLoaded(projects:projects)
         }
     }
     

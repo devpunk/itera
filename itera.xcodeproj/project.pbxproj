@@ -180,6 +180,7 @@
 		DA3E02251F352A4D0012B10E /* VHomeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E02241F352A4D0012B10E /* VHomeAnimations.swift */; };
 		DA3E022D1F3549880012B10E /* VHomeSwiper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E022C1F3549880012B10E /* VHomeSwiper.swift */; };
 		DA3FFF611F38AC65005000BE /* assetGifTutorial0.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3FFF601F38AC65005000BE /* assetGifTutorial0.gif */; };
+		DA3FFF631F38AD55005000BE /* MHomeTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */; };
 		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */; };
 		DA5490301F310337003E6472 /* MHomeMenuDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */; };
@@ -412,6 +413,7 @@
 		DA3E02241F352A4D0012B10E /* VHomeAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeAnimations.swift; sourceTree = "<group>"; };
 		DA3E022C1F3549880012B10E /* VHomeSwiper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSwiper.swift; sourceTree = "<group>"; };
 		DA3FFF601F38AC65005000BE /* assetGifTutorial0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = assetGifTutorial0.gif; sourceTree = "<group>"; };
+		DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeTutorial.swift; sourceTree = "<group>"; };
 		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuFullScreen.swift; sourceTree = "<group>"; };
 		DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuDelete.swift; sourceTree = "<group>"; };
@@ -683,6 +685,7 @@
 			children = (
 				DA2795841F2AFC4100550ECA /* MHome.swift */,
 				DA39F34D1F2D82A800AF9256 /* MHomeLoader.swift */,
+				DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */,
 				DA632E5D1F2FDBD800DF8F9A /* MHomeImage.swift */,
 				DA051E6A1F30C1F400568F72 /* MHomeFactory.swift */,
 				DA39F34B1F2D81C600AF9256 /* MHomeItem.swift */,
@@ -1411,6 +1414,7 @@
 				DA2796951F2AFC4200550ECA /* VSourceVideo.swift in Sources */,
 				DA2796981F2AFC4200550ECA /* VSourceVideoListCell.swift in Sources */,
 				DA042C8A1F2CA4F400874EAE /* VEditRotateImagePicture.swift in Sources */,
+				DA3FFF631F38AD55005000BE /* MHomeTutorial.swift in Sources */,
 				DA2796381F2AFC4200550ECA /* MPerkThumbnailProtocolExtension.swift in Sources */,
 				DA68B7BE1F2C06E700F4B819 /* VEditScaleSlider.swift in Sources */,
 				DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */,
