@@ -64,9 +64,10 @@ class VHomeCardMenu:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MHomeMenuProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeItem? = controller.model.currentItem()
+        let model:MHomeMenuProtocol = modelAtIndex(index:indexPath)
         let cell:VHomeCardMenuCell = cellAtIndex(indexPath:indexPath)
-        cell.config(model:item)
+        cell.config(model:model, item:item)
         
         return cell
     }

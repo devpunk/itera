@@ -61,10 +61,42 @@ class VHomeCardMenuCell:UICollectionViewCell
         }
     }
     
+    private func notAvalable()
+    {
+        isUserInteractionEnabled = false
+        imageView.alpha = kAlphaSelected
+    }
+    
+    private func available()
+    {
+        isUserInteractionEnabled = true
+        imageView.alpha = kAlphaNotSelected
+    }
+    
     //MARK: internal
     
-    func config(model:MHomeMenuProtocol)
+    func config(model:MHomeMenuProtocol, item:MHomeItem?)
     {
         imageView.image = model.icon
+        
+        guard
+        
+            let item:MHomeItem = item
+            
+        else
+        {
+            return
+        }
+        
+        let isAvailable:Bool = model.available(item:item)
+        
+        if isAvailable
+        {
+            available()
+        }
+        else
+        {
+            notAvalable()
+        }
     }
 }
