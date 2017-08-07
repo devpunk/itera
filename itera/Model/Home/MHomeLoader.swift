@@ -45,7 +45,7 @@ extension MHome
                 return projectA.created < projectB.created
             }
             
-            self?.projectsLoaded(projects:projects)
+            self?.tutorialCheck(projects:projects)
         }
     }
     

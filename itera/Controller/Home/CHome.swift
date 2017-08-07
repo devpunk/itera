@@ -2,6 +2,31 @@ import UIKit
 
 class CHome:Controller<VHome, MHome>
 {
+    private var sessionLoaded:Bool
+    
+    override init()
+    {
+        sessionLoaded = false
+        
+        super.init()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedSessionLoaded(sender:)),
+            name:Notification.sessionLoaded,
+            object:nil)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
         get
@@ -23,7 +48,10 @@ class CHome:Controller<VHome, MHome>
     {
         super.viewDidAppear(animated)
         
-        model.load()
+        if sessionLoaded
+        {
+            model.load()
+        }
     }
     
     override func viewWillDisappear(_ animated:Bool)
@@ -40,6 +68,14 @@ class CHome:Controller<VHome, MHome>
         }
         
         view.viewWillDisappear()
+    }
+    
+    //MARK: notified
+    
+    func notifiedSessionLoaded(sender notification:Notification)
+    {
+        sessionLoaded = true
+        model.load()
     }
     
     //MARK: private
