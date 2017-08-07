@@ -50,7 +50,7 @@ class VSourceImageList:VCollection<
             let width:CGFloat = collectionView.bounds.width
             let subtractWidth:CGFloat = (kCellsPerRow + 1) * kCollectionMargin
             let usableWidth:CGFloat = width - subtractWidth
-            let cellWidth:CGFloat = usableWidth / kCellsPerRow
+            let cellWidth:CGFloat = floor(usableWidth / kCellsPerRow)
             let cellSize:CGSize = CGSize(width:cellWidth, height:cellWidth)
             self.cellSize = cellSize
             
