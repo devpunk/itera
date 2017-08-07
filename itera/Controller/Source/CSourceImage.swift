@@ -6,7 +6,7 @@ class CSourceImage:Controller<VSourceImage, MSourceImage>
     {
         super.viewDidLoad()
         
-        model.checkAuth()
+       // model.checkAuth()
     }
     
     override func modelRefresh()
