@@ -181,6 +181,7 @@
 		DA3E022D1F3549880012B10E /* VHomeSwiper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E022C1F3549880012B10E /* VHomeSwiper.swift */; };
 		DA3FFF611F38AC65005000BE /* assetGifTutorial0.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA3FFF601F38AC65005000BE /* assetGifTutorial0.gif */; };
 		DA3FFF631F38AD55005000BE /* MHomeTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */; };
+		DA3FFF651F38B255005000BE /* MSessionTutorials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF641F38B255005000BE /* MSessionTutorials.swift */; };
 		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */; };
 		DA5490301F310337003E6472 /* MHomeMenuDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */; };
@@ -414,6 +415,7 @@
 		DA3E022C1F3549880012B10E /* VHomeSwiper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSwiper.swift; sourceTree = "<group>"; };
 		DA3FFF601F38AC65005000BE /* assetGifTutorial0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = assetGifTutorial0.gif; sourceTree = "<group>"; };
 		DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeTutorial.swift; sourceTree = "<group>"; };
+		DA3FFF641F38B255005000BE /* MSessionTutorials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionTutorials.swift; sourceTree = "<group>"; };
 		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuFullScreen.swift; sourceTree = "<group>"; };
 		DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuDelete.swift; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 				DA27958E1F2AFC4100550ECA /* MSession.swift */,
 				DA27958F1F2AFC4100550ECA /* MSessionPerks.swift */,
 				DA2795901F2AFC4100550ECA /* MSessionSettings.swift */,
+				DA3FFF641F38B255005000BE /* MSessionTutorials.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -1314,6 +1317,7 @@
 				DA8F6F361F3607EC00D22FA7 /* VSourceImageImportProgressBar.swift in Sources */,
 				DA2796451F2AFC4200550ECA /* MSourceVideoFactory.swift in Sources */,
 				DA27961D1F2AFC4100550ECA /* CNew.swift in Sources */,
+				DA3FFF651F38B255005000BE /* MSessionTutorials.swift in Sources */,
 				DA2796321F2AFC4100550ECA /* MEditDurationFactory.swift in Sources */,
 				DA042C821F2C935700874EAE /* CEditRotate.swift in Sources */,
 				DA2796891F2AFC4200550ECA /* VEditDurationCell.swift in Sources */,
