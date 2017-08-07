@@ -183,6 +183,7 @@
 		DA3FFF631F38AD55005000BE /* MHomeTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */; };
 		DA3FFF651F38B255005000BE /* MSessionTutorials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF641F38B255005000BE /* MSessionTutorials.swift */; };
 		DA3FFF671F38B7E3005000BE /* DProjectUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF661F38B7E3005000BE /* DProjectUserExtension.swift */; };
+		DA3FFF691F38B872005000BE /* DProjectTutorialExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3FFF681F38B872005000BE /* DProjectTutorialExtension.swift */; };
 		DA54902C1F30EC1F003E6472 /* MHomeMenuShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */; };
 		DA54902E1F31012A003E6472 /* MHomeMenuFullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */; };
 		DA5490301F310337003E6472 /* MHomeMenuDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */; };
@@ -418,6 +419,7 @@
 		DA3FFF621F38AD55005000BE /* MHomeTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeTutorial.swift; sourceTree = "<group>"; };
 		DA3FFF641F38B255005000BE /* MSessionTutorials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionTutorials.swift; sourceTree = "<group>"; };
 		DA3FFF661F38B7E3005000BE /* DProjectUserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DProjectUserExtension.swift; sourceTree = "<group>"; };
+		DA3FFF681F38B872005000BE /* DProjectTutorialExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DProjectTutorialExtension.swift; sourceTree = "<group>"; };
 		DA54902B1F30EC1F003E6472 /* MHomeMenuShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuShare.swift; sourceTree = "<group>"; };
 		DA54902D1F31012A003E6472 /* MHomeMenuFullScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuFullScreen.swift; sourceTree = "<group>"; };
 		DA54902F1F310337003E6472 /* MHomeMenuDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeMenuDelete.swift; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 				DA2795B41F2AFC4100550ECA /* DSettingsExtension.swift */,
 				DA39F3491F2D7E5200AF9256 /* DProjectExtension.swift */,
 				DA3FFF661F38B7E3005000BE /* DProjectUserExtension.swift */,
+				DA3FFF681F38B872005000BE /* DProjectTutorialExtension.swift */,
 				DA39F3461F2D799100AF9256 /* DItera.xcdatamodeld */,
 			);
 			path = Data;
@@ -1510,6 +1513,7 @@
 				DA2796331F2AFC4100550ECA /* MEditDurationItem.swift in Sources */,
 				DA2796341F2AFC4100550ECA /* MHome.swift in Sources */,
 				DA2796711F2AFC4200550ECA /* VSlider.swift in Sources */,
+				DA3FFF691F38B872005000BE /* DProjectTutorialExtension.swift in Sources */,
 				DA27962A1F2AFC4100550ECA /* MEditActionScale.swift in Sources */,
 				DA2796731F2AFC4200550ECA /* VSpinner.swift in Sources */,
 				DA27967D1F2AFC4200550ECA /* VEditCropImageCorner.swift in Sources */,
