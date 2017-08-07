@@ -2,8 +2,6 @@ import UIKit
 
 extension MSourceImageImportFactory
 {
-    private static let kDefaultDuration:TimeInterval = 1
-    
     class func factorySequence(
         images:[CGImage]) -> MEditSequence
     {
@@ -16,9 +14,11 @@ extension MSourceImageImportFactory
             items.append(item)
         }
         
+        let countImages:Int = images.count
+        let duration:TimeInterval = TimeInterval(countImages)
         let sequence:MEditSequence = MEditSequence(
             items:items,
-            duration:kDefaultDuration)
+            duration:duration)
         
         return sequence
     }
