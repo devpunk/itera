@@ -1,11 +1,11 @@
 PODS:
-  - GifHero (1.0.1)
+  - GifHero (1.0.2)
 
 DEPENDENCIES:
   - GifHero
 
 SPEC CHECKSUMS:
-  GifHero: 02300d0c81bad5c58accba7ad0ce1fddf9ed34ee
+  GifHero: 18c4e7e739a678ac9fb7d88437bb7beb27c93b3d
 
 PODFILE CHECKSUM: 773eef498bd58c984f4ede102a03987894e2d57c
 
