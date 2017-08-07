@@ -37,12 +37,13 @@ class MSave:Model
         path:URL,
         duration:TimeInterval)
     {
-        DManager.sharedInstance?.create(entity:DProject.self)
+        DManager.sharedInstance?.create(
+            entity:DProjectUser.self)
         { [weak self] (data:NSManagedObject?) in
             
             guard
             
-                let project:DProject = data as? DProject
+                let project:DProjectUser = data as? DProjectUser
             
             else
             {

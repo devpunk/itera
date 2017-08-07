@@ -86,11 +86,12 @@ extension MHome
                 
                 let item:MHomeItem = loadProject(
                     project:project,
-                    directory:directory,
-                    dispatchGroup:dispatchGroup)
+                    directory:directory)
             
             else
             {
+                dispatchGroup.leave()
+                
                 continue
             }
             
@@ -108,30 +109,17 @@ extension MHome
     
     private func loadProject(
         project:DProject,
-        directory:URL,
-        dispatchGroup:DispatchGroup) -> MHomeItem?
+        directory:URL) -> MHomeItem?
     {
         guard
             
-            let name:String = project.name
-            
-        else
-        {
-            dispatchGroup.leave()
-            
-            return nil
-        }
-        
-        let path:URL = directory.appendingPathComponent(name)
-        
-        guard
-            
+            let path:URL = MHome.factoryPath(
+                project:project,
+                directory:directory),
             let image:UIImage = loadImage(path:path)
         
         else
         {
-            dispatchGroup.leave()
-            
             return nil
         }
         
