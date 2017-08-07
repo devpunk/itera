@@ -14,7 +14,16 @@ extension MSourceImageImportFactory
     
     func adjustImage(image:CGImage)
     {
+        guard
         
+            let resizedImage:CGImage = resizeToMax(image:image)
+        
+        else
+        {
+            return
+        }
+        
+        images.append(resizedImage)
     }
     
     //MARK: private
