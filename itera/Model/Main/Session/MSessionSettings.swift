@@ -41,7 +41,8 @@ extension MSession
                 return
             }
             
-            self.settingsLoaded(settings:settings)
+            
+            self.factoryTutorials(settings:settings)
         }
     }
 }

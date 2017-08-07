@@ -12,7 +12,7 @@ extension MHome
         }
     }
     
-    func projectsLoaded(projects:[DProjectUser])
+    func projectsLoaded(projects:[DProject])
     {
         let shouldUpdate:Bool = shouldUpdateProjects(
             projects:projects)

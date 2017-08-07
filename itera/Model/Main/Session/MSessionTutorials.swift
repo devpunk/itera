@@ -5,16 +5,14 @@ extension MSession
 {
     private static let kAssetTutorialImages:String = "assetGifTutorial0.gif"
     
-    class func factoryTutorials(
-        completion:@escaping(() -> ()))
+    func factoryTutorials(settings:DSettings)
     {
-        factoryTutorialImages(completion:completion)
+        factoryTutorialImages(settings:settings)
     }
     
     //MARK: private
     
-    private class func factoryTutorialImages(
-        completion:@escaping(() -> ()))
+    private func factoryTutorialImages(settings:DSettings)
     {
         DManager.sharedInstance?.create(
             entity:DProjectTutorial.self)
@@ -29,18 +27,14 @@ extension MSession
                 return
             }
             
-            project.name = kAssetTutorialImages
+            project.name = MSession.kAssetTutorialImages
             
-            factoryTutorialsFinished(completion:completion)
+            self.factoryTutorialsFinished(settings:settings)
         }
     }
     
-    private class func factoryTutorialsFinished(
-        completion:@escaping(() -> ()))
+    private func factoryTutorialsFinished(settings:DSettings)
     {
-        DManager.sharedInstance?.save
-        {
-            completion()
-        }
+        self.settingsLoaded(settings:settings)
     }
 }
