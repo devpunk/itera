@@ -23,4 +23,18 @@ class MHomeMenuDelete:MHomeMenuProtocol
         
         controller.delete(item:item)
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        guard
+        
+            let _:DProjectUser = item.project as? DProjectUser
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
 }

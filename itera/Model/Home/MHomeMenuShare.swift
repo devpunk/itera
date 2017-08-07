@@ -23,4 +23,9 @@ class MHomeMenuShare:MHomeMenuProtocol
         
         controller.share(item:item)
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        return true
+    }
 }

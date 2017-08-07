@@ -23,4 +23,9 @@ class MHomeMenuFullScreen:MHomeMenuProtocol
         
         controller.openFullScreen(item:item)
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        return true
+    }
 }
