@@ -93,9 +93,10 @@ class VFullScreenMenu:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MFullScreenProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeItem = controller.model.item
+        let model:MFullScreenProtocol = modelAtIndex(index:indexPath)
         let cell:VFullScreenMenuCell = cellAtIndex(indexPath:indexPath)
-        cell.config(model:item)
+        cell.config(model:model, item:item)
         
         return cell
     }

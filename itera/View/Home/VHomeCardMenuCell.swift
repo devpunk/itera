@@ -61,7 +61,7 @@ class VHomeCardMenuCell:UICollectionViewCell
         }
     }
     
-    private func notAvalable()
+    private func notAvailable()
     {
         isUserInteractionEnabled = false
         imageView.alpha = kAlphaSelected
@@ -96,7 +96,9 @@ class VHomeCardMenuCell:UICollectionViewCell
         }
         else
         {
-            notAvalable()
+            notAvailable()
         }
+        
+        hover()
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 class VFullScreenMenuCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
-    private let kAlphaSelect:CGFloat = 0.2
+    private let kAlphaSelected:CGFloat = 0.1
     private let kAlphaNotSelected:CGFloat = 1
     
     override init(frame:CGRect)
@@ -53,7 +53,7 @@ class VFullScreenMenuCell:UICollectionViewCell
     {
         if isSelected || isHighlighted
         {
-            alpha = kAlphaSelect
+            alpha = kAlphaSelected
         }
         else
         {
@@ -61,11 +61,35 @@ class VFullScreenMenuCell:UICollectionViewCell
         }
     }
     
+    private func notAvailable()
+    {
+        isUserInteractionEnabled = false
+        imageView.alpha = kAlphaSelected
+    }
+    
+    private func available()
+    {
+        isUserInteractionEnabled = true
+        imageView.alpha = kAlphaNotSelected
+    }
+    
     //MARK: internal
     
-    func config(model:MFullScreenProtocol)
+    func config(model:MFullScreenProtocol, item:MHomeItem)
     {
         imageView.image = model.icon
+        
+        let isAvailable:Bool = model.available(item:item)
+        
+        if isAvailable
+        {
+            available()
+        }
+        else
+        {
+            notAvailable()
+        }
+        
         hover()
     }
 }
