@@ -14,4 +14,9 @@ class MFullScreenExitFullScreen:MFullScreenProtocol
     {
         controller.back()
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        return true
+    }
 }

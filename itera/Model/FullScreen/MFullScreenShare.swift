@@ -14,4 +14,9 @@ class MFullScreenShare:MFullScreenProtocol
     {
         controller.share()
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        return true
+    }
 }

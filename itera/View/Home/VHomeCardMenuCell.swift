@@ -3,7 +3,7 @@ import UIKit
 class VHomeCardMenuCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
-    private let kAlphaSelected:CGFloat = 0.15
+    private let kAlphaSelected:CGFloat = 0.1
     private let kAlphaNotSelected:CGFloat = 1
     
     override init(frame:CGRect)

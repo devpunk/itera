@@ -14,4 +14,18 @@ class MFullScreenDelete:MFullScreenProtocol
     {
         controller.delete()
     }
+    
+    func available(item:MHomeItem) -> Bool
+    {
+        guard
+            
+            let _:DProjectUser = item.project as? DProjectUser
+            
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
 }
